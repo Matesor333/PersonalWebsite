@@ -1035,6 +1035,13 @@ Current project
     color: #2057a7;
 }
 
+.project-video {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
 .feature-list {
     list-style: none;
     padding: 0;
