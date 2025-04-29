@@ -88,8 +88,42 @@ function initScrollReveal() {
 // Add event listener for scroll
 window.addEventListener("scroll", updateActiveNavLink);
 
+// Function to toggle dark mode
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+
+    // Save preference to localStorage
+    if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'enabled');
+        document.getElementById('darkModeIcon').classList.replace('fa-moon', 'fa-sun');
+    } else {
+        localStorage.setItem('darkMode', 'disabled');
+        document.getElementById('darkModeIcon').classList.replace('fa-sun', 'fa-moon');
+    }
+}
+
+// Function to check user's preference
+function checkDarkModePreference() {
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        document.body.classList.add('dark-mode');
+        document.getElementById('darkModeIcon').classList.replace('fa-moon', 'fa-sun');
+    } else {
+        document.body.classList.remove('dark-mode');
+        document.getElementById('darkModeIcon').classList.replace('fa-sun', 'fa-moon');
+    }
+}
+
 // Call the functions on page load
 document.addEventListener("DOMContentLoaded", function() {
     updateActiveNavLink();
     initScrollReveal();
+
+    // Check for dark mode preference
+    checkDarkModePreference();
+
+    // Add event listener to dark mode toggle button
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener('click', toggleDarkMode);
+    }
 });

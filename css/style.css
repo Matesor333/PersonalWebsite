@@ -1,10 +1,45 @@
+:root {
+    /* Light mode colors */
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --header-bg: white;
+    --card-bg: white;
+    --primary-color: #2057a7;
+    --primary-color-hover: #1a4580;
+    --secondary-bg: #e9ecef;
+    --border-color: #eee;
+    --card-border: #e0e0e0;
+    --box-shadow: rgba(0, 0, 0, 0.07);
+    --box-shadow-hover: rgba(0, 0, 0, 0.1);
+    --footer-bg: #f8f9fa;
+    --icon-bg: #f0f4ff;
+}
+
+.dark-mode {
+    /* Dark mode colors */
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --header-bg: #1e1e1e;
+    --card-bg: #1e1e1e;
+    --primary-color: #4d8be6;
+    --primary-color-hover: #6fa0eb;
+    --secondary-bg: #2c2c2c;
+    --border-color: #333;
+    --card-border: #333;
+    --box-shadow: rgba(0, 0, 0, 0.2);
+    --box-shadow-hover: rgba(0, 0, 0, 0.3);
+    --footer-bg: #1e1e1e;
+    --icon-bg: #2c2c2c;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -16,12 +51,13 @@ body {
 header {
     width: 100%;
     padding: 20px 0;
-    border-bottom: 1px solid #eee;
-    background-color: white;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--header-bg);
+    box-shadow: 0 2px 15px var(--box-shadow);
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .header-container {
@@ -36,12 +72,12 @@ header {
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #2057a7;
+    color: var(--primary-color);
     transition: color 0.3s ease;
 }
 
 .logo:hover {
-    color: #1a4580;
+    color: var(--primary-color-hover);
 }
 
 nav ul {
@@ -57,7 +93,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: var(--text-color);
     padding: 8px 0;
     font-weight: 500;
     position: relative;
@@ -65,11 +101,11 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #2057a7;
+    color: var(--primary-color);
 }
 
 nav ul li a.active {
-    color: #2057a7;
+    color: var(--primary-color);
 }
 
 nav ul li a::after {
@@ -79,7 +115,7 @@ nav ul li a::after {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #2057a7;
+    background-color: var(--primary-color);
     transition: width 0.3s ease;
 }
 
@@ -158,24 +194,27 @@ nav ul li a.active::after {
 
 h1 {
     font-size: 48px;
-    color: #2057a7;
+    color: var(--primary-color);
     margin-bottom: 10px;
     font-weight: 700;
+    transition: color 0.3s ease;
 }
 
 h2 {
     font-size: 24px;
     font-weight: normal;
     margin-bottom: 30px;
-    color: #555;
+    color: var(--text-color);
+    transition: color 0.3s ease;
 }
 
 .bio {
     max-width: 800px;
     line-height: 1.7;
     margin-bottom: 30px;
-    color: #444;
+    color: var(--text-color);
     font-size: 1.05rem;
+    transition: color 0.3s ease;
 }
 
 .skills {
@@ -187,20 +226,21 @@ h2 {
 }
 
 .skill-tag {
-    background-color: #e9ecef;
+    background-color: var(--secondary-bg);
     padding: 8px 18px;
     border-radius: 25px;
-    color: #2057a7;
+    color: var(--primary-color);
     font-weight: 500;
     font-size: 0.9rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px var(--box-shadow);
+    transition: all 0.2s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .skill-tag:hover {
-    background-color: #d0e0f7;
+    background-color: var(--primary-color);
+    color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--box-shadow-hover);
 }
 
 .buttons {
@@ -226,17 +266,17 @@ h2 {
 }
 
 .btn-primary {
-    background-color: #2057a7;
+    background-color: var(--primary-color);
     color: white;
 }
 
 .btn-primary:hover {
-    background-color: #1a4580;
+    background-color: var(--primary-color-hover);
 }
 
 .btn-outline {
-    border: 2px solid #2057a7;
-    color: #2057a7;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
     background-color: transparent;
 }
 
@@ -260,7 +300,7 @@ h2 {
 
 .section-title {
     font-size: 36px;
-    color: #2057a7;
+    color: var(--primary-color);
     margin-bottom: 50px;
 }
 
@@ -268,17 +308,17 @@ h2 {
     max-width: 800px;
     margin: 0 auto 40px;
     padding: 30px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--card-border);
     border-radius: 12px;
-    background-color: #fff;
+    background-color: var(--card-bg);
     text-align: left;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 20px var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .education-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px var(--box-shadow-hover);
 }
 
 .education-header {
@@ -290,8 +330,9 @@ h2 {
 
 .education-degree {
     font-size: 22px;
-    color: #2057a7;
+    color: var(--primary-color);
     margin: 0 0 5px 0;
+    transition: color 0.3s ease;
 }
 
 .education-institution {
@@ -300,26 +341,29 @@ h2 {
 }
 
 .education-year {
-    background-color: #e9ecef;
+    background-color: var(--secondary-bg);
     padding: 5px 15px;
     border-radius: 20px;
-    color: #2057a7;
+    color: var(--primary-color);
     font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .education-description {
     line-height: 1.6;
     margin-bottom: 20px;
-    color: #555;
+    color: var(--text-color);
+    transition: color 0.3s ease;
 }
 
 .view-details {
     display: inline-block;
     text-decoration: none;
-    color: #2057a7;
+    color: var(--primary-color);
     font-weight: 500;
     text-align: right;
     float: right;
+    transition: color 0.3s ease;
 }
 
 .arrow {
@@ -338,7 +382,7 @@ h2 {
     right: 30px;
     width: 50px;
     height: 50px;
-    background-color: #2057a7;
+    background-color: var(--primary-color);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -346,18 +390,46 @@ h2 {
     align-items: center;
     cursor: pointer;
     text-decoration: none;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px var(--box-shadow);
     font-size: 20px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
     z-index: 999;
     opacity: 0.9;
 }
 
 .scroll-top:hover {
-    background-color: #1a4580;
+    background-color: var(--primary-color-hover);
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 20px var(--box-shadow-hover);
     opacity: 1;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--secondary-bg);
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+    box-shadow: 0 2px 5px var(--box-shadow);
+}
+
+.dark-mode-toggle:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+.dark-mode-toggle i {
+    font-size: 18px;
 }
 /*
 
@@ -381,21 +453,21 @@ Past project
 }
 
 .project-card {
-    background-color: #fff;
+    background-color: var(--card-bg);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 5px 20px var(--box-shadow);
     text-align: left;
     display: flex;
     flex-direction: column;
     height: 100%;
-    border: 1px solid #e0e0e0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--card-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px var(--box-shadow-hover);
 }
 
 .project-image {
@@ -425,11 +497,12 @@ Past project
 }
 
 .tech-tag {
-    background-color: #e9ecef;
+    background-color: var(--secondary-bg);
     padding: 5px 10px;
     border-radius: 15px;
     font-size: 12px;
-    color: #2057a7;
+    color: var(--primary-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .project-description {
@@ -538,18 +611,18 @@ Current project
 }
 
 .current-project-card {
-    background-color: #fff;
+    background-color: var(--card-bg);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 5px 20px var(--box-shadow);
     display: flex;
-    border: 1px solid #e0e0e0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--card-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .current-project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px var(--box-shadow-hover);
 }
 
 .project-icon {
@@ -565,19 +638,21 @@ Current project
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: #f0f4ff;
+    background-color: var(--icon-bg);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
-    color: #2057a7;
+    color: var(--primary-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .project-content {
     flex: 1;
     padding: 30px;
     text-align: left;
-    border-left: 1px solid #eee;
+    border-left: 1px solid var(--border-color);
+    transition: border-color 0.3s ease;
 }
 
 .project-header {
@@ -588,11 +663,12 @@ Current project
 }
 
 .project-status {
-    background-color: #f0f4ff;
+    background-color: var(--icon-bg);
     padding: 5px 15px;
     border-radius: 20px;
     font-size: 14px;
-    color: #2057a7;
+    color: var(--primary-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .project-progress, .project-timeline {
@@ -604,33 +680,38 @@ Current project
 .progress-label, .timeline-label {
     width: 80px;
     font-weight: bold;
-    color: #555;
+    color: var(--text-color);
+    transition: color 0.3s ease;
 }
 
 .progress-bar-container {
     flex: 1;
     height: 10px;
-    background-color: #e9ecef;
+    background-color: var(--secondary-bg);
     border-radius: 5px;
     margin: 0 15px;
     overflow: hidden;
+    transition: background-color 0.3s ease;
 }
 
 .progress-bar {
     height: 100%;
-    background-color: #2057a7;
+    background-color: var(--primary-color);
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .progress-percentage {
-    color: #2057a7;
+    color: var(--primary-color);
     font-weight: bold;
     width: 40px;
     text-align: right;
+    transition: color 0.3s ease;
 }
 
 .timeline-value {
-    color: #555;
+    color: var(--text-color);
+    transition: color 0.3s ease;
 }
 
 .project-tags {
@@ -658,7 +739,7 @@ Current project
 
     .project-content {
         border-left: none;
-        border-top: 1px solid #eee;
+        border-top: 1px solid var(--border-color);
     }
 
     .project-header {
@@ -693,7 +774,8 @@ Current project
 .interests-section {
     padding: 80px 0;
     text-align: center;
-    background-color: #f8f9fa;
+    background-color: var(--background-color);
+    transition: background-color 0.3s ease;
 }
 
 .interests-container {
@@ -706,22 +788,22 @@ Current project
 }
 
 .interest-card {
-    background-color: #fff;
+    background-color: var(--card-bg);
     border-radius: 12px;
     padding: 30px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 5px 20px var(--box-shadow);
     text-align: left;
     flex: 1;
     display: flex;
     flex-direction: column;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--card-border);
     max-width: 350px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .interest-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px var(--box-shadow-hover);
 }
 
 .interest-icon {
@@ -733,33 +815,37 @@ Current project
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #f0f4ff;
+    background-color: var(--icon-bg);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
-    color: #2057a7;
+    color: var(--primary-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .interest-title {
     font-size: 22px;
-    color: #2057a7;
+    color: var(--primary-color);
     margin-bottom: 15px;
+    transition: color 0.3s ease;
 }
 
 .interest-description {
     line-height: 1.6;
-    color: #555;
+    color: var(--text-color);
     flex-grow: 1;
     margin-bottom: 15px;
+    transition: color 0.3s ease;
 }
 
 .interest-link {
     display: inline-block;
     text-decoration: none;
-    color: #2057a7;
+    color: var(--primary-color);
     font-weight: 500;
     margin-top: auto;
+    transition: color 0.3s ease;
 }
 
 .arrow {
@@ -811,40 +897,41 @@ Current project
 
 .contact-info {
     flex: 1;
-    background-color: #fff;
+    background-color: var(--card-bg);
     border-radius: 12px;
     padding: 30px;
     text-align: left;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
-    border: 1px solid #e0e0e0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 20px var(--box-shadow);
+    border: 1px solid var(--card-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .contact-info:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px var(--box-shadow-hover);
 }
 
 .contact-form-container {
     flex: 1.5;
-    background-color: #fff;
+    background-color: var(--card-bg);
     border-radius: 12px;
     padding: 30px;
     text-align: left;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
-    border: 1px solid #e0e0e0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 20px var(--box-shadow);
+    border: 1px solid var(--card-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .contact-form-container:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px var(--box-shadow-hover);
 }
 
 .contact-info h3, .contact-form-container h3 {
     font-size: 22px;
-    color: #2057a7;
+    color: var(--primary-color);
     margin-bottom: 25px;
+    transition: color 0.3s ease;
 }
 
 .contact-item {
@@ -864,18 +951,21 @@ Current project
 
 .contact-label {
     font-size: 14px;
-    color: #777;
+    color: var(--text-color);
+    opacity: 0.7;
     margin-bottom: 5px;
+    transition: color 0.3s ease;
 }
 
 .contact-value {
     font-size: 16px;
-    color: #333;
+    color: var(--text-color);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .contact-value:hover {
-    color: #2057a7;
+    color: var(--primary-color);
 }
 
 .social-links {
@@ -950,17 +1040,19 @@ Current project
 }
 
 .footer {
-    background-color: #f8f9fa;
+    background-color: var(--footer-bg);
     padding: 30px 0;
     text-align: center;
-    border-top: 1px solid #eee;
-    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.03);
+    border-top: 1px solid var(--border-color);
+    box-shadow: 0 -5px 20px var(--box-shadow);
     margin-top: 50px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .footer p {
-    color: #555;
+    color: var(--text-color);
     font-size: 0.9rem;
+    transition: color 0.3s ease;
 }
 
 /* Project Details Page Styles */
@@ -993,16 +1085,18 @@ Current project
 .project-details-section .project-title {
     font-size: 2.5rem;
     margin-bottom: 30px;
-    color: #333;
+    color: var(--text-color);
     text-align: center;
+    transition: color 0.3s ease;
 }
 
 .section-subtitle {
     font-size: 1.8rem;
-    color: #2057a7;
+    color: var(--primary-color);
     margin: 40px 0 20px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #eee;
+    border-bottom: 2px solid var(--border-color);
+    transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 .project-video-container {
@@ -1013,10 +1107,11 @@ Current project
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    background-color: #f8f9fa;
+    background-color: var(--secondary-bg);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px var(--box-shadow);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .video-placeholder {
@@ -1025,14 +1120,17 @@ Current project
     align-items: center;
     justify-content: center;
     height: 450px;
-    background-color: #eee;
-    color: #777;
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    opacity: 0.7;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .video-placeholder i {
     font-size: 4rem;
     margin-bottom: 15px;
-    color: #2057a7;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
 }
 
 .project-video {
@@ -1055,9 +1153,10 @@ Current project
 }
 
 .feature-list li i {
-    color: #2057a7;
+    color: var(--primary-color);
     margin-right: 10px;
     font-size: 1.2rem;
+    transition: color 0.3s ease;
 }
 
 .tech-stack-grid {
@@ -1068,35 +1167,39 @@ Current project
 }
 
 .tech-item {
-    background-color: #fff;
+    background-color: var(--card-bg);
     border-radius: 10px;
     padding: 25px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .tech-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px var(--box-shadow-hover);
 }
 
 .tech-icon {
     font-size: 2.5rem;
-    color: #2057a7;
+    color: var(--primary-color);
     margin-bottom: 15px;
     text-align: center;
+    transition: color 0.3s ease;
 }
 
 .tech-item h3 {
     font-size: 1.3rem;
     margin-bottom: 10px;
-    color: #333;
+    color: var(--text-color);
+    transition: color 0.3s ease;
 }
 
 .tech-item p {
-    color: #666;
+    color: var(--text-color);
+    opacity: 0.8;
     font-size: 0.95rem;
     line-height: 1.5;
+    transition: color 0.3s ease;
 }
 
 .timeline-container {
@@ -1112,7 +1215,8 @@ Current project
     top: 0;
     bottom: 0;
     width: 2px;
-    background-color: #e0e0e0;
+    background-color: var(--card-border);
+    transition: background-color 0.3s ease;
 }
 
 .timeline-item {
@@ -1123,12 +1227,13 @@ Current project
 .timeline-marker {
     position: absolute;
     left: -40px;
-    background-color: #2057a7;
+    background-color: var(--primary-color);
     color: white;
     padding: 5px 10px;
     border-radius: 4px;
     font-weight: 600;
     font-size: 0.9rem;
+    transition: background-color 0.3s ease;
 }
 
 .timeline-marker::after {
@@ -1139,25 +1244,30 @@ Current project
     transform: translateY(-50%);
     border-width: 5px 0 5px 10px;
     border-style: solid;
-    border-color: transparent transparent transparent #2057a7;
+    border-color: transparent transparent transparent var(--primary-color);
+    transition: border-color 0.3s ease;
 }
 
 .timeline-content {
-    background-color: #f8f9fa;
+    background-color: var(--secondary-bg);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 3px 10px var(--box-shadow);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .timeline-content h3 {
     margin-top: 0;
-    color: #333;
+    color: var(--text-color);
     font-size: 1.2rem;
+    transition: color 0.3s ease;
 }
 
 .timeline-content p {
     margin-bottom: 0;
-    color: #666;
+    color: var(--text-color);
+    opacity: 0.8;
+    transition: color 0.3s ease;
 }
 
 .project-progress-container {
@@ -1166,13 +1276,16 @@ Current project
 
 .progress-percentage {
     font-weight: 600;
-    color: #2057a7;
+    color: var(--primary-color);
     margin: 10px 0;
+    transition: color 0.3s ease;
 }
 
 .progress-description {
-    color: #666;
+    color: var(--text-color);
+    opacity: 0.8;
     line-height: 1.6;
+    transition: color 0.3s ease;
 }
 
 /* Scroll Reveal Animation Styles */
