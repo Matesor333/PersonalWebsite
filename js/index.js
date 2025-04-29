@@ -28,6 +28,24 @@ function updateActiveNavLink() {
     });
 }
 
+// Function to initialize accordion functionality
+function initAccordion() {
+    const accordionToggles = document.querySelectorAll('.accordion-toggle');
+
+    accordionToggles.forEach(toggle => {
+        toggle.addEventListener('click', function() {
+            // Toggle active class on the button
+            this.classList.toggle('active');
+
+            // Find the next sibling which is the accordion content
+            const content = this.nextElementSibling;
+
+            // Toggle the active class on the content
+            content.classList.toggle('active');
+        });
+    });
+}
+
 // Function to handle scroll reveal animations
 function initScrollReveal() {
     // Get all elements that should be animated on scroll
@@ -92,4 +110,5 @@ window.addEventListener("scroll", updateActiveNavLink);
 document.addEventListener("DOMContentLoaded", function() {
     updateActiveNavLink();
     initScrollReveal();
+    initAccordion();
 });
