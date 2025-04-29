@@ -1,0 +1,61 @@
+/* Shared styles for project-details.html and slovak-university-details.html */
+
+/* Progress bar styles */
+.progress-bar {
+    /* Base style for progress bar */
+}
+
+/* Progress percentage classes */
+.progress-10 {
+    width: 10%;
+}
+
+.progress-25 {
+    width: 25%;
+}
+
+.progress-50 {
+    width: 50%;
+}
+
+.progress-75 {
+    width: 75%;
+}
+
+.progress-100 {
+    width: 100%;
+}
+
+/* Center alignment for section subtitles */
+.center-text {
+    text-align: center;
+}
+
+/* Hidden link styles */
+.hidden-link {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.1;
+    transition: opacity 0.3s;
+}
+
+.hidden-link:hover {
+    opacity: 1;
+}
+
+/* Full-width footer styles */
+.footer {
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}

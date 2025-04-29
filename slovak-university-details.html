@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BSci Informatics - Slovak Technical University</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/page-details.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -37,7 +38,7 @@
                 </div>
 
                 <h1 class="project-title fade-in">BSci Informatics and Informational Science</h1>
-                <h2 class="section-subtitle fade-in" style="text-align: center;">Slovak Technical University, Bratislava</h2>
+                <h2 class="section-subtitle fade-in center-text">Slovak Technical University, Bratislava</h2>
 
                 <div class="project-description-container reveal-section">
                     <h2 class="section-subtitle">Course Overview</h2>
@@ -83,27 +84,27 @@
                         <div class="tech-item reveal-item">
                             <div class="tech-icon"><i class="fas fa-code"></i></div>
                             <h3>Procedural Programming</h3>
-                            <p>Fundamentals of procedural programming paradigms, control structures, and algorithm implementation</p>
+                            <p>Fundamentals of procedural programming paradigms, control structures, and algorithm implementation (C)</p>
                         </div>
                         <div class="tech-item reveal-item">
                             <div class="tech-icon"><i class="fas fa-microchip"></i></div>
                             <h3>Principles of Computer Engineering</h3>
-                            <p>Computer architecture, hardware components, digital logic, and system design principles</p>
+                            <p>Computer architecture, hardware components, digital logic, and system design principles (Logisim)</p>
                         </div>
                         <div class="tech-item reveal-item">
                             <div class="tech-icon"><i class="fas fa-sitemap"></i></div>
                             <h3>Data Structures and Algorithms</h3>
-                            <p>Implementation and analysis of fundamental data structures and algorithms for efficient problem-solving</p>
+                            <p>Implementation and analysis of fundamental data structures and algorithms for efficient problem-solving (Java)</p>
                         </div>
                         <div class="tech-item reveal-item">
                             <div class="tech-icon"><i class="fas fa-brain"></i></div>
                             <h3>Theoretical Beginnings of Computer Science</h3>
-                            <p>Foundational theories of computation, automata theory, formal languages, and computational complexity</p>
+                            <p>Foundational theories of computation, automata theory, formal languages, and computational complexity (TuringMachine, Ram)</p>
                         </div>
                         <div class="tech-item reveal-item">
                             <div class="tech-icon"><i class="fas fa-cubes"></i></div>
                             <h3>Object-Oriented Programming</h3>
-                            <p>Object-oriented design principles, inheritance, polymorphism, and implementation using Java</p>
+                            <p>Object-oriented design principles, inheritance, polymorphism, and implementation (Java)</p>
                         </div>
                     </div>
                 </div>
@@ -122,7 +123,7 @@
                             <div class="timeline-marker">Project</div>
                             <div class="timeline-content">
                                 <h3>Low-Level Programming</h3>
-                                <p>Developed applications in C language and created RAM simulations to understand memory management</p>
+                                <p>Created own Linked List and Array List in C language and created RAM simulations to understand memory management</p>
                             </div>
                         </div>
                         <div class="timeline-item reveal-from-left">
@@ -132,13 +133,20 @@
                                 <p>Created object-oriented applications in Java, implementing design patterns and concurrent programming techniques</p>
                             </div>
                         </div>
+                        <div class="timeline-item reveal-from-left">
+                            <div class="timeline-marker">Project</div>
+                            <div class="timeline-content">
+                                <h3>Turing Machine</h3>
+                                <p>Developed a Variations Combinatorics system implemented as a Turing Machine, demonstrating computational theory principles and algorithmic problem-solving techniques</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="project-progress-container reveal-section">
                     <h2 class="section-subtitle">Program Status</h2>
                     <div class="progress-bar-container">
-                        <div class="progress-bar" style="width: 25%;"></div>
+                        <div class="progress-bar progress-25"></div>
                     </div>
                     <div class="progress-percentage">1 Year Completed</div>
                     <p class="progress-description">
@@ -148,25 +156,16 @@
             </section>
         </main>
 
-        <footer class="footer">
-            <div class="container">
-                <p>&copy; 2025 Matus Illith. All rights reserved.</p>
-            </div>
-        </footer>
-
         <a href="#" class="scroll-top"><i class="fas fa-arrow-up"></i></a>
     </div>
 
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Matus Illith. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script src="js/index.js"></script>
-    <script>
-        // Scroll to top functionality
-        document.querySelector('.scroll-top').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    </script>
+    <script src="js/scroll-top.js"></script>
 </body>
 </html>
