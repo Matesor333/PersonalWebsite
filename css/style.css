@@ -1228,6 +1228,10 @@ Current project
 }
 
 /* Accordion styles for mobile */
+.accordion-container {
+    width: 100%;
+}
+
 .accordion-toggle {
     display: none;
     background-color: #f0f4ff;
@@ -1240,6 +1244,7 @@ Current project
     text-align: center;
     border: 1px solid #d0e0f7;
     transition: all 0.3s ease;
+    width: 100%;
 }
 
 .accordion-toggle:hover {
@@ -1299,17 +1304,31 @@ Current project
 
 @media (max-width: 768px) {
     /* Accordion styles for mobile */
+    .accordion-container {
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        margin-top: 15px;
+        overflow: hidden;
+    }
+
     .accordion-toggle {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 0;
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid #e0e0e0;
     }
 
     .tech-stack-grid.accordion-content {
         display: none;
+        margin-top: 0;
+        border-radius: 0;
     }
 
     .tech-stack-grid.accordion-content.active {
         display: grid;
+        padding: 15px;
     }
 }
