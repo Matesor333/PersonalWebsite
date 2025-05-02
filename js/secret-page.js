@@ -26,4 +26,35 @@ document.addEventListener("DOMContentLoaded", function() {
             return false;
         });
     }
+
+    // Enhanced gradient animation effects
+    const title = document.querySelector('.secret-title');
+    const subtitle = document.querySelector('.secret-subtitle');
+    const container = document.querySelector('.modern-text-container');
+
+    if (title && subtitle && container) {
+        // Adjust animation speed based on mouse movement
+        document.addEventListener('mousemove', function(e) {
+            const xPosition = (e.clientX / window.innerWidth);
+            const yPosition = (e.clientY / window.innerHeight);
+
+            // Adjust the animation speed slightly based on mouse position
+            const animationDuration = 8 + (xPosition * 4); // Between 8-12s
+            title.style.setProperty('--animation-duration', `${animationDuration}s`);
+            subtitle.style.setProperty('--animation-duration', `${animationDuration + 1}s`);
+
+            // Subtle parallax effect on the container
+            container.style.transform = `translate(${xPosition * 10 - 5}px, ${yPosition * 10 - 5}px)`;
+            container.style.transition = 'transform 0.3s ease-out';
+        });
+
+        // Add subtle pulse effect on scroll
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+            const scale = 1 + (scrollPosition * 0.05);
+
+            title.style.transform = `scale(${scale})`;
+            title.style.transition = 'transform 0.5s ease-out';
+        });
+    }
 });
