@@ -33,14 +33,14 @@
 
 /* Hidden link styles */
 .hidden-link {
-    color: inherit;
+    color: #2057a7;
     text-decoration: none;
-    opacity: 1.5;
+    opacity: 3;
     transition: opacity 0.3s;
 }
 
 .hidden-link:hover {
-    opacity: 2.5;
+    opacity: 1.5;
     color: #2057a7;
 }
 
