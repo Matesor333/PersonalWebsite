@@ -1,12 +1,3 @@
 User-agent: *
-Allow: /$
-Allow: /index.html
-Allow: /education-details.html
-Allow: /slovak-university-details.html
-Disallow: /
-Disallow: /project-details.html
-Disallow: /css/page-details.css
-Disallow: /secret-page.html
-Disallow: /js/secret-page.js
-Disallow: /css/secret-page.css
+Disallow:
 Host: matus-illith.com
