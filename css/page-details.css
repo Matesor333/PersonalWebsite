@@ -60,3 +60,169 @@
     margin: 0 auto;
     padding: 0 20px;
 }
+
+/* Expandable module cards (Year 2) */
+/* Year 2 grid behavior */
+/* Default: stretch so closed cards in the same row share equal height and show full short descriptions */
+#year2-modules.tech-stack-grid {
+    align-items: stretch;
+    grid-auto-flow: dense; /* lets the widened open card pack nicely */
+}
+
+/* When any card is open, stop stretching siblings so they don't grow to match the opened card's height */
+#year2-modules.tech-stack-grid.has-open {
+    align-items: start;
+}
+
+#year2-modules .tech-item {
+    cursor: pointer;
+}
+
+#year2-modules .tech-item h3 {
+    position: relative;
+    padding-right: 20px;
+}
+
+#year2-modules .tech-item h3::after {
+    content: "\25BE"; /* down-pointing small triangle */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.2s ease;
+    opacity: 0.7;
+}
+
+#year2-modules .tech-item.open h3::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Animated show/hide for details */
+#year2-modules .module-details {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: max-height 0.35s ease, opacity 0.25s ease, transform 0.35s ease, margin-top 0.3s ease;
+    margin-top: 0;
+}
+
+#year2-modules .tech-item.open .module-details {
+    max-height: 1000px; /* sufficiently large to accommodate content */
+    opacity: 1;
+    transform: translateY(0);
+    margin-top: 10px;
+}
+
+/* Sideways expansion: make the opened card span two columns on larger screens */
+@media (min-width: 700px) {
+    #year2-modules .tech-item.open {
+        grid-column: span 2;
+        transform: scale(1.01);
+        box-shadow: 0 8px 24px var(--box-shadow-hover);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+}
+
+/* Make bubbles wrap nicely within details */
+#year2-modules .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+/* Structure Year 2 cards as a column for consistent layout */
+#year2-modules .tech-item {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Keep the grade visible at the bottom of the closed card */
+#year2-modules .course-grade {
+    margin-top: auto;
+}
+
+/* Allow cards to size naturally so short descriptions are fully visible (no clamping) */
+
+/* Expandable module cards (Year 3) */
+/* Year 3 grid behavior */
+/* Default: stretch so closed cards in the same row share equal height and show full short descriptions */
+#year3-modules.tech-stack-grid {
+    align-items: stretch;
+    grid-auto-flow: dense; /* pack widened open card nicely */
+}
+
+/* When any card is open, stop stretching siblings so they don't grow to match the opened card's height */
+#year3-modules.tech-stack-grid.has-open {
+    align-items: start;
+}
+
+#year3-modules .tech-item {
+    cursor: pointer;
+}
+
+#year3-modules .tech-item h3 {
+    position: relative;
+    padding-right: 20px;
+}
+
+#year3-modules .tech-item h3::after {
+    content: "\25BE"; /* down-pointing small triangle */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.2s ease;
+    opacity: 0.7;
+}
+
+#year3-modules .tech-item.open h3::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Animated show/hide for details */
+#year3-modules .module-details {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: max-height 0.35s ease, opacity 0.25s ease, transform 0.35s ease, margin-top 0.3s ease;
+    margin-top: 0;
+}
+
+#year3-modules .tech-item.open .module-details {
+    max-height: 1000px; /* sufficiently large to accommodate content */
+    opacity: 1;
+    transform: translateY(0);
+    margin-top: 10px;
+}
+
+/* Sideways expansion on larger screens */
+@media (min-width: 700px) {
+    #year3-modules .tech-item.open {
+        grid-column: span 2;
+        transform: scale(1.01);
+        box-shadow: 0 8px 24px var(--box-shadow-hover);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+}
+
+/* Make bubbles wrap nicely within details */
+#year3-modules .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+/* Structure Year 3 cards as a column for consistent layout */
+#year3-modules .tech-item {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Keep any grade at the bottom if present */
+#year3-modules .course-grade {
+    margin-top: auto;
+}

@@ -126,4 +126,85 @@ document.addEventListener("DOMContentLoaded", function() {
     if (darkModeToggle) {
         darkModeToggle.addEventListener('click', toggleDarkMode);
     }
+
+    // Year 2 module expandable cards
+    const year2Grid = document.getElementById('year2-modules');
+    if (year2Grid) {
+        const cards = Array.from(year2Grid.querySelectorAll('.tech-item'));
+
+        const updateContainerOpenState = () => {
+            const anyOpen = cards.some(c => c.classList.contains('open'));
+            year2Grid.classList.toggle('has-open', anyOpen);
+        };
+
+        const openExclusive = (targetCard) => {
+            // If the target is already open, just close it; otherwise close others then open target
+            const isOpen = targetCard.classList.contains('open');
+            cards.forEach(c => c.classList.remove('open'));
+            if (!isOpen) targetCard.classList.add('open');
+            updateContainerOpenState();
+        };
+
+        cards.forEach(card => {
+            // Make card focusable for accessibility
+            card.setAttribute('tabindex', '0');
+
+            const handleToggle = () => openExclusive(card);
+
+            card.addEventListener('click', (e) => {
+                // Prevent toggling when clicking inside expanded details content
+                if (e.target && e.target.closest('.module-details')) return;
+                handleToggle();
+            });
+
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    handleToggle();
+                }
+            });
+        });
+
+        // Initialize container state
+        updateContainerOpenState();
+    }
+
+    // Year 3 module expandable cards
+    const year3Grid = document.getElementById('year3-modules');
+    if (year3Grid) {
+        const cards3 = Array.from(year3Grid.querySelectorAll('.tech-item'));
+
+        const updateContainerOpenState3 = () => {
+            const anyOpen = cards3.some(c => c.classList.contains('open'));
+            year3Grid.classList.toggle('has-open', anyOpen);
+        };
+
+        const openExclusive3 = (targetCard) => {
+            const isOpen = targetCard.classList.contains('open');
+            cards3.forEach(c => c.classList.remove('open'));
+            if (!isOpen) targetCard.classList.add('open');
+            updateContainerOpenState3();
+        };
+
+        cards3.forEach(card => {
+            card.setAttribute('tabindex', '0');
+
+            const handleToggle = () => openExclusive3(card);
+
+            card.addEventListener('click', (e) => {
+                if (e.target && e.target.closest('.module-details')) return;
+                handleToggle();
+            });
+
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    handleToggle();
+                }
+            });
+        });
+
+        // Initialize container state
+        updateContainerOpenState3();
+    }
 });
