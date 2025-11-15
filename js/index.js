@@ -207,4 +207,43 @@ document.addEventListener("DOMContentLoaded", function() {
         // Initialize container state
         updateContainerOpenState3();
     }
+
+    // Slovak University courses expandable cards
+    const skGrid = document.getElementById('sk-courses');
+    if (skGrid) {
+        const skCards = Array.from(skGrid.querySelectorAll('.tech-item'));
+
+        const updateSkContainerOpenState = () => {
+            const anyOpen = skCards.some(c => c.classList.contains('open'));
+            skGrid.classList.toggle('has-open', anyOpen);
+        };
+
+        const openExclusiveSk = (targetCard) => {
+            const isOpen = targetCard.classList.contains('open');
+            skCards.forEach(c => c.classList.remove('open'));
+            if (!isOpen) targetCard.classList.add('open');
+            updateSkContainerOpenState();
+        };
+
+        skCards.forEach(card => {
+            card.setAttribute('tabindex', '0');
+
+            const handleToggle = () => openExclusiveSk(card);
+
+            card.addEventListener('click', (e) => {
+                if (e.target && e.target.closest('.module-details')) return;
+                handleToggle();
+            });
+
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    handleToggle();
+                }
+            });
+        });
+
+        // Initialize container state
+        updateSkContainerOpenState();
+    }
 });
