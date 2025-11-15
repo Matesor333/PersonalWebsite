@@ -10,6 +10,10 @@
     width: 10%;
 }
 
+.progress-20 {
+    width: 20%;
+}
+
 .progress-25 {
     width: 25%;
 }
@@ -224,5 +228,86 @@
 
 /* Keep any grade at the bottom if present */
 #year3-modules .course-grade {
+    margin-top: auto;
+}
+
+/* Expandable module cards (Slovak University courses) */
+/* Grid behavior: stretch by default so closed cards in the same row share equal height and show full short descriptions */
+#sk-courses.tech-stack-grid {
+    align-items: stretch;
+    grid-auto-flow: dense; /* pack widened open card nicely */
+}
+
+/* When any card is open, stop stretching siblings so they don't grow to match the opened card's height */
+#sk-courses.tech-stack-grid.has-open {
+    align-items: start;
+}
+
+#sk-courses .tech-item {
+    cursor: pointer;
+}
+
+#sk-courses .tech-item h3 {
+    position: relative;
+    padding-right: 20px;
+}
+
+#sk-courses .tech-item h3::after {
+    content: "\25BE"; /* down-pointing small triangle */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.2s ease;
+    opacity: 0.7;
+}
+
+#sk-courses .tech-item.open h3::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Animated show/hide for details */
+#sk-courses .module-details {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: max-height 0.35s ease, opacity 0.25s ease, transform 0.35s ease, margin-top 0.3s ease;
+    margin-top: 0;
+}
+
+#sk-courses .tech-item.open .module-details {
+    max-height: 1000px; /* sufficiently large to accommodate content */
+    opacity: 1;
+    transform: translateY(0);
+    margin-top: 10px;
+}
+
+/* Sideways expansion on larger screens */
+@media (min-width: 700px) {
+    #sk-courses .tech-item.open {
+        grid-column: span 2;
+        transform: scale(1.01);
+        box-shadow: 0 8px 24px var(--box-shadow-hover);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+}
+
+/* Make bubbles wrap nicely within details */
+#sk-courses .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+/* Structure cards as a column for consistent layout */
+#sk-courses .tech-item {
+    display: flex;
+    flex-direction: column;
+}
+
+/* If any grade appears, keep it at the bottom */
+#sk-courses .course-grade {
     margin-top: auto;
 }
