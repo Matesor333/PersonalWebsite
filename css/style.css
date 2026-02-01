@@ -40,6 +40,13 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    overflow-x: hidden;
+}
+
+main {
+    position: relative;
+    z-index: 1;
 }
 
 .container {

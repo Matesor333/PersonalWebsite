@@ -47,6 +47,16 @@
     opacity: 50%;
     color: #2057a7;
 }
+body{
+position: relative;
+overflow-x: hidden;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+}
+
 
 /* Full-width footer styles */
 .footer {
