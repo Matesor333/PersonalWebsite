@@ -137,21 +137,98 @@ nav ul li a.active::after {
     }
 
     .header-container {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
     }
 
     .logo {
-        margin-bottom: 15px;
+        margin-bottom: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--header-bg);
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 5px 10px var(--box-shadow);
+        z-index: 1001;
+    }
+
+    nav.active {
+        display: block;
     }
 
     nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
     }
 
     nav ul li {
-        margin: 5px 10px;
+        margin: 10px 0;
     }
+
+    /* General responsive improvements */
+    .profile-section, .education-section, .projects-section, 
+    .current-projects-section, .interests-section, .contact-section {
+        padding: 40px 0;
+    }
+
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .education-card, .project-card, .current-project-card, .interest-card, .contact-info {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .education-degree {
+        font-size: 1.2rem;
+    }
+
+    .education-institution {
+        font-size: 1rem;
+    }
+
+    .bio {
+        font-size: 1rem;
+        text-align: left;
+    }
+}
+
+.menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: var(--secondary-bg);
+    color: var(--primary-color);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px var(--box-shadow);
+}
+
+.menu-toggle:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.menu-toggle i {
+    font-size: 20px;
 }
 
 .profile-section {
@@ -579,15 +656,26 @@ Past project
     }
 
     h1 {
-        font-size: 36px;
+        font-size: 32px;
     }
 
     h2 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
-    .section-title {
-        font-size: 30px;
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .skill-tag {
+        padding: 6px 14px;
+        font-size: 0.85rem;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 0.95rem;
     }
 }
 /*
@@ -774,9 +862,12 @@ Current project
         margin: 5px 0;
     }
 
-    .progress-percentage {
-        width: 100%;
-        text-align: left;
+    .project-title {
+        font-size: 1.25rem;
+    }
+
+    .project-description {
+        font-size: 0.95rem;
     }
 }
 
@@ -888,6 +979,15 @@ Current project
     .interest-card {
         width: 100%;
         max-width: 500px;
+        padding: 20px;
+    }
+
+    .interest-title {
+        font-size: 1.25rem;
+    }
+
+    .interest-description {
+        font-size: 0.95rem;
     }
 }
 
