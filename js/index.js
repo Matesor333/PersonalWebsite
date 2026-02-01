@@ -113,10 +113,19 @@ function checkDarkModePreference() {
     }
 }
 
+// Function to update the copyright year
+function updateCopyrightYear() {
+    const yearElement = document.getElementById('current-year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+}
+
 // Call the functions on page load
 document.addEventListener("DOMContentLoaded", function() {
     updateActiveNavLink();
     initScrollReveal();
+    updateCopyrightYear();
 
     // Check for dark mode preference
     checkDarkModePreference();
