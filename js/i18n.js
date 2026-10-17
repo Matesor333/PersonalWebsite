@@ -37,24 +37,26 @@
     const sw = $('.lang-switch')[0];
     if (!sw) return;
     const btns = [...sw.querySelectorAll('button')];
-    const mark = l => {
-        sw.dataset.active = LANGS.indexOf(l);
-        btns.forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === l));
-    };
-    mark(lang);
-    // the pill only animates after first paint, so a SK/DE page does not load with it sliding in
-    requestAnimationFrame(() => requestAnimationFrame(() => sw.classList.add('ready')));
-    btns.forEach(b => b.addEventListener('click', () => {
+    btns.forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === lang));
+    // the current language is the trigger; the others move into a menu that opens beneath it
+    const cur = btns.find(b => b.dataset.lang === lang);
+    const menu = document.createElement('div');
+    menu.className = 'lang-menu';
+    btns.filter(b => b !== cur).forEach(b => menu.append(b));
+    sw.append(menu);
+    cur.setAttribute('aria-haspopup', 'true');
+    cur.setAttribute('aria-expanded', 'false');
+    const toggle = open => { sw.classList.toggle('open', open); cur.setAttribute('aria-expanded', open); };
+    cur.addEventListener('click', () => toggle(!sw.classList.contains('open')));
+    document.addEventListener('click', e => { if (!sw.contains(e.target)) toggle(false); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') { toggle(false); cur.focus(); } });
+    menu.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
         const to = b.dataset.lang;
-        if (to === lang || sw.dataset.busy) return;
-        sw.dataset.busy = 1;
         save(to);
-        mark(to);
         const u = new URL(location.href);
         if (to === 'en') u.searchParams.delete('lang'); else u.searchParams.set('lang', to);
         const sec = document.elementFromPoint(innerWidth / 2, innerHeight / 2)?.closest('section[id]');
         u.hash = sec ? sec.id : '';
-        // let the pill land before the page swaps
-        setTimeout(() => location.replace(u), matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 220);
+        location.replace(u);
     }));
 })();

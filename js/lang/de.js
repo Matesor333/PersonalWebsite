@@ -14,6 +14,7 @@ window.I18N_PACKS.de = {
         'nav.proof': 'Belege',
         'nav.stack': 'Der Stack',
         'nav.projects': 'Projekte',
+        'nav.ai': 'KI',
         'nav.fit': 'Wie ich arbeite',
         'counter.title': 'Mit den Pfeiltasten links und rechts blättern Sie durch die Folien',
         'lang.label': 'Sprache',
@@ -29,6 +30,7 @@ window.I18N_PACKS.de = {
         's.proof': 'Belege',
         's.stack': 'Der Stack',
         's.side': 'Engineering-Projekte',
+        's.ai': 'KI',
         's.fit': 'Wie ich arbeite',
 
         'cover.h1': 'Vom Maschinencode zum Business Case.',
@@ -76,6 +78,15 @@ window.I18N_PACKS.de = {
         'rgu.big': 'BSc (Hons) Computer Science, Aberdeen, 2023–2027. Öffnen Sie einen Kurs, um zu sehen, was ich gelernt habe und welche Note ich erhielt.',
 
         'side.h2': 'Dinge, die ich gebaut habe, um zu verstehen, wie es funktioniert.',
+
+        'ai.h2': 'Wie ich KI nutze und wo ich ihr nicht traue.',
+        'ai.big': 'KI ist täglich Teil meines Workflows, macht aber weiterhin Fehler und ist nicht bereit, frei herumzulaufen. Ich behandle sie wie einen schnellen Kollegen, dessen Arbeit ich immer prüfe.',
+        'ai.1': '<strong>Wo ich sie nutze.</strong> Testing, Frontend-Design, Penetrationstests, Recherche und das Ausarbeiten grober Ideen zu Plänen.',
+        'ai.2': '<strong>Eine tägliche Security-Schleife.</strong> Jeden Tag recherchiert sie neu veröffentlichte Schwachstellen, und ich suche sie dann in meinen eigenen Codebasen.',
+        'ai.3': '<strong>Meine eigenen Claude-Skills.</strong> Ein persönliches Regelwerk für Softwarearchitektur, Entwicklungspraxis und Sicherheit, dem jede Session folgt.',
+        'ai.4': '<strong>Angriff auf meine eigenen Server.</strong> Ich habe die Schutzmechanismen von Claude Code entfernt, damit es Penetrationstests gegen meine eigenen Server durchführen kann.',
+        'ai.5': '<strong>Wo sie patzt.</strong> Sie findet Lösungen auf dem Niveau eines 10x-Full-Stack-Entwicklers, vergisst in meinen Tests aber weiterhin Anfänger-Exploits, am häufigsten SQL-Injection.',
+        'ai.6': '<strong>Als Nächstes: Modelle zu Hause.</strong> Ich plane, eigene Modelle lokal zu hosten, und warte auf NVIDIA-DGX-Spark-Benchmarks und breitere Verfügbarkeit.',
 
         'fit.h2': 'Wie ich arbeite.',
         'fit.1': '<strong>Freitauchen und Freeriden.</strong> Ruhe unter Druck und Respekt vor dem Risiko, das man nicht sieht.',

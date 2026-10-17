@@ -72,8 +72,8 @@ html[data-lens="build"] [data-show="business"] { display: none; }
 @keyframes tick { from { transform: translateY(60%); opacity: 0; } }
 .bar-right { display: flex; align-items: center; gap: 0.75rem; }
 
-/* language switch: a quieter sibling of the lens switch; the pill slides, then the page swaps (see i18n.js) */
-.lang-switch { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); border: 1.5px solid var(--rule); border-radius: 999px; padding: 3px; }
+/* language switch: the current language is a button; clicking opens a menu of the others (see i18n.js) */
+.lang-switch { position: relative; border: 1.5px solid var(--rule); border-radius: 999px; padding: 3px; }
 .lang-switch button {
     position: relative; z-index: 1; border: 0; background: none; color: var(--muted);
     font: 500 0.75rem/1 var(--mono); letter-spacing: 0.04em;
@@ -81,12 +81,14 @@ html[data-lens="build"] [data-show="business"] { display: none; }
     transition: color 0.25s var(--ease), transform 0.12s var(--ease);
 }
 .lang-switch button:active { transform: scale(0.92); }
-.lang-switch button[aria-pressed="true"] { color: var(--bg); }
-.lang-switch .pill { position: absolute; z-index: 0; inset: 3px auto 3px 3px; width: calc((100% - 6px) / 3); background: var(--fg); border-radius: 999px; }
-.lang-switch.ready .pill { transition: transform 0.3s var(--ease); }
-.lang-switch[data-active="1"] .pill { transform: translateX(100%); }
-.lang-switch[data-active="2"] .pill { transform: translateX(200%); }
-@media (hover: hover) and (pointer: fine) { .lang-switch button[aria-pressed="false"]:hover { color: var(--fg); } }
+.lang-switch button[aria-pressed="true"] { color: var(--fg); }
+.lang-switch button[aria-pressed="true"]::after { content: ""; display: inline-block; width: 0.3em; height: 0.3em; margin-left: 0.55em; border: solid currentColor; border-width: 0 1.5px 1.5px 0; transform: translateY(-0.15em) rotate(45deg); transition: transform 0.25s var(--ease); }
+.lang-switch.open button[aria-pressed="true"]::after { transform: translateY(0.05em) rotate(-135deg); }
+.lang-menu { position: absolute; top: calc(100% + 0.4rem); right: 0; min-width: 100%; display: none; flex-direction: column; padding: 3px; background: var(--bg); border: 1.5px solid var(--rule); border-radius: 1rem; }
+.lang-switch.open .lang-menu { display: flex; }
+.lang-menu button { text-align: left; border-radius: 0.7rem; }
+.lang-switch .pill { display: none; }
+@media (hover: hover) and (pointer: fine) { .lang-switch button:hover { color: var(--accent); } }
 
 .lens-switch { position: relative; display: grid; grid-template-columns: 1fr 1fr; border: 1.5px solid var(--fg); border-radius: 999px; padding: 3px; }
 .lens-switch button {

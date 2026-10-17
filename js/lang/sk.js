@@ -14,6 +14,7 @@ window.I18N_PACKS.sk = {
         'nav.proof': 'Dôkazy',
         'nav.stack': 'Celý stack',
         'nav.projects': 'Projekty',
+        'nav.ai': 'AI',
         'nav.fit': 'Ako pracujem',
         'counter.title': 'Snímky prepínajte šípkami doľava a doprava',
         'lang.label': 'Jazyk',
@@ -29,6 +30,7 @@ window.I18N_PACKS.sk = {
         's.proof': 'Dôkazy',
         's.stack': 'Celý stack',
         's.side': 'Inžinierske projekty',
+        's.ai': 'AI',
         's.fit': 'Ako pracujem',
 
         'cover.h1': 'Od strojového kódu k biznis prípadu.',
@@ -76,6 +78,15 @@ window.I18N_PACKS.sk = {
         'rgu.big': 'BSc (Hons) Computer Science, Aberdeen, 2023–2027. Otvorte si predmet a uvidíte, čo som sa naučil a akú mám známku.',
 
         'side.h2': 'Veci, ktoré som postavil, aby som pochopil, ako to funguje.',
+
+        'ai.h2': 'Ako používam AI a kde jej neverím.',
+        'ai.big': 'AI je v mojom workflow každý deň, no stále robí chyby a nie je pripravená voľne pobehovať. Beriem ju ako rýchleho kolegu, ktorého prácu vždy kontrolujem.',
+        'ai.1': '<strong>Kde ju používam.</strong> Testovanie, frontend dizajn, penetračné testovanie, výskum a premena hrubých nápadov na plány.',
+        'ai.2': '<strong>Denná bezpečnostná slučka.</strong> Každý deň vyhľadáva novo zverejnené zraniteľnosti a ja ich potom hľadám vo vlastných kódových bázach.',
+        'ai.3': '<strong>Vlastné Claude skills.</strong> Osobná sada pravidiel pre softvérovú architektúru, vývojové postupy a bezpečnosť, ktorú dodržiava každá session.',
+        'ai.4': '<strong>Útok na vlastné servery.</strong> Odstránil som ochranné mantinely Claude Code, aby mohol robiť penetračné testy na serveroch, ktoré vlastním.',
+        'ai.5': '<strong>Kde zlyháva.</strong> Dokáže nájsť riešenia ako 10x full-stack vývojár, no v mojich testoch stále zabúda na základné exploity, najčastejšie SQL injection.',
+        'ai.6': '<strong>Ďalej: modely doma.</strong> Plánujem hostovať vlastné modely lokálne a čakám na benchmarky NVIDIA DGX Spark a jeho širšiu dostupnosť.',
 
         'fit.h2': 'Ako pracujem.',
         'fit.1': '<strong>Freediving a freeride.</strong> Pokoj pod tlakom a rešpekt voči riziku, ktoré nevidno.',

@@ -35,6 +35,7 @@
         <a href="#fiit" data-show="build">FIIT</a>
         <a href="#rgu" data-show="build">RGU</a>
         <a href="#side" data-show="build" data-i18n="nav.projects">Projects</a>
+        <a href="#ai" data-show="build" data-i18n="nav.ai">AI</a>
         <a href="#fit" data-i18n="nav.fit">How I operate</a>
     </nav>
     <p class="counter" id="counter" aria-hidden="true" title="Use the left and right arrow keys to flip slides" data-i18n-attr="title=counter.title"></p>
@@ -177,6 +178,22 @@
         <div class="wrap">
             <h2 data-i18n="side.h2">Things I built to understand how it works.</h2>
             <div class="side-grid" id="side-list"></div>
+        </div>
+    </section>
+
+    <!-- BUILD: AI -->
+    <section class="slide" id="ai" data-show="build" data-title="AI" data-i18n-attr="data-title=s.ai">
+        <div class="wrap narrow">
+            <h2 data-i18n="ai.h2">How I use AI, and where I don't trust it.</h2>
+            <p class="big" data-i18n="ai.big">AI is in my workflow every day, but it still makes mistakes and isn't ready to run around freely. I treat it like a fast colleague whose work I always review.</p>
+            <ul class="lines">
+                <li data-r data-i18n="ai.1"><strong>Where I use it.</strong> Testing, frontend design, penetration testing, research and turning rough ideas into plans.</li>
+                <li data-r data-i18n="ai.2"><strong>A daily security loop.</strong> Every day it researches newly disclosed vulnerabilities, then I hunt for them in my own codebases.</li>
+                <li data-r data-i18n="ai.3"><strong>My own Claude skills.</strong> A personal rule set for software architecture, development practice and security that every session follows.</li>
+                <li data-r data-i18n="ai.4"><strong>Attacking my own servers.</strong> I removed Claude Code's guardrails so it can run penetration tests against servers I own.</li>
+                <li data-r data-i18n="ai.5"><strong>Where it slips.</strong> It can work out solutions like a 10x full-stack developer, yet in my testing it still forgets beginner exploits, most often SQL injection.</li>
+                <li data-r data-i18n="ai.6"><strong>Next: models at home.</strong> I plan to host my own models locally, and I'm waiting on NVIDIA DGX Spark benchmarks and wider availability.</li>
+            </ul>
         </div>
     </section>
 

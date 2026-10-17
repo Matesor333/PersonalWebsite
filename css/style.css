@@ -1391,8 +1391,6 @@ Current project
 
 .lang-switch {
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     border: 1px solid var(--card-border);
     border-radius: 999px;
     padding: 3px;
@@ -1413,32 +1411,44 @@ Current project
     transition: color 0.25s ease;
 }
 
-.lang-switch button[aria-pressed="true"] {
-    color: #fff;
+.lang-switch button[aria-pressed="true"]::after {
+    content: "";
+    display: inline-block;
+    width: 0.3em;
+    height: 0.3em;
+    margin-left: 0.5em;
+    border: solid currentColor;
+    border-width: 0 1.5px 1.5px 0;
+    transform: translateY(-0.15em) rotate(45deg);
+}
+
+.lang-switch.open button[aria-pressed="true"]::after {
+    transform: translateY(0.05em) rotate(-135deg);
+}
+
+.lang-menu {
+    position: absolute;
+    top: calc(100% + 0.4rem);
+    right: 0;
+    min-width: 100%;
+    display: none;
+    flex-direction: column;
+    padding: 3px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 1rem;
+    box-shadow: 0 6px 18px var(--box-shadow);
+}
+
+.lang-switch.open .lang-menu {
+    display: flex;
+}
+
+.lang-menu button {
+    text-align: left;
 }
 
 .lang-switch .pill {
-    position: absolute;
-    inset: 3px auto 3px 3px;
-    width: calc((100% - 6px) / 3);
-    background: var(--primary-color);
-    border-radius: 999px;
+    display: none;
 }
 
-.lang-switch.ready .pill {
-    transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.lang-switch[data-active="1"] .pill {
-    transform: translateX(100%);
-}
-
-.lang-switch[data-active="2"] .pill {
-    transform: translateX(200%);
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .lang-switch .pill {
-        transition: none !important;
-    }
-}
