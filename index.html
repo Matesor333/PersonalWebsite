@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matus Illith — Software engineer, from machine code to the business case</title>
-    <meta name="description" content="Matus Illith: software engineer who learned to code from machine code up through systems, security and cloud, and who builds products and businesses around it. Seeking a placement or Product Owner role.">
+    <meta name="description" content="Matus Illith: software engineer who learned to code from machine code up through systems, security and cloud, and who builds products and businesses around it. Seeking a graduate software engineering or Product Owner role.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Hanken+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap">
     <link rel="stylesheet" href="css/deck.css">
-    <script>try { var l = localStorage.getItem('lens'); if (l === 'build' || l === 'business') document.documentElement.dataset.lens = l; } catch (e) {}</script>
+    <script>try {
+        var q = new URLSearchParams(location.search).get('lens'); // course pages link here with ?lens=build
+        if (q === 'build' || q === 'business') localStorage.setItem('lens', q);
+        var l = q || localStorage.getItem('lens');
+        if (l === 'build' || l === 'business') document.documentElement.dataset.lens = l;
+    } catch (e) {}</script>
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
@@ -48,7 +53,7 @@
                 <a class="arrow-link" href="#stack" data-show="build">See what I learned <span aria-hidden="true">↓</span></a>
                 <a class="arrow-link" href="#ventures" data-show="business">See the ventures <span aria-hidden="true">↓</span></a>
             </div>
-            <p class="cover-meta">Matus Illith · MSci Computing, Robert Gordon University, Aberdeen · looking for a 4th-year industry placement or a Product Owner role</p>
+            <p class="cover-meta">Matus Illith · BSc (Hons) Computer Science, Robert Gordon University, Aberdeen · graduating 2027 · looking for a graduate software engineering or Product Owner role</p>
             <p class="hint" data-show="build">Switch to Business for the work I've done with and for companies.</p>
             <p class="hint" data-show="business">Switch to Build for the engineering and education behind it.</p>
         </div>
@@ -112,7 +117,7 @@
     <!-- BUILD: FIIT -->
     <section class="slide" id="fiit" data-show="build" data-title="FIIT, Bratislava">
         <div class="wrap narrow">
-            <h2>Where I learned to code: FIIT, Bratislava.</h2>
+            <h2 style="view-transition-name: fiit-title">Where I learned to code: FIIT, Bratislava.</h2>
             <p class="big">BSci Informatics and Informational Science, 2022–23, at the Slovak University of Technology. Mathematics and theory, computer engineering, and programming in C and Java. Open a course to see what I learned.</p>
             <div class="courses" id="fiit-courses"></div>
             <p><a class="arrow-link" href="slovak-university-details.html">Full course details <span aria-hidden="true">→</span></a></p>
@@ -122,8 +127,8 @@
     <!-- BUILD: RGU -->
     <section class="slide" id="rgu" data-show="build" data-title="RGU, Aberdeen">
         <div class="wrap narrow">
-            <h2>Then systems, security and AI at Robert Gordon University.</h2>
-            <p class="big">MSci Computer Science, Aberdeen, 2023–2028. Open a course to see what I learned and the grade.</p>
+            <h2 style="view-transition-name: rgu-title">Then systems, security and AI at Robert Gordon University.</h2>
+            <p class="big">BSc (Hons) Computer Science, Aberdeen, 2023–2027. Open a course to see what I learned and the grade.</p>
             <div class="roadmap">
                 <span class="rail" aria-hidden="true"><span class="rail-fill"></span></span>
                 <ol id="rgu-list"></ol>

@@ -68,7 +68,7 @@ window.STACK_LAYERS = [
     {name: 'Data', build: 'Microsoft SQL, normalisation and query optimisation (RGU); MySQL, Supabase and Firebase in my projects.'},
     {name: 'Web & APIs', build: 'Node.js, REST APIs and MongoDB (RGU); React; a JavaFX desktop app.'},
     {name: 'Cloud & infrastructure', build: 'AWS, and my own server hosting the Elev8 alpha.'},
-    {name: 'AI & machine learning', build: 'Machine Learning and AI for Problem Solving (RGU); Advanced AI and Knowledge Modeling ahead in Year 5.'},
+    {name: 'AI & machine learning', build: 'Machine Learning and AI for Problem Solving (RGU); Natural Language Processing and Computer Vision in my final year.'},
     {name: 'Product & business', build: 'Pirates Studies (product-market fit), Creative Design (user-centred), Interdisciplinary Team Project, and my own ventures.'}
 ];
 

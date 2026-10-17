@@ -1,4 +1,4 @@
-// Generated from slovak-university-details.html and education-details.html (my own course copy).
+// Source of truth for the deck slides and the course pages. Course text is from my original course pages.
 window.EDU_FIIT = [
  {
   "name": "Calculus",
@@ -97,6 +97,24 @@ window.EDU_FIIT = [
    "Collections",
    "Multithreading (intro)"
   ]
+ }
+];
+window.EDU_FIIT_PROJECTS = [
+ {
+  "name": "Sequential Logic Circuit",
+  "desc": "Built a sequence logical circuit using LogiSim, applying principles of digital logic and computer architecture"
+ },
+ {
+  "name": "Low-Level Programming",
+  "desc": "Created own Linked List and Array List in C language and created RAM simulations to understand memory management"
+ },
+ {
+  "name": "Java Application Development",
+  "desc": "Created object-oriented applications in Java, implementing design patterns and concurrent programming techniques"
+ },
+ {
+  "name": "Turing Machine",
+  "desc": "Developed a Variations Combinatorics system implemented as a Turing Machine, demonstrating computational theory principles and algorithmic problem-solving techniques"
  }
 ];
 window.EDU_RGU = [
@@ -259,7 +277,7 @@ window.EDU_RGU = [
   ]
  },
  {
-  "y": "Year 3 · Bachelors Year",
+  "y": "Year 3",
   "courses": [
    {
     "name": "Concurrent Programming",
@@ -368,32 +386,28 @@ window.EDU_RGU = [
   ]
  },
  {
-  "y": "Year 4 · Industrial placement",
-  "note": "A full-time role in a tech company, working on real projects alongside industry professionals. This is the year I am looking for now.",
-  "courses": []
- },
- {
-  "y": "Year 5 · Master's Level",
+  "y": "Year 4 · Final year",
+  "current": true,
   "courses": [
    {
-    "name": "Computer Science Research",
-    "desc": "Advanced research methodologies and academic writing for Computer Science"
-   },
-   {
-    "name": "Knowledge Modeling and Reasoning",
-    "desc": "Techniques for representing knowledge and implementing reasoning systems in artificial intelligence"
-   },
-   {
     "name": "Languages and Compilers",
-    "desc": "Design and implementation of programming languages, parsing techniques, and compiler construction"
+    "status": "In progress"
    },
    {
-    "name": "Advanced Artificial Intelligence",
-    "desc": "Cutting-edge techniques in artificial intelligence, machine learning, and data analytics"
+    "name": "Data Visualisation",
+    "status": "In progress"
    },
    {
-    "name": "MSci Capstone Project",
-    "desc": "Substantial individual research project demonstrating mastery of advanced computing concepts"
+    "name": "Natural Language Processing",
+    "status": "In progress"
+   },
+   {
+    "name": "Computer Vision",
+    "status": "In progress"
+   },
+   {
+    "name": "Capstone Project",
+    "status": "In progress"
    }
   ]
  }

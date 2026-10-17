@@ -46,7 +46,8 @@
     });
 
     // Course rows: collapsed to name + grade, open to what I learned.
-    const course = c => `
+    const course = c => !(c.desc || c.learned || c.outcomes) ? `
+        <div class="course static"><span class="cname">${c.name}</span>${c.status ? `<span class="grade now">${c.status}</span>` : ''}</div>` : `
         <details class="course">
             <summary><span class="cname">${c.name}</span>${c.grade ? `<span class="grade" title="Grade">${c.grade}</span>` : ''}</summary>
             <div class="cbody">
@@ -59,7 +60,7 @@
     $('#rgu-list').forEach(el => {
         el.innerHTML = EDU_RGU.map(y => `
         <li class="step">
-            <h3>${y.y}</h3>
+            <h3>${y.y}${y.current ? ' <span class="status">You are here</span>' : ''}</h3>
             ${y.note ? `<p>${y.note}</p>` : ''}
             <div class="courses">${y.courses.map(course).join('')}</div>
         </li>`).join('');
@@ -169,12 +170,17 @@
         const r = ev.currentTarget.getBoundingClientRect();
         root.style.setProperty('--vx', r.left + r.width / 2 + 'px');
         root.style.setProperty('--vy', r.top + r.height / 2 + 'px');
-        document.startViewTransition(apply);
+        // The wipe is scoped to this class so page-to-page view transitions keep the default crossfade.
+        root.classList.add('lens-wipe');
+        document.startViewTransition(apply).finished.finally(() => root.classList.remove('lens-wipe'));
     };
     buttons.forEach(b => b.addEventListener('click', e => setLens(b.dataset.setLens, e)));
     sync();
     syncPin();
     show(0);
+    // Arriving from a course page with #fiit / #rgu: the pin spacer shifted the target after the browser's jump.
+    const target = location.hash && document.getElementById(location.hash.slice(1));
+    if (target) target.scrollIntoView({behavior: 'instant'});
 
     // ---- keyboard: left/right jump a slide (up/down keep native scroll)
     addEventListener('keydown', e => {

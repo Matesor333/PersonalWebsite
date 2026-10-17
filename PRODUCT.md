@@ -12,11 +12,11 @@ Static HTML/CSS/JS on GitHub Pages (CNAME present). GSAP + ScrollTrigger + Lenis
 
 ## Users
 
-Primary: teams hiring a Product Owner / technical PO, deciding whether Matus understands the business case and can build it. Secondary: software-engineering placement and graduate recruiters.
+Primary: teams hiring a Product Owner / technical PO, deciding whether Matus understands the business case and can build it. Secondary: graduate software-engineering recruiters (no placement year: switched to the 4-year honours route).
 
 ## Product Purpose
 
-A personal site that works as a pitch deck selling Matus Illith: a computer science student (MSci, Robert Gordon University, Aberdeen) who combines the business side and the programming side. Success: a hiring manager contacts him about a PO or SWE role / 4th-year placement.
+A personal site that works as a pitch deck selling Matus Illith: a final-year computer science student (BSc (Hons), Robert Gordon University, Aberdeen, graduating 2027) who combines the business side and the programming side. Success: a hiring manager contacts him about a graduate SWE or PO role.
 
 ## Positioning
 
@@ -34,7 +34,7 @@ A software engineer with range, from Turing machines and C through OS, security 
 - Designlify (designlify.tech): freelance landing pages, full-stack apps, custom software, hardware.
 - Ikarians HealthTech: led the technical team on a doctor-portal prototype (`PhotoGallery/Ikarian.gif`).
 - Invoice Creation Software (JavaFX, Supabase, iText7; `PhotoGallery/InvoiceMakerVideo.gif`), Variation Turing Machine (`PhotoGallery/Video Project 5.gif`).
-- Education: MSci Computer Science, RGU 2023–2028; BSci Informatics, Slovak Technical University 2022–2023.
+- Education: BSc (Hons) Computer Science, RGU 2023–2027 (final year: Languages and Compilers, Data Visualisation, NLP, Computer Vision, Capstone); BSci Informatics, Slovak Technical University 2022–2023.
 - Links: LinkedIn linkedin.com/in/matus-illith, GitHub Matesor333.
 - Absent, do not fabricate: revenue, client or user counts, testimonials, email address, CV file.
 

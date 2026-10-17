@@ -209,12 +209,58 @@ dd { margin: 0; max-width: 40em; }
 .js [data-r] { opacity: 0; transform: translateY(24px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); transition-delay: calc(var(--i, 0) * 70ms); }
 .js [data-r].in { opacity: 1; transform: none; }
 
-/* lens switch wipe */
-::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
-::view-transition-new(root) { animation: wipe 0.75s var(--ease); }
+/* page-to-page morph (course pages <-> deck); the lens wipe below is scoped to html.lens-wipe */
+@view-transition { navigation: auto; }
+@media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
+html.lens-wipe::view-transition-old(root), html.lens-wipe::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+html.lens-wipe::view-transition-new(root) { animation: wipe 0.75s var(--ease); }
 @keyframes wipe { from { clip-path: circle(0 at var(--vx, 90%) var(--vy, 2rem)); } to { clip-path: circle(150vmax at var(--vx, 90%) var(--vy, 2rem)); } }
 
+.course.static { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 0.8rem 0.25rem; font-weight: 700; }
+.grade.now { background: var(--accent); color: var(--bg); }
+
+/* course pages (education-details.html, slovak-university-details.html) */
+.course-page .bar { background: var(--bg); border-bottom: 1.5px solid var(--rule); }
+.back:hover span { transform: translateX(-3px); }
+.page-pad { padding-inline: var(--gutter); }
+.cp-hero { padding: 9rem var(--gutter) 3rem; }
+.cp-hero h1 { max-width: 16ch; }
+.cp-meta { margin: 1.5rem 0 1rem; font-family: var(--mono); font-size: 0.9rem; color: var(--accent); }
+.cp-hero .big { color: var(--muted); }
+.track { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.5rem; margin: 2.5rem 0 0; padding: 0; }
+.track li { position: relative; padding-top: 1rem; font: 500 0.8rem/1.4 var(--mono); color: var(--muted); }
+.track li::before, .track li::after { content: ""; position: absolute; inset: 0 0 auto 0; height: 6px; border-radius: 3px; }
+.track li::before { background: var(--rule); }
+.track li::after { background: var(--accent); transform: scaleX(0); transform-origin: left; animation: fill 0.6s var(--ease) forwards; animation-delay: calc(var(--k) * 80ms + 300ms); }
+.track li.now { color: var(--fg); --to: 0.35; }
+.track .status { display: inline-block; margin-top: 0.4rem; }
+@keyframes fill { to { transform: scaleX(var(--to, 1)); } }
+
+.yearnav { position: sticky; top: 3.6rem; z-index: 9; display: flex; gap: 1.5rem; padding: 0.6rem var(--gutter); background: var(--bg); border-bottom: 1.5px solid var(--rule); }
+.yearnav a { position: relative; font: 500 0.85rem/1 var(--mono); text-decoration: none; color: var(--muted); padding: 0.5rem 0; }
+.yearnav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 0.25s var(--ease); }
+.yearnav a[aria-current="true"] { color: var(--fg); }
+.yearnav a[aria-current="true"]::after { transform: scaleX(1); }
+
+.year { display: grid; grid-template-columns: minmax(0, 14rem) minmax(0, 1fr); gap: 2rem 3rem; padding: 3rem 0; border-top: 1.5px solid var(--rule); scroll-margin-top: 7rem; }
+.year > h2 { position: sticky; top: 8rem; align-self: start; margin: 0; max-width: none; font-size: clamp(1.4rem, 2.4vw, 2rem); }
+.year > h2 .status { display: inline-block; margin-top: 0.75rem; }
+.module { padding: 1.25rem 0; border-top: 1.5px solid var(--rule); }
+.module:first-child { border-top: 0; padding-top: 0; }
+.module header { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+.module h3 { font-size: clamp(1.15rem, 1rem + 0.6vw, 1.5rem); }
+.module p { margin: 0.6rem 0 0; max-width: 42em; color: var(--muted); }
+.module p.learned { color: var(--fg); }
+.module .chips { margin-top: 0.9rem; }
+.note { margin: 0 0 1.5rem; max-width: 42em; color: var(--muted); }
+.cp-next { padding: 4rem var(--gutter) 6rem; border-top: 1.5px solid var(--rule); }
+.cp-next .arrow-link { font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem); font-family: var(--display); }
+
 @media (max-width: 899px) {
+    .year { grid-template-columns: minmax(0, 1fr); }
+    .year > h2 { position: static; }
+    .yearnav { gap: 1rem; overflow-x: auto; }
+    .back span:first-child { display: none; }
     .profile, .venture-body, .side-grid, .stack-grid { grid-template-columns: minmax(0, 1fr); }
     .portrait { max-width: 20rem; }
     .counter, .btn-sm { display: none; }
