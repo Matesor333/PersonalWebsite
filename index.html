@@ -183,17 +183,27 @@
 
     <!-- BUILD: AI -->
     <section class="slide" id="ai" data-show="build" data-title="AI" data-i18n-attr="data-title=s.ai">
-        <div class="wrap narrow">
+        <div class="wrap">
             <h2 data-i18n="ai.h2">How I use AI, and where I don't trust it.</h2>
-            <p class="big" data-i18n="ai.big">AI is in my workflow every day, but it still makes mistakes and isn't ready to run around freely. I treat it like a fast colleague whose work I always review.</p>
-            <ul class="lines">
-                <li data-r data-i18n="ai.1"><strong>Where I use it.</strong> Testing, frontend design, penetration testing, research and turning rough ideas into plans.</li>
-                <li data-r data-i18n="ai.2"><strong>A daily security loop.</strong> Every day it researches newly disclosed vulnerabilities, then I hunt for them in my own codebases.</li>
-                <li data-r data-i18n="ai.3"><strong>My own Claude skills.</strong> A personal rule set for software architecture, development practice and security that every session follows.</li>
-                <li data-r data-i18n="ai.4"><strong>Attacking my own servers.</strong> I removed Claude Code's guardrails so it can run penetration tests against servers I own.</li>
-                <li data-r data-i18n="ai.5"><strong>Where it slips.</strong> It can work out solutions like a 10x full-stack developer, yet in my testing it still forgets beginner exploits, most often SQL injection.</li>
-                <li data-r data-i18n="ai.6"><strong>Next: models at home.</strong> I plan to host my own models locally, and I'm waiting on NVIDIA DGX Spark benchmarks and wider availability.</li>
-            </ul>
+            <p class="big" data-i18n="ai.big">It can work out a solution like a senior full-stack developer, then miss a beginner exploit like SQL injection. So I use it constantly and review everything.</p>
+            <div class="ai-split">
+                <div data-r>
+                    <h3 data-i18n="ai.give.h">What I hand it.</h3>
+                    <ul class="lines">
+                        <li data-i18n="ai.give.1"><strong>Testing, design and research.</strong> Tests, frontend design, research, and breaking rough ideas into plans.</li>
+                        <li data-i18n="ai.give.2"><strong>A daily security loop.</strong> It researches newly disclosed vulnerabilities, then I hunt for them in my own codebases.</li>
+                        <li data-i18n="ai.give.3"><strong>My own rules.</strong> Claude skills I wrote for software architecture, development rules and security, so every session starts from them.</li>
+                    </ul>
+                </div>
+                <div class="keep" data-r>
+                    <h3 data-i18n="ai.keep.h">What I never take unreviewed.</h3>
+                    <ul class="lines">
+                        <li data-i18n="ai.keep.1"><strong>Security basics.</strong> In my testing it still forgets beginner exploits, most often SQL injection, so I check queries and inputs by hand.</li>
+                        <li data-i18n="ai.keep.2"><strong>Penetration tests.</strong> Claude Code runs them only against servers I own, in an isolated setup, and I review the results.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="ai-next" data-r data-i18n="ai.next">Next: hosting my own models at home, once NVIDIA's DGX Spark is benchmarked and widely available.</p>
         </div>
     </section>
 
