@@ -164,6 +164,47 @@ dd { margin: 0; max-width: 40em; }
 .step h3 { margin-bottom: 0.5rem; }
 .step p { margin: 0; max-width: 38em; color: var(--muted); }
 
+/* stack ladder: a fully lit list by default; pinned + climbing on desktop (see deck.js) */
+.stack-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 3rem; align-items: center; }
+.ladder-detail { display: none; }
+.stack-pinned .ladder-detail { display: block; }
+.ladder-detail h3 { font-size: clamp(2.25rem, 5vw, 4rem); margin-bottom: 1.25rem; }
+.ladder { list-style: none; margin: 0; padding: 0; background: linear-gradient(var(--rule), var(--rule)) left / 2px 100% no-repeat; }
+.layer { position: relative; padding: 0.4rem 0 0.4rem 1.5rem; transition: opacity 0.4s var(--ease); }
+.layer::before { content: ""; position: absolute; left: -0.45rem; top: 0.85rem; width: 0.8rem; height: 0.8rem; border-radius: 50%; background: var(--bg); border: 2px solid var(--rule); transition: background 0.3s var(--ease), border-color 0.3s var(--ease), transform 0.4s var(--ease); }
+.layer.lit::before { background: var(--accent); border-color: var(--accent); }
+.layer.cur::before { transform: scale(1.6); }
+.layer .name { font-family: var(--display); font-weight: 800; font-size: 1.1rem; }
+.layer .ev { display: block; color: var(--muted); font-size: 0.95rem; margin-bottom: 0.6rem; max-width: 40em; }
+.stack-pinned.slide { padding-top: 5.5rem; padding-bottom: 2rem; }
+.stack-pinned h2 { margin-bottom: 1.5rem; }
+.stack-pinned .layer { padding-block: 0.15rem; }
+.stack-pinned .layer::before { top: 0.5rem; }
+.stack-pinned .layer .ev { display: none; }
+.stack-pinned .layer:not(.lit) { opacity: 0.35; }
+.stack-pinned .layer.cur .name { color: var(--accent); }
+
+/* course rows: name + grade, open for what I learned */
+:root { interpolate-size: allow-keywords; }
+.courses { margin: 1.25rem 0 0.5rem; }
+.course { border-top: 1.5px solid var(--rule); }
+.course:last-child { border-bottom: 1.5px solid var(--rule); }
+.course summary { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; cursor: pointer; font-weight: 700; padding: 0.8rem 0.25rem; transition: color 0.2s var(--ease); }
+.course summary::marker { color: var(--accent); }
+.course summary:active { transform: scale(0.995); }
+.grade { font: 500 0.75rem/1 var(--mono); border: 1.5px solid var(--accent); color: var(--accent); border-radius: 3px; padding: 0.35em 0.6em; }
+.cbody { padding: 0 0.25rem 1.1rem; }
+.cbody p { margin: 0 0 0.75rem; max-width: 42em; color: var(--muted); }
+.cbody .chips { margin-top: 0.75rem; }
+.course::details-content { block-size: 0; opacity: 0; overflow: clip; transition: block-size 0.3s var(--ease), opacity 0.25s var(--ease), content-visibility 0.3s allow-discrete; }
+.course[open]::details-content { block-size: auto; opacity: 1; }
+.course[open] .chip { animation: chip-in 0.35s var(--ease) both; }
+@keyframes chip-in { from { opacity: 0; transform: translateY(6px); } }
+@media (hover: hover) and (pointer: fine) { .course summary:hover { color: var(--accent); } }
+.step > .courses { margin-top: 1rem; }
+.contrib { margin: 0.75rem 0 0; color: var(--muted); }
+.side .chips { margin-top: 0.75rem; }
+
 /* scroll reveals (content visible unless JS runs) */
 .js [data-r] { opacity: 0; transform: translateY(24px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); transition-delay: calc(var(--i, 0) * 70ms); }
 .js [data-r].in { opacity: 1; transform: none; }
@@ -174,7 +215,7 @@ dd { margin: 0; max-width: 40em; }
 @keyframes wipe { from { clip-path: circle(0 at var(--vx, 90%) var(--vy, 2rem)); } to { clip-path: circle(150vmax at var(--vx, 90%) var(--vy, 2rem)); } }
 
 @media (max-width: 899px) {
-    .profile, .venture-body, .side-grid { grid-template-columns: minmax(0, 1fr); }
+    .profile, .venture-body, .side-grid, .stack-grid { grid-template-columns: minmax(0, 1fr); }
     .portrait { max-width: 20rem; }
     .counter, .btn-sm { display: none; }
     dl { grid-template-columns: 1fr; gap: 0.25rem; }

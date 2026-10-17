@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-lens="business">
+<html lang="en" data-lens="build">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matus Illith — Product Owner mindset, engineer's hands</title>
-    <meta name="description" content="Matus Illith builds the product and the business around it: own ventures, real users, and the code to ship them. Seeking a Product Owner or software engineering placement.">
+    <title>Matus Illith — Software engineer, from machine code to the business case</title>
+    <meta name="description" content="Matus Illith: software engineer who learned to code from machine code up through systems, security and cloud, and who builds products and businesses around it. Seeking a placement or Product Owner role.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Hanken+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap">
@@ -12,84 +12,82 @@
     <script>try { var l = localStorage.getItem('lens'); if (l === 'build' || l === 'business') document.documentElement.dataset.lens = l; } catch (e) {}</script>
 </head>
 <body>
-<a class="skip" href="#ventures">Skip to ventures</a>
+<a class="skip" href="#content">Skip to content</a>
 
 <header class="bar">
     <a class="bar-name" href="#cover">Matus Illith</a>
     <p class="counter" id="counter" aria-hidden="true" title="Use the left and right arrow keys to flip slides"></p>
     <div class="bar-right">
-        <div class="lens-switch" role="group" aria-label="Reading lens">
+        <div class="lens-switch" role="group" aria-label="Choose which side to read">
             <span class="pill" aria-hidden="true"></span>
-            <button type="button" data-set-lens="business" aria-pressed="true">Business</button>
-            <button type="button" data-set-lens="build" aria-pressed="false">Build</button>
+            <button type="button" data-set-lens="business" aria-pressed="false">Business</button>
+            <button type="button" data-set-lens="build" aria-pressed="true">Build</button>
         </div>
         <a class="btn btn-sm" href="#ask">Let's talk</a>
     </div>
 </header>
 
-<main>
-    <!-- 01 Cover -->
+<main id="content">
+    <!-- Cover (both decks) -->
     <section class="slide stack cover" id="cover" data-title="Cover">
         <div class="lens-ring" aria-hidden="true"></div>
         <div class="wrap">
             <h1>
-                <span class="w"><span style="--d:0">I</span></span>
-                <span class="w"><span style="--d:1">build</span></span>
-                <span class="w"><span style="--d:2">the</span></span>
-                <span class="w"><span style="--d:3">product</span></span>
-                <span class="w"><span style="--d:4">—</span></span>
-                <span class="w"><span style="--d:5">and</span></span>
-                <span class="w"><span style="--d:6">the</span></span>
-                <span class="w"><span style="--d:7">business</span></span>
-                <span class="w"><span style="--d:8">around</span></span>
-                <span class="w"><span style="--d:9">it.</span></span>
+                <span class="w"><span style="--d:0">From</span></span>
+                <span class="w"><span style="--d:1">machine</span></span>
+                <span class="w"><span style="--d:2">code</span></span>
+                <span class="w"><span style="--d:3">to</span></span>
+                <span class="w"><span style="--d:4">the</span></span>
+                <span class="w"><span style="--d:5">business</span></span>
+                <span class="w"><span style="--d:6">case.</span></span>
             </h1>
-            <p class="lede" data-show="business">I run my own ventures: I talk to the people who'll use the thing, decide what gets built first, then write the code myself.</p>
-            <p class="lede" data-show="build">Java and C first, then React, Python and Docker. I don't throw a spec over a wall: I ship it.</p>
+            <p class="lede" data-show="build">Most at home in Java and C. I learned to code from the machine up (Turing machines, logic circuits, memory by hand), then through operating systems, security, cloud and the web.</p>
+            <p class="lede" data-show="business">I'm a software engineer who builds the product and the business around it: I talk to the people who'll use the thing, decide what gets built first, then write the code myself.</p>
             <div class="cta-row">
                 <a class="btn" href="https://www.linkedin.com/in/matus-illith" target="_blank" rel="noopener noreferrer">Let's talk</a>
-                <a class="arrow-link" href="#ventures">See the ventures <span aria-hidden="true">↓</span></a>
+                <a class="arrow-link" href="#stack" data-show="build">See what I learned <span aria-hidden="true">↓</span></a>
+                <a class="arrow-link" href="#ventures" data-show="business">See the ventures <span aria-hidden="true">↓</span></a>
             </div>
-            <p class="cover-meta">Matus Illith · MSci Computing, Robert Gordon University, Aberdeen · looking for a Product Owner role or a 4th-year industry placement</p>
-            <p class="hint">Flip the lens in the top bar: same work, two readings.</p>
+            <p class="cover-meta">Matus Illith · MSci Computing, Robert Gordon University, Aberdeen · looking for a 4th-year industry placement or a Product Owner role</p>
+            <p class="hint" data-show="build">Switch to Business for the work I've done with and for companies.</p>
+            <p class="hint" data-show="business">Switch to Build for the engineering and education behind it.</p>
         </div>
     </section>
 
-    <!-- 02 Problem -->
-    <section class="slide stack" id="problem" data-title="The gap">
+    <!-- BUSINESS: the gap -->
+    <section class="slide stack" id="problem" data-show="business" data-title="The gap">
         <div class="wrap narrow">
             <h2>Most products stall in the gap between what the business needs and what engineering builds.</h2>
-            <p class="big">Someone has to own that gap: talk to the people who will use the thing, decide what matters first, and understand the system well enough to know what is cheap and what is expensive.</p>
-            <p class="big">That is the job I am training for, and the one I have been doing on my own projects.</p>
+            <p class="big">Someone has to own that gap: understand the people who will use the thing, and the system well enough to know what is cheap and what is expensive. That is the job I am training for, and the one I do on my own projects.</p>
         </div>
     </section>
 
-    <!-- 03 Profile -->
-    <section class="slide" id="profile" data-title="Profile">
+    <!-- BUSINESS: profile -->
+    <section class="slide" id="profile" data-show="business" data-title="Profile">
         <div class="wrap profile">
             <img class="portrait" src="PhotoGallery/ProfielPicture.JPG" alt="Portrait of Matus Illith" data-r>
             <div>
                 <h2>One person on both sides of the table.</h2>
-                <ul class="lines" data-show="business">
+                <ul class="lines">
                     <li data-r><strong>Discovery.</strong> Built Elev8 with coaches in Aberdeen and Bratislava.</li>
                     <li data-r><strong>Roadmaps.</strong> Web first, then PC, then mobile: sequenced on purpose.</li>
                     <li data-r><strong>Leading.</strong> Led the technical team on a HealthTech doctor-portal prototype.</li>
                     <li data-r><strong>Delivering.</strong> Freelance projects scoped and shipped end to end under Designlify.</li>
                 </ul>
-                <div data-show="build">
-                    <p class="big">Most proficient in Java and C, with recent Python. I also use Docker and Bash to keep my workflow fast.</p>
-                    <ul class="chips" data-r>
-                        <li class="chip">Java</li><li class="chip">C</li><li class="chip">JavaScript</li>
-                        <li class="chip">React</li><li class="chip">Node.js</li><li class="chip">Python</li>
-                        <li class="chip">Bash</li><li class="chip">Docker</li>
-                    </ul>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- 04 Proof -->
-    <section class="slide" id="proof" data-title="Proof">
+    <!-- BUSINESS: ventures -->
+    <section class="slide" id="ventures" data-show="business" data-title="Ventures">
+        <div class="wrap">
+            <h2>Three things I built with real people.</h2>
+            <div id="ventures-list"></div>
+        </div>
+    </section>
+
+    <!-- BUSINESS: proof -->
+    <section class="slide" id="proof" data-show="business" data-title="Proof">
         <div class="wrap narrow">
             <h2>The numbers behind it.</h2>
             <ul class="ledger">
@@ -100,39 +98,49 @@
         </div>
     </section>
 
-    <!-- 05 Ventures -->
-    <section class="slide" id="ventures" data-title="Ventures">
+    <!-- BUILD: stack ladder -->
+    <section class="slide" id="stack" data-show="build" data-title="The stack">
         <div class="wrap">
-            <h2>Three things I built with real people.</h2>
-            <div id="ventures-list"></div>
-        </div>
-    </section>
-
-    <!-- 06 Side projects -->
-    <section class="slide" id="side" data-title="Engineering projects">
-        <div class="wrap">
-            <h2>And the engineering underneath.</h2>
-            <div class="side-grid" id="side-list"></div>
-        </div>
-    </section>
-
-    <!-- 07 Roadmap -->
-    <section class="slide" id="roadmap" data-title="Roadmap">
-        <div class="wrap narrow">
-            <h2>My roadmap, so far and next.</h2>
-            <div class="roadmap">
-            <span class="rail" aria-hidden="true"><span class="rail-fill"></span></span>
-            <ol>
-                <li class="step"><h3>2022 — BSci Informatics</h3><p>Slovak Technical University, Bratislava. Low-level C, RAM simulation, logic circuits, and Java with OOP design patterns.</p></li>
-                <li class="step"><h3>2023–2028 — MSci Computer Science</h3><p>Robert Gordon University, Aberdeen. Programming, web development, IoT, databases, operating systems, data structures. <a href="education-details.html">Course details</a></p></li>
-                <li class="step"><h3>Now — Placement</h3><p>Looking for a full-time industry placement for my 4th year.</p></li>
-                <li class="step"><h3>Next — Product Owner</h3><p>Owning the "what" and the "why", with the engineering depth to keep the "how" honest.</p></li>
-            </ol>
+            <h2>Every layer of the stack, one person.</h2>
+            <div class="stack-grid">
+                <div class="ladder-detail" id="ladder-detail" aria-hidden="true"></div>
+                <ol class="ladder" id="ladder"></ol>
             </div>
         </div>
     </section>
 
-    <!-- 08 Fit -->
+    <!-- BUILD: FIIT -->
+    <section class="slide" id="fiit" data-show="build" data-title="FIIT, Bratislava">
+        <div class="wrap narrow">
+            <h2>Where I learned to code: FIIT, Bratislava.</h2>
+            <p class="big">BSci Informatics and Informational Science, 2022–23, at the Slovak University of Technology. Mathematics and theory, computer engineering, and programming in C and Java. Open a course to see what I learned.</p>
+            <div class="courses" id="fiit-courses"></div>
+            <p><a class="arrow-link" href="slovak-university-details.html">Full course details <span aria-hidden="true">→</span></a></p>
+        </div>
+    </section>
+
+    <!-- BUILD: RGU -->
+    <section class="slide" id="rgu" data-show="build" data-title="RGU, Aberdeen">
+        <div class="wrap narrow">
+            <h2>Then systems, security and AI at Robert Gordon University.</h2>
+            <p class="big">MSci Computer Science, Aberdeen, 2023–2028. Open a course to see what I learned and the grade.</p>
+            <div class="roadmap">
+                <span class="rail" aria-hidden="true"><span class="rail-fill"></span></span>
+                <ol id="rgu-list"></ol>
+            </div>
+            <p><a class="arrow-link" href="education-details.html">Full course details <span aria-hidden="true">→</span></a></p>
+        </div>
+    </section>
+
+    <!-- BUILD: projects -->
+    <section class="slide" id="side" data-show="build" data-title="Engineering projects">
+        <div class="wrap">
+            <h2>Things I built to understand how it works.</h2>
+            <div class="side-grid" id="side-list"></div>
+        </div>
+    </section>
+
+    <!-- How I operate (both decks) -->
     <section class="slide" id="fit" data-title="How I operate">
         <div class="wrap narrow">
             <h2>How I operate.</h2>
@@ -144,10 +152,11 @@
         </div>
     </section>
 
-    <!-- 09 Ask -->
+    <!-- Ask (both decks) -->
     <section class="slide" id="ask" data-title="Let's talk">
         <div class="wrap narrow">
-            <h2>Hiring a Product Owner or an engineer who thinks like one?</h2>
+            <h2 data-show="build">Hiring a software engineer who thinks about the product?</h2>
+            <h2 data-show="business">Hiring a Product Owner who can build?</h2>
             <p class="big">Based between the UK and Slovakia. Connect with me on LinkedIn and let's set up a call.</p>
             <div class="cta-row">
                 <a class="btn" href="https://www.linkedin.com/in/matus-illith" target="_blank" rel="noopener noreferrer">Message me on LinkedIn</a>
@@ -162,6 +171,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="js/ventures.js"></script>
+<script src="js/education.js"></script>
 <script src="js/deck.js"></script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>

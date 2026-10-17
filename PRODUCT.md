@@ -20,7 +20,7 @@ A personal site that works as a pitch deck selling Matus Illith: a computer scie
 
 ## Positioning
 
-He builds the product and the business around it: his own ventures (Elev8 / Augmented Fitness CRM, Designlify, Ikarians HealthTech) show discovery with real users, decisions, and the code to ship them.
+A software engineer with range, from Turing machines and C through OS, security and cloud to the business side (FIIT STU Bratislava, then RGU Aberdeen), who also builds the product and the business around it: his own ventures (Elev8 / Augmented Fitness CRM, Designlify, Ikarians HealthTech) show discovery with real users, decisions, and the code to ship them.
 
 ## Capabilities and Constraints
 

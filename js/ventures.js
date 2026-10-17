@@ -57,18 +57,43 @@ window.VENTURES = [
     }
 ];
 
+// Ordered lowest level first. `build` = what I learned/did, `biz` = why it matters when owning a product.
+window.STACK_LAYERS = [
+    {name: 'Machine code & theory', build: 'Turing machines, RAM machines and automata at FIIT; a variation generator written as pure Turing machine code.'},
+    {name: 'Hardware & logic', build: 'Sequential logic circuits in Logisim (FIIT); microcontrollers and Arduino (RGU).'},
+    {name: 'C & memory', build: 'My own linked list and array list in C, RAM simulations, memory managed by hand (FIIT).'},
+    {name: 'Operating systems', build: 'Processes, virtualization, memory allocation, OS scripting, Bash and Docker (RGU).'},
+    {name: 'Concurrency', build: 'Multithreaded Java at FIIT and RGU: parallel execution and synchronization.'},
+    {name: 'Security', build: 'Software Security and Malware Analysis; Information Risk and Security Management (RGU).'},
+    {name: 'Data', build: 'Microsoft SQL, normalisation and query optimisation (RGU); MySQL, Supabase and Firebase in my projects.'},
+    {name: 'Web & APIs', build: 'Node.js, REST APIs and MongoDB (RGU); React; a JavaFX desktop app.'},
+    {name: 'Cloud & infrastructure', build: 'AWS, and my own server hosting the Elev8 alpha.'},
+    {name: 'AI & machine learning', build: 'Machine Learning and AI for Problem Solving (RGU); Advanced AI and Knowledge Modeling ahead in Year 5.'},
+    {name: 'Product & business', build: 'Pirates Studies (product-market fit), Creative Design (user-centred), Interdisciplinary Team Project, and my own ventures.'}
+];
+
 window.SIDE_PROJECTS = [
     {
-        name: 'Invoice Creation Software',
-        biz: 'A desktop tool for freelancers: manage clients, track history and generate professional PDF invoices with cloud sync.',
-        stack: ['Java', 'JavaFX', 'Supabase', 'REST API', 'iText7', 'Jackson', 'Maven'],
-        img: 'PhotoGallery/InvoiceMakerVideo.gif', alt: 'Invoice software demo'
-    },
-    {
         name: 'Variation Turing Machine',
-        biz: 'A puzzle in the purest constraint: a variation generator written entirely as Turing machine code.',
+        desc: 'A puzzle in the purest constraint: a variation generator written entirely as Turing machine code.',
         stack: ['Turing machine code'],
         img: 'PhotoGallery/Video Project 5.gif', alt: 'Turing machine running',
         link: ['Run it', 'https://turingmachine.io/']
+    },
+    {
+        name: 'Sequential Logic Circuit',
+        desc: 'Knowing how a machine decides, from gates up, is what lets me tell a hard request from an easy one.',
+        stack: ['Logisim', 'Digital logic']
+    },
+    {
+        name: 'Data Structures & RAM Simulation in C',
+        desc: 'Memory costs real time and money. I learned that by managing it by hand.',
+        stack: ['C', 'Linked list', 'Array list', 'RAM simulation']
+    },
+    {
+        name: 'Invoice Creation Software',
+        desc: 'A desktop tool for freelancers: manage clients, track history and generate professional PDF invoices with cloud sync.',
+        stack: ['Java', 'JavaFX', 'Supabase', 'REST API', 'iText7', 'Jackson', 'Maven'],
+        img: 'PhotoGallery/InvoiceMakerVideo.gif', alt: 'Invoice software demo'
     }
 ];
