@@ -29,7 +29,7 @@ const setLayer = i => {
 Rejected alternative: hijack wheel and touch with GSAP `Observer` to step one layer per gesture. It is snappier, but it takes over native scrolling, breaks trackpad inertia and keyboard scrolling, and traps the user inside the slide. Snap on top of normal scroll is the better trade.
 
 ## Target values (do not approximate)
-- Scroll distance per layer: `22%` of viewport height, so 11 layers = 242% (about 2.4 screens).
+- Scroll distance per layer: `40%` of viewport height (was 22% in the first pass, which advanced a layer per wheel notch and skipped 5 layers on a 10-notch flick; measured in headless Edge). 11 layers = 440%. Snap delay 0.12.
 - Layer index: `Math.round(progress * (n - 1))` (first layer at progress 0, last layer at 1).
 - Snap: `snap: { snapTo: 1 / (n - 1), duration: { min: 0.2, max: 0.45 }, delay: 0.08, ease: 'expo.out' }`. `expo.out` is GSAP's closest built-in to the site's `--ease: cubic-bezier(0.16, 1, 0.3, 1)`.
 - Detail enter: WAAPI, `duration: 240`, `easing: 'cubic-bezier(0.16, 1, 0.3, 1)'`, from `{opacity: 0, transform: 'translateY(12px)'}` to `{opacity: 1, transform: 'none'}`. Enter only, no exit.

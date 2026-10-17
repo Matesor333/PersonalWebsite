@@ -142,10 +142,12 @@
             fill.style.transform = 'scaleY(0)';
             shown = -1;
             setLayer(0);
-            // 22% of a viewport per layer, and a snap so every scroll settles on a whole layer.
+            // Scroll distance per layer, as % of the viewport. Measured: 22 moved a layer per wheel notch (a flick skipped 5);
+            // 40 is ~4 notches per layer. Lower it for a more sensitive ladder, raise it for a calmer one.
+            const LAYER_SCROLL = 40;
             pin = ScrollTrigger.create({
-                trigger: stackEl, start: 'top top', end: `+=${n * 22}%`, pin: true,
-                snap: {snapTo: 1 / (n - 1), duration: {min: 0.2, max: 0.45}, delay: 0.08, ease: 'expo.out'},
+                trigger: stackEl, start: 'top top', end: `+=${n * LAYER_SCROLL}%`, pin: true,
+                snap: {snapTo: 1 / (n - 1), duration: {min: 0.2, max: 0.45}, delay: 0.12, ease: 'expo.out'},
                 onUpdate: s => {
                     setLayer(Math.round(s.progress * (n - 1)));
                     fill.style.transform = `scaleY(${s.progress})`;
