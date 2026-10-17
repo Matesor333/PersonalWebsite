@@ -39,8 +39,8 @@ window.I18N_PACKS.sk = {
         'cover.see.stack': 'Pozrite, čo som sa naučil <span aria-hidden="true">↓</span>',
         'cover.see.ventures': 'Pozrite si podniky <span aria-hidden="true">↓</span>',
         'cover.meta': 'Matus Illith · BSc (Hons) Computer Science, Robert Gordon University, Aberdeen · štúdium končím v roku 2027 · hľadám pozíciu absolventského softvérového inžiniera alebo Product Ownera',
-        'cover.hint.build': 'Prepnite na Biznis a uvidíte, čo som robil s firmami a pre ne.',
-        'cover.hint.business': 'Prepnite na Vývoj a uvidíte inžinierstvo a vzdelanie, ktoré za tým stoja.',
+        'cover.hint.build': 'Čítate najprv inžiniersku stranu. Prepnite na Biznis, ak chcete začať podnikmi a ľuďmi, s ktorými som ich budoval.',
+        'cover.hint.business': 'Čítate najprv biznis stranu. Prepnite na Vývoj, ak chcete začať inžinierstvom a vzdelaním, ktoré za tým stoja.',
 
         'problem.h2': 'Väčšina produktov uviazne v medzere medzi tým, čo potrebuje biznis, a tým, čo inžinieri postavia.',
         'problem.big': 'Niekto musí túto medzeru vlastniť: rozumieť ľuďom, ktorí produkt budú používať, aj samotnému systému natoľko, aby vedel, čo je lacné a čo drahé. Na túto prácu sa pripravujem a robím ju na vlastných projektoch.',
@@ -64,9 +64,9 @@ window.I18N_PACKS.sk = {
         'proof.1': 'Tréneri, s ktorými som robil rozhovory',
         'proof.2': 'Vedúci posilňovní, s ktorými som robil rozhovory',
         'proof.3': 'Produkty dotiahnuté od nápadu po finálny výsledok',
-        'proof.v1': 'Asi 15',
-        'proof.v2': 'Asi 20',
-        'proof.v3': 'Asi 6',
+        'proof.v1': '15',
+        'proof.v2': '20',
+        'proof.v3': '6',
 
         'stack.h2': 'Každá vrstva stacku, jeden človek.',
 
@@ -97,7 +97,7 @@ window.I18N_PACKS.sk = {
 
         'ask.h2.build': 'Hľadáte softvérového inžiniera, ktorý myslí na produkt?',
         'ask.h2.business': 'Hľadáte Product Ownera, ktorý vie aj programovať?',
-        'ask.big': 'Pôsobím medzi Spojeným kráľovstvom a Slovenskom. Spojte sa so mnou na LinkedIne a dohodnime si hovor.',
+        'ask.big': 'Pôsobím medzi Spojeným kráľovstvom a Slovenskom. Štúdium končím v roku 2027 a hľadám pozíciu absolventského softvérového inžiniera alebo Product Ownera. Napíšte mi na LinkedIne a dohodnime si hovor.',
         'ask.linkedin': 'Napíšte mi na LinkedIn',
 
         // course pages
@@ -142,20 +142,14 @@ window.I18N_PACKS.sk = {
         'legacy.nav.contact': 'Kontakt',
         'legacy.rights': 'Všetky práva vyhradené.',
         'pd.title': 'Personal Trainer CRM - Podrobnosti o projekte',
-        'pd.back': 'Späť na aktuálne projekty',
-        'pd.showcase': 'Ukážka projektu',
-        'pd.description': 'Popis projektu',
-        'pd.p1': 'Toto CRM bude štíhla webová platforma pre osobných trénerov a online koučov, v ktorej bez námahy spravujú klientov, rozvrhy a komunikáciu — všetko na jednom mieste. Sledujte ciele a pokrok na vizuálnych dashboardoch, automatizujte rezervácie a pripomienky a posielajte personalizované správy bez zbytočnej administratívy. Začneme ako responzívna webová aplikácia, z ktorej sa vyvinie rýchla a spoľahlivá PC aplikácia a neskôr oveľa viac. <a href="http://elev8coaching.tech/" class="hidden-link">Viac na našom webe</a>',
-        'pd.p2': 'Táto cesta nie je len o lepšom výkone — je o možnosti voľby.',
-        'pd.p3': 'Momentálne programujem a stavam si vlastný server, na ktorom môžem softvér hostovať a testovať — v podstate interná alfa testovacia fáza.',
-        'pd.p4': 'Na tomto projekte som spolupracoval s trénermi v Aberdeene a Bratislave.',
-        'pd.features': 'Medzi kľúčové funkcie patria:',
+        'pd.what': 'Čo robí',
+        'pd.now': 'Kde je teraz',
+        'pd.nowtbd': 'aktuálny stav a ďalší míľnik',
         'pd.f1': 'Plánovanie a správa tréningov',
         'pd.f2': 'Sledovanie pokroku klientov',
         'pd.f3': 'Tvorba a prideľovanie tréningových plánov',
         'pd.f4': 'Integrovaný systém správ',
         'pd.f5': 'Spracovanie platieb a správa predplatného',
-        'pd.f6': 'Mobilná aplikácia pre prístup na cestách',
         'pd.tech': 'Technologický stack',
         'pd.t1': 'Frontendový webový framework na tvorbu používateľského rozhrania',
         'pd.t2': 'Backendové služby vrátane autentifikácie, databázy a hostingu',
@@ -164,16 +158,6 @@ window.I18N_PACKS.sk = {
         'pd.t5': 'Architektúra API na komunikáciu klienta so serverom',
         'pd.t6': 'Cloudová infraštruktúra pre servery, výpočty, úložisko a nasadenia',
         'pd.t7': 'Integrácia spracovania platieb',
-        'pd.future': 'Budúca práca',
-        'pd.m1.h': 'Beta + vývoj mobilnej aplikácie',
-        'pd.m1.p': 'Súbežná práca na hlavnom beta vydaní a sprievodných mobilných aplikáciách pre iOS a Android.',
-        'pd.m2.h': 'Zber údajov o cvikoch',
-        'pd.m2.p': 'Vytvorenie rozsiahlej knižnice vzdelávacích videí, ktoré ukazujú správnu techniku cvikov a ich variácie. Osobní tréneri tak môžu klientom jednoducho posielať profesionálne ukážky namiesto nahrávania vlastných.',
-        'pd.m3.h': 'Plné vydanie',
-        'pd.m3.p': 'Oficiálne spustenie s kompletnou sadou funkcií a marketplace pre trénerov',
-        'pd.progress': 'Aktuálny pokrok',
-        'pd.complete': 'Hotových 20 %',
-        'pd.progress.p': 'Projekt je momentálne vo fáze prototypovania so zameraním na návrh používateľského rozhrania a databázovej schémy.',
         'sp.title': 'Tajná stránka',
         'sp.back': 'Späť na podrobnosti o projekte',
         'sp.title.h': 'Nová éra softvéru',
@@ -377,7 +361,7 @@ window.I18N_PACKS.sk = {
                     problem: 'Lekári potrebujú údaje o pacientoch, ktoré vedia rýchlo prečítať a využiť, aby sa rozhodovali lepšie a rýchlejšie.',
                     users: 'Lekári, prostredníctvom prototypu portálu pre HealthTech startup.',
                     decisions: ['Viedol som tím na technickej stope, kým startup formoval produkt.'],
-                    outcome: ['Prototyp dodaný na testovanie; startup ho stále testuje a hľadá financovanie']
+                    outcome: ['Prototyp dodaný a neskôr prepracovaný; startup ho stále testuje a hľadá financovanie']
                 },
                 build: {
                     contribution: 'Viedol som tím, ktorý budoval technickú stránku prototypu lekárskeho portálu.'

@@ -1,190 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lens="business">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="pd.title">Personal Trainer CRM - Project Details</title>
+    <meta name="description" content="Case study: Elev8, an Augmented Fitness CRM for personal trainers. The problem, the users, the decisions and the stack, by Matus Illith.">
     <link rel="alternate" hreflang="en" href="https://matus-illith.com/project-details.html">
     <link rel="alternate" hreflang="sk" href="https://matus-illith.com/project-details.html?lang=sk">
     <link rel="alternate" hreflang="de" href="https://matus-illith.com/project-details.html?lang=de">
     <link rel="alternate" hreflang="x-default" href="https://matus-illith.com/project-details.html">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/page-details.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Hanken+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap">
+    <link rel="stylesheet" href="css/deck.css">
 </head>
-<body>
-    <header>
-        <div class="header-container">
-            <div class="logo" data-i18n="legacy.logo">Portfolio</div>
-            <nav>
-                <ul>
-                    <li><a href="index.html#about" class="nav-link" data-i18n="legacy.nav.about">About</a></li>
-                    <li><a href="index.html#education" class="nav-link" data-i18n="legacy.nav.education">Education</a></li>
-                    <li><a href="index.html#past-projects" class="nav-link" data-i18n="legacy.nav.past">Past Projects</a></li>
-                    <li><a href="index.html#current-projects" class="nav-link" data-i18n="legacy.nav.current">Current Projects</a></li>
-                    <li><a href="index.html#interests" class="nav-link" data-i18n="legacy.nav.interests">Interests</a></li>
-                    <li><a href="index.html#contact" class="nav-link" data-i18n="legacy.nav.contact">Contact</a></li>
-                    <li>
-                        <div class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label=lang.label">
-                            <span class="pill" aria-hidden="true"></span>
-                            <button type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
-                            <button type="button" data-lang="sk" lang="sk" aria-label="Slovenčina" aria-pressed="false">SK</button>
-                            <button type="button" data-lang="de" lang="de" aria-label="Deutsch" aria-pressed="false">DE</button>
-                        </div>
-                    </li>
-                    <li>
-                        <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
-                            <i id="darkModeIcon" class="fas fa-moon"></i>
-                        </button>
-                    </li>
-                </ul>
-            </nav>
+<body class="course-page">
+<a class="skip" href="#content" data-i18n="skip">Skip to content</a>
+
+<header class="bar">
+    <a class="bar-name" href="index.html#cover">Matus Illith</a>
+    <div class="bar-right">
+        <div class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label=lang.label">
+            <span class="pill" aria-hidden="true"></span>
+            <button type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+            <button type="button" data-lang="sk" lang="sk" aria-label="Slovenčina" aria-pressed="false">SK</button>
+            <button type="button" data-lang="de" lang="de" aria-label="Deutsch" aria-pressed="false">DE</button>
         </div>
-    </header>
+        <a class="arrow-link back" href="index.html#ventures" data-i18n="course.back"><span aria-hidden="true">←</span> Back to the deck</a>
+        <a class="btn btn-sm" href="index.html#ask" data-i18n="talk">Let's talk</a>
+    </div>
+</header>
 
-    <div class="container">
-        <main>
-            <section class="project-details-section">
-                <div class="back-link fade-in">
-                    <a href="index.html#current-projects"><i class="fas fa-arrow-left"></i> <span data-i18n="pd.back">Back to Current Projects</span></a>
-                </div>
+<main id="content">
+    <section class="cp-hero">
+        <div class="wrap">
+            <h1>Elev8</h1>
+            <p class="cp-meta" id="cp-meta"></p>
+        </div>
+    </section>
 
-                <h1 class="project-title fade-in">Augmented Fitness</h1>
+    <div class="wrap page-pad">
+        <div id="case-venture"></div>
 
-                <div class="project-video-container reveal-section">
-                    <h2 class="section-subtitle" data-i18n="pd.showcase">Project Showcase</h2>
-                    <div class="video-wrapper">
-                        <video width="100%" autoplay muted loop playsinline class="project-video">
-                            <source src="PhotoGallery/UpdatedGUI.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
+        <section class="year case-sec">
+            <h2 data-i18n="pd.what">What it does</h2>
+            <ul class="lines">
+                <li data-r data-i18n="pd.f1">Session scheduling and management</li>
+                <li data-r data-i18n="pd.f2">Client progress tracking</li>
+                <li data-r data-i18n="pd.f3">Workout plan creation and assignment</li>
+                <li data-r data-i18n="pd.f4">Integrated messaging system</li>
+                <li data-r data-i18n="pd.f5">Payment processing and subscription management</li>
+            </ul>
+        </section>
 
-                <div class="project-description-container reveal-section">
-                    <h2 class="section-subtitle" data-i18n="pd.description">Project Description</h2>
-                    <p data-i18n="pd.p1">
-                        This CRM will be a lean, web-based platform built for personal trainers and online coaches to effortlessly manage clients, schedules, and communications-all in one place.
-                        Track goals and progress with visual dashboards, automate bookings and reminders, and send personalized messages without the busywork.
-                        Starting as a responsive web app, we’ll evolve into a fast, rock-solid PC application and later much more. <a href="http://elev8coaching.tech/" class="hidden-link">Read more at our website</a>
-                    </p>
-                    <p data-i18n="pd.p2">
-                        This journey isn’t just about better performance—it’s about choice.
-                    </p>
-                    <p data-i18n="pd.p3">
-                        I am currently coding and building my own server so I can host and test the software—essentially running an internal alpha testing phase.
-                    </p>
-                    <p data-i18n="pd.p4">
-                        On this project I collaborated with coaches across Aberdeen and Bratislava.
-                    </p>
-                    <p data-i18n="pd.features">
-                        Key features include:
-                    </p>
-                    <ul class="feature-list">
-                        <li class="reveal-item"><i class="fas fa-calendar-check"></i> <span data-i18n="pd.f1">Session scheduling and management</span></li>
-                        <li class="reveal-item"><i class="fas fa-chart-line"></i> <span data-i18n="pd.f2">Client progress tracking</span></li>
-                        <li class="reveal-item"><i class="fas fa-dumbbell"></i> <span data-i18n="pd.f3">Workout plan creation and assignment</span></li>
-                        <li class="reveal-item"><i class="fas fa-comments"></i> <span data-i18n="pd.f4">Integrated messaging system</span></li>
-                        <li class="reveal-item"><i class="fas fa-credit-card"></i> <span data-i18n="pd.f5">Payment processing and subscription management</span></li>
-                        <li class="reveal-item"><i class="fas fa-mobile-alt"></i> <span data-i18n="pd.f6">Mobile app for on-the-go access</span></li>
-                    </ul>
-                </div>
+        <section class="year case-sec">
+            <h2 data-i18n="pd.tech">Technology Stack</h2>
+            <ul class="lines">
+                <li data-r><strong>React.</strong> <span data-i18n="pd.t1">Frontend web application framework for building the user interface</span></li>
+                <li data-r><strong>Firebase.</strong> <span data-i18n="pd.t2">Backend services including authentication, database, and hosting</span></li>
+                <li data-r><strong>Python.</strong> <span data-i18n="pd.t3">Backend processing and data analysis</span></li>
+                <li data-r><strong>MySQL.</strong> <span data-i18n="pd.t4">Relational database for structured data storage</span></li>
+                <li data-r><strong>REST API.</strong> <span data-i18n="pd.t5">API architecture for client-server communication</span></li>
+                <li data-r><strong>AWS.</strong> <span data-i18n="pd.t6">Cloud infrastructure for servers, compute, storage, and deployments</span></li>
+                <li data-r><strong>Stripe.</strong> <span data-i18n="pd.t7">Payment processing integration</span></li>
+            </ul>
+        </section>
 
-                <div class="project-tech-container reveal-section">
-                    <h2 class="section-subtitle" data-i18n="pd.tech">Technology Stack</h2>
-                    <div class="tech-stack-grid">
-                        <div class="tech-item reveal-item">
-                            <div class="tech-icon"><i class="fab fa-react"></i></div>
-                            <h3>React</h3>
-                            <p data-i18n="pd.t1">Frontend web application framework for building the user interface</p>
-                        </div>
-                        <div class="tech-item reveal-item">
-                            <div class="tech-icon"><i class="fas fa-database"></i></div>
-                            <h3>Firebase</h3>
-                            <p data-i18n="pd.t2">Backend services including authentication, database, and hosting</p>
-                        </div>
-                        <div class="tech-item reveal-item">
-                            <div class="tech-icon"><i class="fab fa-python"></i></div>
-                            <h3>Python</h3>
-                            <p data-i18n="pd.t3">Backend processing and data analysis</p>
-                        </div>
-                        <div class="tech-item reveal-item">
-                            <div class="tech-icon"><i class="fas fa-server"></i></div>
-                            <h3>MySQL</h3>
-                            <p data-i18n="pd.t4">Relational database for structured data storage</p>
-                        </div>
-                        <div class="tech-item reveal-item">
-                            <div class="tech-icon"><i class="fas fa-exchange-alt"></i></div>
-                            <h3>RESTful API</h3>
-                            <p data-i18n="pd.t5">API architecture for client-server communication</p>
-                        </div>
-                        <div class="tech-item reveal-item">
-                            <div class="tech-icon"><i class="fab fa-aws"></i></div>
-                            <h3>AWS</h3>
-                            <p data-i18n="pd.t6">Cloud infrastructure for servers, compute, storage, and deployments</p>
-                        </div>
-                        <div class="tech-item reveal-item">
-                            <div class="tech-icon"><i class="fab fa-stripe"></i></div>
-                            <h3>Stripe</h3>
-                            <p data-i18n="pd.t7">Payment processing integration</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-future-container reveal-section">
-                    <h2 class="section-subtitle" data-i18n="pd.future">Future Work</h2>
-                    <div class="timeline-container">
-                        <div class="timeline-item reveal-from-left">
-                            <div class="timeline-marker">Q1–Q2 2026</div>
-                            <div class="timeline-content">
-                                <h3 data-i18n="pd.m1.h">Beta + Mobile App Development</h3>
-                                <p data-i18n="pd.m1.p">Concurrent work on the core beta release and companion mobile apps for iOS and Android.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item reveal-from-left">
-                            <div class="timeline-marker">Q3 2026</div>
-                            <div class="timeline-content">
-                                <h3 data-i18n="pd.m2.h">Exercise Data Collection</h3>
-                                <p data-i18n="pd.m2.p">Creating a comprehensive library of educational videos demonstrating proper exercise techniques and variations. This allows personal trainers to easily share professional demonstrations with clients instead of recording their own.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item reveal-from-right">
-                            <div class="timeline-marker">Q3-Q4 2026</div>
-                            <div class="timeline-content">
-                                <h3 data-i18n="pd.m3.h">Full Release</h3>
-                                <p data-i18n="pd.m3.p">Official launch with a complete feature set and marketplace for trainers</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-progress-container reveal-section">
-                    <h2 class="section-subtitle" data-i18n="pd.progress">Current Progress</h2>
-                    <div class="progress-bar-container">
-                        <div class="progress-bar progress-20"></div>
-                    </div>
-                    <div class="progress-percentage" data-i18n="pd.complete">20% Complete</div>
-                    <p class="progress-description" data-i18n="pd.progress.p">
-                        Currently in the prototyping phase, focusing on user interface design and database schema development.
-                    </p>
-                </div>
-            </section>
-        </main>
-
-        <a href="#" class="scroll-top"><i class="fas fa-arrow-up"></i></a>
+        <section class="year case-sec">
+            <h2 data-i18n="pd.now">Where it stands now</h2>
+            <p class="note" id="case-now"></p>
+        </section>
     </div>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; <span id="current-year"></span> Matus Illith. <span data-i18n="legacy.rights">All rights reserved.</span></p>
+    <section class="cp-next">
+        <div class="wrap">
+            <a class="arrow-link back" href="index.html#ventures" data-i18n="course.back"><span aria-hidden="true">←</span> Back to the deck</a>
+            <p class="cover-meta">&copy; <span id="year"></span> Matus Illith</p>
         </div>
-    </footer>
+    </section>
+</main>
 
-    <script src="js/lang/sk.js"></script>
-    <script src="js/lang/de.js"></script>
-    <script src="js/i18n.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/scroll-top.js"></script>
-    <script src="js/background.js"></script>
+<script src="js/ventures.js"></script>
+<script src="js/lang/sk.js"></script>
+<script src="js/lang/de.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/render.js"></script>
+<script src="js/case.js"></script>
 </body>
 </html>

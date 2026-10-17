@@ -49,7 +49,7 @@
     const toggle = open => { sw.classList.toggle('open', open); cur.setAttribute('aria-expanded', open); };
     cur.addEventListener('click', () => toggle(!sw.classList.contains('open')));
     document.addEventListener('click', e => { if (!sw.contains(e.target)) toggle(false); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') { toggle(false); cur.focus(); } });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && sw.classList.contains('open')) { toggle(false); cur.focus(); } });
     menu.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
         const to = b.dataset.lang;
         save(to);

@@ -6,34 +6,9 @@
     const t = I18N.t;
 
     // ---- render data-driven blocks
-    const val = v => (typeof v === 'string' ? v : `<span class="tbd">${t('js.tbd', 'TBD')} · ${v.tbd}</span>`);
-    const chips = a => a.map(s => `<li class="chip">${val(s)}</li>`).join('');
-    const link = ([t, h]) => `<a class="arrow-link" href="${h}" target="_blank" rel="noopener noreferrer">${t}<span aria-hidden="true">↗</span></a>`;
+    const {chips, link, venture} = R;
 
-    $('#ventures-list').forEach(el => {
-        el.innerHTML = VENTURES.map(v => `
-        <article class="venture" data-r>
-            <header class="venture-head">
-                <h3>${v.name}</h3>
-                <p class="venture-meta"><span>${val(v.role)}</span><span class="status">${v.status}</span></p>
-            </header>
-            <div class="venture-body">
-                <div class="venture-text">
-                    <dl>
-                        <dt>${t('js.problem', 'Problem')}</dt><dd>${v.biz.problem}</dd>
-                        <dt>${t('js.users', 'Users')}</dt><dd>${val(v.biz.users)}</dd>
-                        <dt>${t('js.decisions', 'Decisions')}</dt><dd><ul class="plain">${v.biz.decisions.map(d => `<li>${d}</li>`).join('')}</ul></dd>
-                        <dt>${t('js.outcome', 'Outcome')}</dt><dd><ul class="plain inline">${v.biz.outcome.map(o => `<li>${val(o)}</li>`).join('')}</ul></dd>
-                        <dt>${t('js.builtwith', 'Built with')}</dt><dd><ul class="chips">${chips(v.build.stack)}</ul><p class="contrib">${v.build.contribution}</p></dd>
-                    </dl>
-                    <p class="venture-links">${v.links.map(link).join('')}</p>
-                </div>
-                ${v.media ? `<div class="venture-media">${v.media.video
-                    ? `<video src="${v.media.video}" muted loop playsinline preload="none" aria-label="${v.media.alt}"></video>`
-                    : `<img src="${v.media.img}" alt="${v.media.alt}" loading="lazy">`}</div>` : ''}
-            </div>
-        </article>`).join('');
-    });
+    $('#ventures-list').forEach(el => { el.innerHTML = VENTURES.map(v => venture(v)).join(''); });
 
     $('#side-list').forEach(el => {
         el.innerHTML = SIDE_PROJECTS.map(p => `
@@ -190,13 +165,20 @@
     const setLens = (lens, ev) => {
         if (lens === root.dataset.lens) return;
         const apply = () => {
+            const here = visible()[current];
             root.dataset.lens = lens;
             sync();
             try { localStorage.setItem('lens', lens); } catch (e) { /* private mode */ }
-            scrollTo({top: 0, behavior: 'instant'});
             syncPin();
-            show(0);
-            if (!reduce) restartHeadline();
+            // slides shared by both decks (cover, ventures, how I operate, ask) stay put; otherwise start at the cover
+            if (here && here.id !== 'cover' && here.offsetParent !== null) {
+                here.scrollIntoView({behavior: 'instant'});
+                show(visible().indexOf(here));
+            } else {
+                scrollTo({top: 0, behavior: 'instant'});
+                show(0);
+                if (!reduce) restartHeadline();
+            }
         };
         if (reduce || !document.startViewTransition) return apply();
         const r = ev.currentTarget.getBoundingClientRect();
@@ -214,9 +196,9 @@
     const target = location.hash && document.getElementById(location.hash.slice(1));
     if (target) target.scrollIntoView({behavior: 'instant'});
 
-    // ---- keyboard: left/right jump a slide (up/down keep native scroll)
+    // ---- keyboard: left/right jump a slide (up/down keep native scroll; focused controls keep their own keys)
     addEventListener('keydown', e => {
-        if (e.altKey || e.ctrlKey || e.metaKey || /input|textarea|select/i.test(e.target.tagName)) return;
+        if (e.altKey || e.ctrlKey || e.metaKey || e.target.closest('input, textarea, select, a, button, summary')) return;
         const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
         if (!d) return;
         const list = visible();

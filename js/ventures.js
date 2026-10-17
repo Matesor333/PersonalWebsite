@@ -29,7 +29,7 @@ window.VENTURES = [
             problem: 'Doctors need patient data they can read and act on quickly, to make better and faster decisions.',
             users: 'Doctors, through a portal prototype built for a HealthTech startup.',
             decisions: ['Led the team on the technical track while the startup shaped the product.'],
-            outcome: ['Prototype delivered for testing; the startup is still testing it and looking for funding']
+            outcome: ['Prototype delivered and later redesigned; the startup is still testing it and looking for funding']
         },
         build: {
             stack: [],

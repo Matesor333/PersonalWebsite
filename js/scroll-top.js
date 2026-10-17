@@ -1,6 +1,6 @@
 // Scroll to top functionality
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.scroll-top').addEventListener('click', function(e) {
+    document.querySelector('.scroll-top')?.addEventListener('click', function(e) {
         e.preventDefault();
         window.scrollTo({
             top: 0,

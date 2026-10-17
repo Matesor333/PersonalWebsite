@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-lens="build">
+<html lang="en" data-lens="business">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,8 +48,8 @@
         </div>
         <div class="lens-switch" role="group" aria-label="Choose which side to read" data-i18n-attr="aria-label=lens.label">
             <span class="pill" aria-hidden="true"></span>
-            <button type="button" data-set-lens="business" aria-pressed="false" data-i18n="lens.business">Business</button>
-            <button type="button" data-set-lens="build" aria-pressed="true" data-i18n="lens.build">Build</button>
+            <button type="button" data-set-lens="business" aria-pressed="true" data-i18n="lens.business">Business</button>
+            <button type="button" data-set-lens="build" aria-pressed="false" data-i18n="lens.build">Build</button>
         </div>
         <a class="btn btn-sm" href="#ask" data-i18n="talk">Let's talk</a>
     </div>
@@ -72,13 +72,13 @@
             <p class="lede" data-show="build" data-i18n="cover.lede.build">Most at home in Java and C. I learned to code from the machine up (Turing machines, logic circuits, memory by hand), then through operating systems, security, cloud and the web.</p>
             <p class="lede" data-show="business" data-i18n="cover.lede.business">I'm a software engineer who builds the product and the business around it: I talk to the people who'll use the thing, decide what gets built first, then write the code myself.</p>
             <div class="cta-row">
-                <a class="btn" href="https://www.linkedin.com/in/matus-illith" target="_blank" rel="noopener noreferrer" data-i18n="talk">Let's talk</a>
+                <a class="btn" href="#ask" data-i18n="talk">Let's talk</a>
                 <a class="arrow-link" href="#stack" data-show="build" data-i18n="cover.see.stack">See what I learned <span aria-hidden="true">↓</span></a>
                 <a class="arrow-link" href="#ventures" data-show="business" data-i18n="cover.see.ventures">See the ventures <span aria-hidden="true">↓</span></a>
             </div>
             <p class="cover-meta" data-i18n="cover.meta">Matus Illith · BSc (Hons) Computer Science, Robert Gordon University, Aberdeen · graduating 2027 · looking for a graduate software engineering or Product Owner role</p>
-            <p class="hint" data-show="build" data-i18n="cover.hint.build">Switch to Business for the work I've done with and for companies.</p>
-            <p class="hint" data-show="business" data-i18n="cover.hint.business">Switch to Build for the engineering and education behind it.</p>
+            <p class="hint" data-show="build" data-i18n="cover.hint.build">You're reading the engineering side first. Switch to Business to start with the ventures and the people I built them with.</p>
+            <p class="hint" data-show="business" data-i18n="cover.hint.business">You're reading the business side first. Switch to Build to start with the engineering and education behind it.</p>
         </div>
     </section>
 
@@ -93,7 +93,7 @@
     <!-- BUSINESS: profile -->
     <section class="slide" id="profile" data-show="business" data-title="Profile" data-i18n-attr="data-title=s.profile">
         <div class="wrap profile">
-            <img class="portrait" src="PhotoGallery/ProfielPicture.JPG" alt="Portrait of Matus Illith" data-i18n-attr="alt=profile.alt" data-r>
+            <img class="portrait" width="1170" height="1511" decoding="async" src="PhotoGallery/ProfielPicture.JPG" alt="Portrait of Matus Illith" data-i18n-attr="alt=profile.alt" data-r>
             <div>
                 <h2 data-i18n="profile.h2">One person on both sides of the table.</h2>
                 <ul class="lines">
@@ -224,7 +224,7 @@
         <div class="wrap narrow">
             <h2 data-show="build" data-i18n="ask.h2.build">Hiring a software engineer who thinks about the product?</h2>
             <h2 data-show="business" data-i18n="ask.h2.business">Hiring a Product Owner who can build?</h2>
-            <p class="big" data-i18n="ask.big">Based between the UK and Slovakia. Connect with me on LinkedIn and let's set up a call.</p>
+            <p class="big" data-i18n="ask.big">Based between the UK and Slovakia. Graduating in 2027 and looking for a graduate software engineering or Product Owner role. Message me on LinkedIn and let's set up a call.</p>
             <div class="cta-row">
                 <a class="btn" href="https://www.linkedin.com/in/matus-illith" target="_blank" rel="noopener noreferrer" data-i18n="ask.linkedin">Message me on LinkedIn</a>
                 <a class="arrow-link" href="https://github.com/Matesor333" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
@@ -241,6 +241,7 @@
 <script src="js/lang/sk.js"></script>
 <script src="js/lang/de.js"></script>
 <script src="js/i18n.js"></script>
+<script src="js/render.js"></script>
 <script src="js/deck.js"></script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>

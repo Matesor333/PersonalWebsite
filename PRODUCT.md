@@ -36,6 +36,7 @@ A software engineer with range, from Turing machines and C through OS, security 
 - Invoice Creation Software (JavaFX, Supabase, iText7; `PhotoGallery/InvoiceMakerVideo.gif`), Variation Turing Machine (`PhotoGallery/Video Project 5.gif`).
 - Education: BSc (Hons) Computer Science, RGU 2023–2027 (final year: Languages and Compilers, Data Visualisation, NLP, Computer Vision, Capstone); BSci Informatics, Slovak Technical University 2022–2023.
 - Links: LinkedIn linkedin.com/in/matus-illith, GitHub Matesor333.
+- Discovery figures (user-confirmed 2026-10-17, shown on the Proof slide without hedging): 15 coaches and 20 heads of gyms interviewed; 6 products taken from idea to final result.
 - Absent, do not fabricate: revenue, client or user counts, testimonials, email address, CV file.
 
 ## Product Principles

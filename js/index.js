@@ -95,10 +95,10 @@ function toggleDarkMode() {
     // Save preference to localStorage
     if (document.body.classList.contains('dark-mode')) {
         localStorage.setItem('darkMode', 'enabled');
-        document.getElementById('darkModeIcon').classList.replace('fa-moon', 'fa-sun');
+        document.getElementById('darkModeIcon')?.classList.replace('fa-moon', 'fa-sun');
     } else {
         localStorage.setItem('darkMode', 'disabled');
-        document.getElementById('darkModeIcon').classList.replace('fa-sun', 'fa-moon');
+        document.getElementById('darkModeIcon')?.classList.replace('fa-sun', 'fa-moon');
     }
 }
 
@@ -106,10 +106,10 @@ function toggleDarkMode() {
 function checkDarkModePreference() {
     if (localStorage.getItem('darkMode') === 'enabled') {
         document.body.classList.add('dark-mode');
-        document.getElementById('darkModeIcon').classList.replace('fa-moon', 'fa-sun');
+        document.getElementById('darkModeIcon')?.classList.replace('fa-moon', 'fa-sun');
     } else {
         document.body.classList.remove('dark-mode');
-        document.getElementById('darkModeIcon').classList.replace('fa-sun', 'fa-moon');
+        document.getElementById('darkModeIcon')?.classList.replace('fa-sun', 'fa-moon');
     }
 }
 

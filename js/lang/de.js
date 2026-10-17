@@ -39,8 +39,8 @@ window.I18N_PACKS.de = {
         'cover.see.stack': 'Sehen Sie, was ich gelernt habe <span aria-hidden="true">↓</span>',
         'cover.see.ventures': 'Zu den Ventures <span aria-hidden="true">↓</span>',
         'cover.meta': 'Matus Illith · BSc (Hons) Computer Science, Robert Gordon University, Aberdeen · Abschluss 2027 · auf der Suche nach einer Einstiegsstelle als Softwareentwickler oder Product Owner',
-        'cover.hint.build': 'Wechseln Sie zu Business für die Arbeit, die ich mit und für Unternehmen gemacht habe.',
-        'cover.hint.business': 'Wechseln Sie zu Technik für das Engineering und die Ausbildung dahinter.',
+        'cover.hint.build': 'Sie lesen zuerst die Technik-Seite. Wechseln Sie zu Business, wenn Sie mit den Unternehmen und den Menschen dahinter beginnen möchten.',
+        'cover.hint.business': 'Sie lesen zuerst die Business-Seite. Wechseln Sie zu Technik, wenn Sie mit Engineering und Ausbildung beginnen möchten.',
 
         'problem.h2': 'Die meisten Produkte bleiben in der Lücke zwischen dem, was das Geschäft braucht, und dem, was die Technik baut, stecken.',
         'problem.big': 'Jemand muss diese Lücke besetzen: die Menschen verstehen, die das Produkt nutzen werden, und das System gut genug kennen, um zu wissen, was günstig und was teuer ist. Darauf bereite ich mich vor, und das tue ich in meinen eigenen Projekten.',
@@ -64,9 +64,9 @@ window.I18N_PACKS.de = {
         'proof.1': 'Befragte Coaches',
         'proof.2': 'Befragte Fitnessstudio-Leiter',
         'proof.3': 'Produkte von der Idee bis zum fertigen Ergebnis',
-        'proof.v1': 'Etwa 15',
-        'proof.v2': 'Etwa 20',
-        'proof.v3': 'Etwa 6',
+        'proof.v1': '15',
+        'proof.v2': '20',
+        'proof.v3': '6',
 
         'stack.h2': 'Jede Ebene des Stacks, eine Person.',
 
@@ -97,7 +97,7 @@ window.I18N_PACKS.de = {
 
         'ask.h2.build': 'Sie suchen einen Softwareentwickler, der das Produkt mitdenkt?',
         'ask.h2.business': 'Sie suchen einen Product Owner, der auch bauen kann?',
-        'ask.big': 'Ich lebe zwischen Großbritannien und der Slowakei. Vernetzen Sie sich auf LinkedIn mit mir, dann vereinbaren wir ein Gespräch.',
+        'ask.big': 'Ich lebe zwischen Großbritannien und der Slowakei. Ich schließe 2027 mein Studium ab und suche eine Einstiegsrolle als Software Engineer oder Product Owner. Schreiben Sie mir auf LinkedIn, dann vereinbaren wir ein Gespräch.',
         'ask.linkedin': 'Schreiben Sie mir auf LinkedIn',
 
         // course pages
@@ -142,20 +142,14 @@ window.I18N_PACKS.de = {
         'legacy.nav.contact': 'Kontakt',
         'legacy.rights': 'Alle Rechte vorbehalten.',
         'pd.title': 'Personal Trainer CRM - Projektdetails',
-        'pd.back': 'Zurück zu den aktuellen Projekten',
-        'pd.showcase': 'Projektpräsentation',
-        'pd.description': 'Projektbeschreibung',
-        'pd.p1': 'Dieses CRM wird eine schlanke, webbasierte Plattform für Personal Trainer und Online-Coaches, mit der sich Kunden, Termine und Kommunikation mühelos an einem Ort verwalten lassen. Verfolgen Sie Ziele und Fortschritte mit visuellen Dashboards, automatisieren Sie Buchungen und Erinnerungen und senden Sie personalisierte Nachrichten ohne Verwaltungsaufwand. Wir starten als responsive Web-App und entwickeln uns zu einer schnellen, grundsoliden PC-Anwendung und später zu weit mehr. <a href="http://elev8coaching.tech/" class="hidden-link">Mehr auf unserer Website</a>',
-        'pd.p2': 'Bei dieser Reise geht es nicht nur um bessere Leistung, sondern um Wahlfreiheit.',
-        'pd.p3': 'Ich programmiere derzeit und baue meinen eigenen Server, um die Software hosten und testen zu können, im Grunde eine interne Alpha-Testphase.',
-        'pd.p4': 'In diesem Projekt habe ich mit Coaches in Aberdeen und Bratislava zusammengearbeitet.',
-        'pd.features': 'Zu den wichtigsten Funktionen gehören:',
+        'pd.what': 'Was es kann',
+        'pd.now': 'Wo es gerade steht',
+        'pd.nowtbd': 'aktueller Stand und nächster Meilenstein',
         'pd.f1': 'Terminplanung und -verwaltung',
         'pd.f2': 'Verfolgung des Kundenfortschritts',
         'pd.f3': 'Erstellung und Zuweisung von Trainingsplänen',
         'pd.f4': 'Integriertes Nachrichtensystem',
         'pd.f5': 'Zahlungsabwicklung und Abo-Verwaltung',
-        'pd.f6': 'Mobile App für den Zugriff unterwegs',
         'pd.tech': 'Technologie-Stack',
         'pd.t1': 'Frontend-Framework für Webanwendungen zum Aufbau der Benutzeroberfläche',
         'pd.t2': 'Backend-Dienste einschließlich Authentifizierung, Datenbank und Hosting',
@@ -164,16 +158,6 @@ window.I18N_PACKS.de = {
         'pd.t5': 'API-Architektur für die Kommunikation zwischen Client und Server',
         'pd.t6': 'Cloud-Infrastruktur für Server, Rechenleistung, Speicher und Deployments',
         'pd.t7': 'Anbindung der Zahlungsabwicklung',
-        'pd.future': 'Künftige Arbeit',
-        'pd.m1.h': 'Beta + Entwicklung der mobilen App',
-        'pd.m1.p': 'Parallele Arbeit am Kern-Beta-Release und an begleitenden mobilen Apps für iOS und Android.',
-        'pd.m2.h': 'Erfassung von Übungsdaten',
-        'pd.m2.p': 'Aufbau einer umfassenden Bibliothek mit Lehrvideos, die die richtige Technik und Variationen von Übungen zeigen. So können Personal Trainer ihren Kunden einfach professionelle Demonstrationen weitergeben, statt eigene aufzunehmen.',
-        'pd.m3.h': 'Vollständige Veröffentlichung',
-        'pd.m3.p': 'Offizieller Start mit vollständigem Funktionsumfang und einem Marktplatz für Trainer',
-        'pd.progress': 'Aktueller Stand',
-        'pd.complete': '20 % abgeschlossen',
-        'pd.progress.p': 'Derzeit in der Prototyping-Phase mit Schwerpunkt auf UI-Design und Entwicklung des Datenbankschemas.',
         'sp.title': 'Geheime Seite',
         'sp.back': 'Zurück zu den Projektdetails',
         'sp.title.h': 'Eine neue Ära der Software',
@@ -377,7 +361,7 @@ window.I18N_PACKS.de = {
                     problem: 'Ärzte brauchen Patientendaten, die sie schnell lesen und nutzen können, um bessere und schnellere Entscheidungen zu treffen.',
                     users: 'Ärzte, über einen Portal-Prototyp für ein HealthTech-Startup.',
                     decisions: ['Ich habe das Team auf der technischen Seite geleitet, während das Startup das Produkt formte.'],
-                    outcome: ['Prototyp zum Testen übergeben; das Startup testet weiter und sucht Finanzierung']
+                    outcome: ['Prototyp übergeben und später neu gestaltet; das Startup testet ihn weiter und sucht Finanzierung']
                 },
                 build: {
                     contribution: 'Leitete ein Team, das die technische Seite des Ärzteportal-Prototyps baute.'
