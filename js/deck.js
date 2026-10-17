@@ -3,9 +3,10 @@
     root.classList.add('js');
     const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
     const $ = (s, c = document) => [...c.querySelectorAll(s)];
+    const t = I18N.t;
 
     // ---- render data-driven blocks
-    const val = v => (typeof v === 'string' ? v : `<span class="tbd">TBD · ${v.tbd}</span>`);
+    const val = v => (typeof v === 'string' ? v : `<span class="tbd">${t('js.tbd', 'TBD')} · ${v.tbd}</span>`);
     const chips = a => a.map(s => `<li class="chip">${val(s)}</li>`).join('');
     const link = ([t, h]) => `<a class="arrow-link" href="${h}" target="_blank" rel="noopener noreferrer">${t}<span aria-hidden="true">↗</span></a>`;
 
@@ -19,11 +20,11 @@
             <div class="venture-body">
                 <div class="venture-text">
                     <dl>
-                        <dt>Problem</dt><dd>${v.biz.problem}</dd>
-                        <dt>Users</dt><dd>${val(v.biz.users)}</dd>
-                        <dt>Decisions</dt><dd><ul class="plain">${v.biz.decisions.map(d => `<li>${d}</li>`).join('')}</ul></dd>
-                        <dt>Outcome</dt><dd><ul class="plain inline">${v.biz.outcome.map(o => `<li>${val(o)}</li>`).join('')}</ul></dd>
-                        <dt>Built with</dt><dd><ul class="chips">${chips(v.build.stack)}</ul><p class="contrib">${v.build.contribution}</p></dd>
+                        <dt>${t('js.problem', 'Problem')}</dt><dd>${v.biz.problem}</dd>
+                        <dt>${t('js.users', 'Users')}</dt><dd>${val(v.biz.users)}</dd>
+                        <dt>${t('js.decisions', 'Decisions')}</dt><dd><ul class="plain">${v.biz.decisions.map(d => `<li>${d}</li>`).join('')}</ul></dd>
+                        <dt>${t('js.outcome', 'Outcome')}</dt><dd><ul class="plain inline">${v.biz.outcome.map(o => `<li>${val(o)}</li>`).join('')}</ul></dd>
+                        <dt>${t('js.builtwith', 'Built with')}</dt><dd><ul class="chips">${chips(v.build.stack)}</ul><p class="contrib">${v.build.contribution}</p></dd>
                     </dl>
                     <p class="venture-links">${v.links.map(link).join('')}</p>
                 </div>
@@ -49,7 +50,7 @@
     const course = c => !(c.desc || c.learned || c.outcomes) ? `
         <div class="course static"><span class="cname">${c.name}</span>${c.status ? `<span class="grade now">${c.status}</span>` : ''}</div>` : `
         <details class="course">
-            <summary><span class="cname">${c.name}</span>${c.grade ? `<span class="grade" title="Grade">${c.grade}</span>` : ''}</summary>
+            <summary><span class="cname">${c.name}</span>${c.grade ? `<span class="grade" title="${t('js.grade', 'Grade')}">${c.grade}</span>` : ''}</summary>
             <div class="cbody">
                 <p>${c.desc}</p>
                 ${c.learned ? `<p>${c.learned}</p>` : ''}
@@ -60,7 +61,7 @@
     $('#rgu-list').forEach(el => {
         el.innerHTML = EDU_RGU.map(y => `
         <li class="step">
-            <h3>${y.y}${y.current ? ' <span class="status">You are here</span>' : ''}</h3>
+            <h3>${y.y}${y.current ? ` <span class="status">${t('js.here', 'You are here')}</span>` : ''}</h3>
             ${y.note ? `<p>${y.note}</p>` : ''}
             <div class="courses">${y.courses.map(course).join('')}</div>
         </li>`).join('');

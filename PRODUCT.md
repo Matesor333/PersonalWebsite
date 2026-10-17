@@ -20,18 +20,18 @@ A personal site that works as a pitch deck selling Matus Illith: a final-year co
 
 ## Positioning
 
-A software engineer with range, from Turing machines and C through OS, security and cloud to the business side (FIIT STU Bratislava, then RGU Aberdeen), who also builds the product and the business around it: his own ventures (Elev8 / Augmented Fitness CRM, Designlify, Ikarians HealthTech) show discovery with real users, decisions, and the code to ship them.
+A software engineer with range, from Turing machines and C through OS, security and cloud to the business side (FIIT STU Bratislava, then RGU Aberdeen), who also builds the product and the business around it: his own ventures (Elev8 / Augmented Fitness CRM, Ikarians HealthTech) show discovery with real users, decisions, and the code to ship them.
 
 ## Capabilities and Constraints
 
 - Ventures are shown through two lenses per case study: Business (problem, users, decisions, outcome) and Build (stack, architecture, contribution).
 - More ventures will be supplied later, so case studies are data-driven.
 - Nothing is invented: traction figures, client counts and outcomes are clearly labeled placeholders until Matus supplies them.
+- Languages: English (default), Slovak, German. English copy lives in the HTML and the data files; sk/de overlays live in `js/lang/*.js` and are applied by `js/i18n.js` (`?lang=` > saved choice > English). New copy needs a `data-i18n` key (or a `t()` call) plus an entry in both packs.
 
 ## Evidence on Hand
 
 - Elev8 / Augmented Fitness CRM: built with coaches in Aberdeen and Bratislava, screen recording `PhotoGallery/UpdatedGUI.mp4`, own server for internal alpha, React/Firebase/Python/MySQL/REST/AWS/Stripe, ~20% progress, expected completion end Q2–start Q3 2026.
-- Designlify (designlify.tech): freelance landing pages, full-stack apps, custom software, hardware.
 - Ikarians HealthTech: led the technical team on a doctor-portal prototype (`PhotoGallery/Ikarian.gif`).
 - Invoice Creation Software (JavaFX, Supabase, iText7; `PhotoGallery/InvoiceMakerVideo.gif`), Variation Turing Machine (`PhotoGallery/Video Project 5.gif`).
 - Education: BSc (Hons) Computer Science, RGU 2023–2027 (final year: Languages and Compilers, Data Visualisation, NLP, Computer Vision, Capstone); BSci Informatics, Slovak Technical University 2022–2023.

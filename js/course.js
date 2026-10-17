@@ -3,13 +3,14 @@
     document.documentElement.classList.add('js');
     const $ = (s, c = document) => [...c.querySelectorAll(s)];
     const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const t = I18N.t;
     const chips = a => a.map(s => `<li class="chip">${s}</li>`).join('');
 
     const module = c => `
         <article class="module" data-r>
             <header>
                 <h3>${c.name}</h3>
-                ${c.grade ? `<span class="grade">Grade ${c.grade}</span>` : c.status ? `<span class="grade now">${c.status}</span>` : ''}
+                ${c.grade ? `<span class="grade">${t('js.grade', 'Grade')} ${c.grade}</span>` : c.status ? `<span class="grade now">${c.status}</span>` : ''}
             </header>
             ${c.desc ? `<p>${c.desc}</p>` : ''}
             ${c.learned ? `<p class="learned">${c.learned}</p>` : ''}
@@ -18,11 +19,11 @@
 
     const groups = document.body.dataset.page === 'rgu'
         ? EDU_RGU
-        : [{y: 'Courses', courses: EDU_FIIT}, {y: 'Key projects', courses: EDU_FIIT_PROJECTS}];
+        : [{y: t('js.courses', 'Courses'), courses: EDU_FIIT}, {y: t('js.projects', 'Key projects'), courses: EDU_FIIT_PROJECTS}];
 
     $('#years')[0].innerHTML = groups.map((g, i) => `
         <section class="year" id="y${i + 1}">
-            <h2>${g.y}${g.current ? ' <span class="status">You are here</span>' : ''}</h2>
+            <h2>${g.y}${g.current ? ` <span class="status">${t('js.here', 'You are here')}</span>` : ''}</h2>
             <div class="modules">${g.note ? `<p class="note">${g.note}</p>` : ''}${g.courses.map(module).join('')}</div>
         </section>`).join('');
 

@@ -3,30 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FIIT, Slovak University of Technology — Matus Illith</title>
-    <meta name="description" content="The courses and projects from Matus Illith's year at FIIT, Slovak University of Technology in Bratislava, where he learned to code from the machine up.">
+    <title data-i18n="fiit.page.title">FIIT, Slovak University of Technology — Matus Illith</title>
+    <meta name="description" data-i18n-attr="content=fiit.page.desc" content="The courses and projects from Matus Illith's year at FIIT, Slovak University of Technology in Bratislava, where he learned to code from the machine up.">
+    <link rel="alternate" hreflang="en" href="https://matus-illith.com/slovak-university-details.html">
+    <link rel="alternate" hreflang="sk" href="https://matus-illith.com/slovak-university-details.html?lang=sk">
+    <link rel="alternate" hreflang="de" href="https://matus-illith.com/slovak-university-details.html?lang=de">
+    <link rel="alternate" hreflang="x-default" href="https://matus-illith.com/slovak-university-details.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Hanken+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap">
     <link rel="stylesheet" href="css/deck.css">
 </head>
 <body class="course-page" data-page="fiit">
-<a class="skip" href="#content">Skip to content</a>
+<a class="skip" href="#content" data-i18n="skip">Skip to content</a>
 
 <header class="bar">
     <a class="bar-name" href="index.html?lens=build#cover">Matus Illith</a>
     <div class="bar-right">
-        <a class="arrow-link back" href="index.html?lens=build#fiit"><span aria-hidden="true">←</span> Back to the deck</a>
-        <a class="btn btn-sm" href="https://www.linkedin.com/in/matus-illith" target="_blank" rel="noopener noreferrer">Let's talk</a>
+        <select class="lang-select" aria-label="Language" data-i18n-attr="aria-label=lang.label">
+            <option value="en" lang="en">EN</option>
+            <option value="sk" lang="sk">SK</option>
+            <option value="de" lang="de">DE</option>
+        </select>
+        <a class="arrow-link back" href="index.html?lens=build#fiit" data-i18n="course.back"><span aria-hidden="true">←</span> Back to the deck</a>
+        <a class="btn btn-sm" href="https://www.linkedin.com/in/matus-illith" target="_blank" rel="noopener noreferrer" data-i18n="talk">Let's talk</a>
     </div>
 </header>
 
 <main id="content">
     <section class="cp-hero">
         <div class="wrap">
-            <h1 style="view-transition-name: fiit-title">FIIT, Slovak University of Technology</h1>
-            <p class="cp-meta">BSci Informatics and Informational Science · Bratislava · 2022–23</p>
-            <p class="big">One year that combined theoretical computer science with practical programming, mathematics and computer engineering. I completed it, then moved to Robert Gordon University in Aberdeen to continue in computing.</p>
+            <h1 style="view-transition-name: fiit-title" data-i18n="fiit.page.h1">FIIT, Slovak University of Technology</h1>
+            <p class="cp-meta" data-i18n="fiit.page.meta">BSci Informatics and Informational Science · Bratislava · 2022–23</p>
+            <p class="big" data-i18n="fiit.page.big">One year that combined theoretical computer science with practical programming, mathematics and computer engineering. I completed it, then moved to Robert Gordon University in Aberdeen to continue in computing.</p>
         </div>
     </section>
 
@@ -34,14 +43,17 @@
 
     <section class="cp-next">
         <div class="wrap">
-            <a class="arrow-link back" href="index.html?lens=build#fiit"><span aria-hidden="true">←</span> Back to the deck</a>
-            <a class="arrow-link" href="education-details.html">Next: Robert Gordon University, Aberdeen <span aria-hidden="true">→</span></a>
+            <a class="arrow-link back" href="index.html?lens=build#fiit" data-i18n="course.back"><span aria-hidden="true">←</span> Back to the deck</a>
+            <a class="arrow-link" href="education-details.html" data-i18n="fiit.page.next">Next: Robert Gordon University, Aberdeen <span aria-hidden="true">→</span></a>
             <p class="cover-meta">&copy; <span id="year"></span> Matus Illith</p>
         </div>
     </section>
 </main>
 
 <script src="js/education.js"></script>
+<script src="js/lang/sk.js"></script>
+<script src="js/lang/de.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/course.js"></script>
 </body>
 </html>

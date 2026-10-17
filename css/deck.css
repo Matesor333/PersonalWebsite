@@ -72,6 +72,15 @@ html[data-lens="build"] [data-show="business"] { display: none; }
 @keyframes tick { from { transform: translateY(60%); opacity: 0; } }
 .bar-right { display: flex; align-items: center; gap: 0.75rem; }
 
+.lang-select {
+    appearance: none; background: none; color: var(--fg); cursor: pointer;
+    font: 500 0.8rem/1 var(--mono); letter-spacing: 0.04em;
+    border: 1.5px solid var(--rule); border-radius: 999px; padding: 0.6rem 0.9rem;
+    transition: border-color 0.2s var(--ease);
+}
+.lang-select option { background: var(--bg); color: var(--fg); }
+@media (hover: hover) and (pointer: fine) { .lang-select:hover { border-color: var(--fg); } }
+
 .lens-switch { position: relative; display: grid; grid-template-columns: 1fr 1fr; border: 1.5px solid var(--fg); border-radius: 999px; padding: 3px; }
 .lens-switch button {
     position: relative; z-index: 1; border: 0; background: none; color: var(--fg);
@@ -101,7 +110,7 @@ html[data-lens="build"] .lens-switch .pill { transform: translateX(100%); }
 .wrap.narrow { max-width: 56rem; }
 @media (min-width: 900px) and (min-height: 640px) { .stack { position: sticky; top: 0; } }
 
-h1, h2, h3 { font-family: var(--display); line-height: 1; letter-spacing: -0.03em; margin: 0; text-wrap: balance; }
+h1, h2, h3 { font-family: var(--display); line-height: 1; letter-spacing: -0.03em; margin: 0; text-wrap: balance; hyphens: auto; overflow-wrap: break-word; }
 h1 { font-size: clamp(2.6rem, 8.2vw, 6rem); font-weight: 800; max-width: 14ch; }
 h2 { font-size: clamp(2rem, 5vw, 3.75rem); font-weight: 800; margin-bottom: 2.5rem; max-width: 20ch; }
 .narrow h2 { max-width: 24ch; }
@@ -148,6 +157,7 @@ h3 { font-size: clamp(1.4rem, 2.6vw, 2.25rem); font-weight: 800; }
 .ledger { list-style: none; padding: 0; margin: 0; }
 .ledger li { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 1.25rem 0; border-top: 1.5px solid var(--rule); font-size: clamp(1.1rem, 1rem + 0.6vw, 1.5rem); }
 .ledger li:last-child { border-bottom: 1.5px solid var(--rule); }
+.ledger .fig { font-family: var(--display); font-weight: 800; color: var(--accent); white-space: nowrap; }
 
 /* ventures */
 .venture { padding: 3rem 0; border-top: 1.5px solid var(--rule); }

@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matus Illith — Software engineer, from machine code to the business case</title>
-    <meta name="description" content="Matus Illith: software engineer who learned to code from machine code up through systems, security and cloud, and who builds products and businesses around it. Seeking a graduate software engineering or Product Owner role.">
+    <title data-i18n="meta.title">Matus Illith — Software engineer, from machine code to the business case</title>
+    <meta name="description" data-i18n-attr="content=meta.desc" content="Matus Illith: software engineer who learned to code from machine code up through systems, security and cloud, and who builds products and businesses around it. Seeking a graduate software engineering or Product Owner role.">
+    <link rel="alternate" hreflang="en" href="https://matus-illith.com/">
+    <link rel="alternate" hreflang="sk" href="https://matus-illith.com/?lang=sk">
+    <link rel="alternate" hreflang="de" href="https://matus-illith.com/?lang=de">
+    <link rel="alternate" hreflang="x-default" href="https://matus-illith.com/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Hanken+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap">
@@ -17,39 +21,44 @@
     } catch (e) {}</script>
 </head>
 <body>
-<a class="skip" href="#content">Skip to content</a>
+<a class="skip" href="#content" data-i18n="skip">Skip to content</a>
 
 <header class="bar">
     <a class="bar-name" href="#cover">Matus Illith</a>
-    <nav class="bar-nav" aria-label="Sections">
-        <a href="#problem" data-show="business">The gap</a>
-        <a href="#profile" data-show="business">Profile</a>
-        <a href="#ventures" data-show="business">Ventures</a>
-        <a href="#venture-training" data-show="business">Method</a>
-        <a href="#proof" data-show="business">Proof</a>
-        <a href="#stack" data-show="build">The stack</a>
+    <nav class="bar-nav" aria-label="Sections" data-i18n-attr="aria-label=nav.label">
+        <a href="#problem" data-show="business" data-i18n="nav.gap">The gap</a>
+        <a href="#profile" data-show="business" data-i18n="nav.profile">Profile</a>
+        <a href="#ventures" data-show="business" data-i18n="nav.ventures">Ventures</a>
+        <a href="#venture-training" data-show="business" data-i18n="nav.method">Method</a>
+        <a href="#proof" data-show="business" data-i18n="nav.proof">Proof</a>
+        <a href="#stack" data-show="build" data-i18n="nav.stack">The stack</a>
         <a href="#fiit" data-show="build">FIIT</a>
         <a href="#rgu" data-show="build">RGU</a>
-        <a href="#side" data-show="build">Projects</a>
-        <a href="#fit">How I operate</a>
+        <a href="#side" data-show="build" data-i18n="nav.projects">Projects</a>
+        <a href="#fit" data-i18n="nav.fit">How I operate</a>
     </nav>
-    <p class="counter" id="counter" aria-hidden="true" title="Use the left and right arrow keys to flip slides"></p>
+    <p class="counter" id="counter" aria-hidden="true" title="Use the left and right arrow keys to flip slides" data-i18n-attr="title=counter.title"></p>
     <div class="bar-right">
-        <div class="lens-switch" role="group" aria-label="Choose which side to read">
+        <select class="lang-select" aria-label="Language" data-i18n-attr="aria-label=lang.label">
+            <option value="en" lang="en">EN</option>
+            <option value="sk" lang="sk">SK</option>
+            <option value="de" lang="de">DE</option>
+        </select>
+        <div class="lens-switch" role="group" aria-label="Choose which side to read" data-i18n-attr="aria-label=lens.label">
             <span class="pill" aria-hidden="true"></span>
-            <button type="button" data-set-lens="business" aria-pressed="false">Business</button>
-            <button type="button" data-set-lens="build" aria-pressed="true">Build</button>
+            <button type="button" data-set-lens="business" aria-pressed="false" data-i18n="lens.business">Business</button>
+            <button type="button" data-set-lens="build" aria-pressed="true" data-i18n="lens.build">Build</button>
         </div>
-        <a class="btn btn-sm" href="#ask">Let's talk</a>
+        <a class="btn btn-sm" href="#ask" data-i18n="talk">Let's talk</a>
     </div>
 </header>
 
 <main id="content">
     <!-- Cover (both decks) -->
-    <section class="slide stack cover" id="cover" data-title="Cover">
+    <section class="slide stack cover" id="cover" data-title="Cover" data-i18n-attr="data-title=s.cover">
         <div class="lens-ring" aria-hidden="true"></div>
         <div class="wrap">
-            <h1>
+            <h1 data-i18n="cover.h1" data-i18n-words>
                 <span class="w"><span style="--d:0">From</span></span>
                 <span class="w"><span style="--d:1">machine</span></span>
                 <span class="w"><span style="--d:2">code</span></span>
@@ -58,81 +67,80 @@
                 <span class="w"><span style="--d:5">business</span></span>
                 <span class="w"><span style="--d:6">case.</span></span>
             </h1>
-            <p class="lede" data-show="build">Most at home in Java and C. I learned to code from the machine up (Turing machines, logic circuits, memory by hand), then through operating systems, security, cloud and the web.</p>
-            <p class="lede" data-show="business">I'm a software engineer who builds the product and the business around it: I talk to the people who'll use the thing, decide what gets built first, then write the code myself.</p>
+            <p class="lede" data-show="build" data-i18n="cover.lede.build">Most at home in Java and C. I learned to code from the machine up (Turing machines, logic circuits, memory by hand), then through operating systems, security, cloud and the web.</p>
+            <p class="lede" data-show="business" data-i18n="cover.lede.business">I'm a software engineer who builds the product and the business around it: I talk to the people who'll use the thing, decide what gets built first, then write the code myself.</p>
             <div class="cta-row">
-                <a class="btn" href="https://www.linkedin.com/in/matus-illith" target="_blank" rel="noopener noreferrer">Let's talk</a>
-                <a class="arrow-link" href="#stack" data-show="build">See what I learned <span aria-hidden="true">↓</span></a>
-                <a class="arrow-link" href="#ventures" data-show="business">See the ventures <span aria-hidden="true">↓</span></a>
+                <a class="btn" href="https://www.linkedin.com/in/matus-illith" target="_blank" rel="noopener noreferrer" data-i18n="talk">Let's talk</a>
+                <a class="arrow-link" href="#stack" data-show="build" data-i18n="cover.see.stack">See what I learned <span aria-hidden="true">↓</span></a>
+                <a class="arrow-link" href="#ventures" data-show="business" data-i18n="cover.see.ventures">See the ventures <span aria-hidden="true">↓</span></a>
             </div>
-            <p class="cover-meta">Matus Illith · BSc (Hons) Computer Science, Robert Gordon University, Aberdeen · graduating 2027 · looking for a graduate software engineering or Product Owner role</p>
-            <p class="hint" data-show="build">Switch to Business for the work I've done with and for companies.</p>
-            <p class="hint" data-show="business">Switch to Build for the engineering and education behind it.</p>
+            <p class="cover-meta" data-i18n="cover.meta">Matus Illith · BSc (Hons) Computer Science, Robert Gordon University, Aberdeen · graduating 2027 · looking for a graduate software engineering or Product Owner role</p>
+            <p class="hint" data-show="build" data-i18n="cover.hint.build">Switch to Business for the work I've done with and for companies.</p>
+            <p class="hint" data-show="business" data-i18n="cover.hint.business">Switch to Build for the engineering and education behind it.</p>
         </div>
     </section>
 
     <!-- BUSINESS: the gap -->
-    <section class="slide stack" id="problem" data-show="business" data-title="The gap">
+    <section class="slide stack" id="problem" data-show="business" data-title="The gap" data-i18n-attr="data-title=s.problem">
         <div class="wrap narrow">
-            <h2>Most products stall in the gap between what the business needs and what engineering builds.</h2>
-            <p class="big">Someone has to own that gap: understand the people who will use the thing, and the system well enough to know what is cheap and what is expensive. That is the job I am training for, and the one I do on my own projects.</p>
+            <h2 data-i18n="problem.h2">Most products stall in the gap between what the business needs and what engineering builds.</h2>
+            <p class="big" data-i18n="problem.big">Someone has to own that gap: understand the people who will use the thing, and the system well enough to know what is cheap and what is expensive. That is the job I am training for, and the one I do on my own projects.</p>
         </div>
     </section>
 
     <!-- BUSINESS: profile -->
-    <section class="slide" id="profile" data-show="business" data-title="Profile">
+    <section class="slide" id="profile" data-show="business" data-title="Profile" data-i18n-attr="data-title=s.profile">
         <div class="wrap profile">
-            <img class="portrait" src="PhotoGallery/ProfielPicture.JPG" alt="Portrait of Matus Illith" data-r>
+            <img class="portrait" src="PhotoGallery/ProfielPicture.JPG" alt="Portrait of Matus Illith" data-i18n-attr="alt=profile.alt" data-r>
             <div>
-                <h2>One person on both sides of the table.</h2>
+                <h2 data-i18n="profile.h2">One person on both sides of the table.</h2>
                 <ul class="lines">
-                    <li data-r><strong>Discovery.</strong> Built Elev8 with coaches in Aberdeen and Bratislava.</li>
-                    <li data-r><strong>Roadmaps.</strong> Web first, then PC, then mobile: sequenced on purpose.</li>
-                    <li data-r><strong>Leading.</strong> Led the technical team on a HealthTech doctor-portal prototype.</li>
-                    <li data-r><strong>Delivering.</strong> Freelance projects scoped and shipped end to end under Designlify.</li>
+                    <li data-r data-i18n="profile.1"><strong>Discovery.</strong> Built Elev8 with coaches in Aberdeen and Bratislava.</li>
+                    <li data-r data-i18n="profile.2"><strong>Roadmaps.</strong> Web first, then PC, then mobile: sequenced on purpose.</li>
+                    <li data-r data-i18n="profile.3"><strong>Leading.</strong> Led the technical team on a HealthTech doctor-portal prototype.</li>
                 </ul>
             </div>
         </div>
     </section>
 
     <!-- BUSINESS: ventures -->
-    <section class="slide" id="ventures" data-show="business" data-title="Ventures">
+    <section class="slide" id="ventures" data-show="business" data-title="Ventures" data-i18n-attr="data-title=s.ventures">
         <div class="wrap">
-            <h2>Three things I built with real people.</h2>
+            <h2 data-i18n="ventures.h2">Two things I built with real people.</h2>
             <div id="ventures-list"></div>
         </div>
     </section>
 
     <!-- BUSINESS: entrepreneurship module -->
-    <section class="slide" id="venture-training" data-show="business" data-title="Entrepreneurship">
+    <section class="slide" id="venture-training" data-show="business" data-title="Entrepreneurship" data-i18n-attr="data-title=s.method">
         <div class="wrap narrow">
-            <h2>The method behind the ventures.</h2>
-            <p class="big">Pirates Studies, my Year 3 module at Robert Gordon University, is built on MIT's entrepreneurship course and was taught by the dean of the school, who studied at MIT. Grade: A.</p>
+            <h2 data-i18n="method.h2">The method behind the ventures.</h2>
+            <p class="big" data-i18n="method.big">Pirates Studies, my Year 3 module at Robert Gordon University, is built on MIT's entrepreneurship course and was taught by the dean of the school, who studied at MIT. Grade: A.</p>
             <ul class="lines">
-                <li data-r><strong>Opportunities.</strong> Identify and evaluate new venture opportunities: recognise market needs and innovation potential.</li>
-                <li data-r><strong>Customers.</strong> Interpret customer needs, then quantify and communicate a compelling value proposition.</li>
-                <li data-r><strong>Business plans.</strong> Craft winning business plans and scale startups, with strategy, operational planning and sustainable growth.</li>
-                <li data-r><strong>Prototyping.</strong> Move from low-fidelity to high-fidelity prototypes through iterative development.</li>
+                <li data-r data-i18n="method.1"><strong>Opportunities.</strong> Identify and evaluate new venture opportunities: recognise market needs and innovation potential.</li>
+                <li data-r data-i18n="method.2"><strong>Customers.</strong> Interpret customer needs, then quantify and communicate a compelling value proposition.</li>
+                <li data-r data-i18n="method.3"><strong>Business plans.</strong> Craft winning business plans and scale startups, with strategy, operational planning and sustainable growth.</li>
+                <li data-r data-i18n="method.4"><strong>Prototyping.</strong> Move from low-fidelity to high-fidelity prototypes through iterative development.</li>
             </ul>
         </div>
     </section>
 
     <!-- BUSINESS: proof -->
-    <section class="slide" id="proof" data-show="business" data-title="Proof">
+    <section class="slide" id="proof" data-show="business" data-title="Proof" data-i18n-attr="data-title=s.proof">
         <div class="wrap narrow">
-            <h2>The numbers behind it.</h2>
+            <h2 data-i18n="proof.h2">The numbers behind it.</h2>
             <ul class="ledger">
-                <li data-r><span>Clients served through Designlify</span><span class="tbd">TBD · add figure</span></li>
-                <li data-r><span>Coaches and users I have interviewed</span><span class="tbd">TBD · add figure</span></li>
-                <li data-r><span>Products taken from idea to working prototype</span><span class="tbd">TBD · add figure</span></li>
+                <li data-r><span data-i18n="proof.1">Coaches I have interviewed</span><span class="fig" data-i18n="proof.v1">About 15</span></li>
+                <li data-r><span data-i18n="proof.2">Heads of gyms I have interviewed</span><span class="fig" data-i18n="proof.v2">About 20</span></li>
+                <li data-r><span data-i18n="proof.3">Products taken from idea to final result</span><span class="fig" data-i18n="proof.v3">About 6</span></li>
             </ul>
         </div>
     </section>
 
     <!-- BUILD: stack ladder -->
-    <section class="slide" id="stack" data-show="build" data-title="The stack">
+    <section class="slide" id="stack" data-show="build" data-title="The stack" data-i18n-attr="data-title=s.stack">
         <div class="wrap">
-            <h2>Every layer of the stack, one person.</h2>
+            <h2 data-i18n="stack.h2">Every layer of the stack, one person.</h2>
             <div class="stack-grid">
                 <div class="ladder-detail" id="ladder-detail" aria-hidden="true"></div>
                 <ol class="ladder" id="ladder"></ol>
@@ -143,56 +151,55 @@
     <!-- BUILD: FIIT -->
     <section class="slide" id="fiit" data-show="build" data-title="FIIT, Bratislava">
         <div class="wrap narrow">
-            <h2 style="view-transition-name: fiit-title">Where I learned to code: FIIT, Bratislava.</h2>
-            <p class="big">BSci Informatics and Informational Science, 2022–23, at the Slovak University of Technology. Mathematics and theory, computer engineering, and programming in C and Java. Open a course to see what I learned.</p>
+            <h2 style="view-transition-name: fiit-title" data-i18n="fiit.h2">Where I learned to code: FIIT, Bratislava.</h2>
+            <p class="big" data-i18n="fiit.big">BSci Informatics and Informational Science, 2022–23, at the Slovak University of Technology. Mathematics and theory, computer engineering, and programming in C and Java. Open a course to see what I learned.</p>
             <div class="courses" id="fiit-courses"></div>
-            <p><a class="arrow-link" href="slovak-university-details.html">Full course details <span aria-hidden="true">→</span></a></p>
+            <p><a class="arrow-link" href="slovak-university-details.html" data-i18n="course.details">Full course details <span aria-hidden="true">→</span></a></p>
         </div>
     </section>
 
     <!-- BUILD: RGU -->
     <section class="slide" id="rgu" data-show="build" data-title="RGU, Aberdeen">
         <div class="wrap narrow">
-            <h2 style="view-transition-name: rgu-title">Then systems, security and AI at Robert Gordon University.</h2>
-            <p class="big">BSc (Hons) Computer Science, Aberdeen, 2023–2027. Open a course to see what I learned and the grade.</p>
+            <h2 style="view-transition-name: rgu-title" data-i18n="rgu.h2">Then systems, security and AI at Robert Gordon University.</h2>
+            <p class="big" data-i18n="rgu.big">BSc (Hons) Computer Science, Aberdeen, 2023–2027. Open a course to see what I learned and the grade.</p>
             <div class="roadmap">
                 <span class="rail" aria-hidden="true"><span class="rail-fill"></span></span>
                 <ol id="rgu-list"></ol>
             </div>
-            <p><a class="arrow-link" href="education-details.html">Full course details <span aria-hidden="true">→</span></a></p>
+            <p><a class="arrow-link" href="education-details.html" data-i18n="course.details">Full course details <span aria-hidden="true">→</span></a></p>
         </div>
     </section>
 
     <!-- BUILD: projects -->
-    <section class="slide" id="side" data-show="build" data-title="Engineering projects">
+    <section class="slide" id="side" data-show="build" data-title="Engineering projects" data-i18n-attr="data-title=s.side">
         <div class="wrap">
-            <h2>Things I built to understand how it works.</h2>
+            <h2 data-i18n="side.h2">Things I built to understand how it works.</h2>
             <div class="side-grid" id="side-list"></div>
         </div>
     </section>
 
     <!-- How I operate (both decks) -->
-    <section class="slide" id="fit" data-title="How I operate">
+    <section class="slide" id="fit" data-title="How I operate" data-i18n-attr="data-title=s.fit">
         <div class="wrap narrow">
-            <h2>How I operate.</h2>
+            <h2 data-i18n="fit.h2">How I operate.</h2>
             <ul class="lines">
-                <li data-r><strong>Freediving and freeriding.</strong> Calm under pressure, and respect for the risk you cannot see.</li>
-                <li data-r><strong>The gym.</strong> Boring consistency beats occasional heroics.</li>
-                <li data-r><strong>Guitar, now ukulele.</strong> Always learning a new instrument, badly at first, on purpose.</li>
+                <li data-r data-i18n="fit.1"><strong>Freediving and freeriding.</strong> Calm under pressure, and respect for the risk you cannot see.</li>
+                <li data-r data-i18n="fit.2"><strong>The gym.</strong> Boring consistency beats occasional heroics.</li>
+                <li data-r data-i18n="fit.3"><strong>Guitar, now ukulele.</strong> Always learning a new instrument, badly at first, on purpose.</li>
             </ul>
         </div>
     </section>
 
     <!-- Ask (both decks) -->
-    <section class="slide" id="ask" data-title="Let's talk">
+    <section class="slide" id="ask" data-title="Let's talk" data-i18n-attr="data-title=talk">
         <div class="wrap narrow">
-            <h2 data-show="build">Hiring a software engineer who thinks about the product?</h2>
-            <h2 data-show="business">Hiring a Product Owner who can build?</h2>
-            <p class="big">Based between the UK and Slovakia. Connect with me on LinkedIn and let's set up a call.</p>
+            <h2 data-show="build" data-i18n="ask.h2.build">Hiring a software engineer who thinks about the product?</h2>
+            <h2 data-show="business" data-i18n="ask.h2.business">Hiring a Product Owner who can build?</h2>
+            <p class="big" data-i18n="ask.big">Based between the UK and Slovakia. Connect with me on LinkedIn and let's set up a call.</p>
             <div class="cta-row">
-                <a class="btn" href="https://www.linkedin.com/in/matus-illith" target="_blank" rel="noopener noreferrer">Message me on LinkedIn</a>
+                <a class="btn" href="https://www.linkedin.com/in/matus-illith" target="_blank" rel="noopener noreferrer" data-i18n="ask.linkedin">Message me on LinkedIn</a>
                 <a class="arrow-link" href="https://github.com/Matesor333" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-                <a class="arrow-link" href="https://designlify.tech/" target="_blank" rel="noopener noreferrer">Designlify <span aria-hidden="true">↗</span></a>
             </div>
             <p class="cover-meta">&copy; <span id="year"></span> Matus Illith</p>
         </div>
@@ -203,6 +210,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="js/ventures.js"></script>
 <script src="js/education.js"></script>
+<script src="js/lang/sk.js"></script>
+<script src="js/lang/de.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/deck.js"></script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>

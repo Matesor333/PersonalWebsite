@@ -3,21 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robert Gordon University — BSc (Hons) Computer Science — Matus Illith</title>
-    <meta name="description" content="Every module of Matus Illith's BSc (Hons) Computer Science at Robert Gordon University, Aberdeen: what he learned, grades and outcomes.">
+    <title data-i18n="rgu.page.title">Robert Gordon University — BSc (Hons) Computer Science — Matus Illith</title>
+    <meta name="description" data-i18n-attr="content=rgu.page.desc" content="Every module of Matus Illith's BSc (Hons) Computer Science at Robert Gordon University, Aberdeen: what he learned, grades and outcomes.">
+    <link rel="alternate" hreflang="en" href="https://matus-illith.com/education-details.html">
+    <link rel="alternate" hreflang="sk" href="https://matus-illith.com/education-details.html?lang=sk">
+    <link rel="alternate" hreflang="de" href="https://matus-illith.com/education-details.html?lang=de">
+    <link rel="alternate" hreflang="x-default" href="https://matus-illith.com/education-details.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Hanken+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap">
     <link rel="stylesheet" href="css/deck.css">
 </head>
 <body class="course-page" data-page="rgu">
-<a class="skip" href="#content">Skip to content</a>
+<a class="skip" href="#content" data-i18n="skip">Skip to content</a>
 
 <header class="bar">
     <a class="bar-name" href="index.html?lens=build#cover">Matus Illith</a>
     <div class="bar-right">
-        <a class="arrow-link back" href="index.html?lens=build#rgu"><span aria-hidden="true">←</span> Back to the deck</a>
-        <a class="btn btn-sm" href="https://www.linkedin.com/in/matus-illith" target="_blank" rel="noopener noreferrer">Let's talk</a>
+        <select class="lang-select" aria-label="Language" data-i18n-attr="aria-label=lang.label">
+            <option value="en" lang="en">EN</option>
+            <option value="sk" lang="sk">SK</option>
+            <option value="de" lang="de">DE</option>
+        </select>
+        <a class="arrow-link back" href="index.html?lens=build#rgu" data-i18n="course.back"><span aria-hidden="true">←</span> Back to the deck</a>
+        <a class="btn btn-sm" href="https://www.linkedin.com/in/matus-illith" target="_blank" rel="noopener noreferrer" data-i18n="talk">Let's talk</a>
     </div>
 </header>
 
@@ -25,30 +34,33 @@
     <section class="cp-hero">
         <div class="wrap">
             <h1 style="view-transition-name: rgu-title">Robert Gordon University</h1>
-            <p class="cp-meta">BSc (Hons) Computer Science · Aberdeen · 2023–2027</p>
-            <p class="big">A four-year honours degree that combines theory with practical skills in software development, systems design and computer architecture. I am in the final year.</p>
-            <ol class="track" aria-label="Programme progress">
-                <li style="--k:0">Year 1<br>Foundation</li>
-                <li style="--k:1">Year 2<br>Development</li>
-                <li style="--k:2">Year 3</li>
-                <li style="--k:3" class="now">Year 4<br>Final year<br><span class="status">You are here</span></li>
+            <p class="cp-meta" data-i18n="rgu.page.meta">BSc (Hons) Computer Science · Aberdeen · 2023–2027</p>
+            <p class="big" data-i18n="rgu.page.big">A four-year honours degree that combines theory with practical skills in software development, systems design and computer architecture. I am in the final year.</p>
+            <ol class="track" aria-label="Programme progress" data-i18n-attr="aria-label=rgu.page.track">
+                <li style="--k:0" data-i18n="rgu.page.y1">Year 1<br>Foundation</li>
+                <li style="--k:1" data-i18n="rgu.page.y2">Year 2<br>Development</li>
+                <li style="--k:2" data-i18n="rgu.page.y3">Year 3</li>
+                <li style="--k:3" class="now" data-i18n="rgu.page.y4">Year 4<br>Final year<br><span class="status">You are here</span></li>
             </ol>
         </div>
     </section>
 
-    <nav class="yearnav" id="yearnav" aria-label="Jump to a year"></nav>
+    <nav class="yearnav" id="yearnav" aria-label="Jump to a year" data-i18n-attr="aria-label=course.yearnav"></nav>
     <div class="wrap page-pad" id="years"></div>
 
     <section class="cp-next">
         <div class="wrap">
-            <a class="arrow-link back" href="index.html?lens=build#rgu"><span aria-hidden="true">←</span> Back to the deck</a>
-            <a class="arrow-link" href="slovak-university-details.html">Where it started: FIIT, Bratislava <span aria-hidden="true">→</span></a>
+            <a class="arrow-link back" href="index.html?lens=build#rgu" data-i18n="course.back"><span aria-hidden="true">←</span> Back to the deck</a>
+            <a class="arrow-link" href="slovak-university-details.html" data-i18n="rgu.page.next">Where it started: FIIT, Bratislava <span aria-hidden="true">→</span></a>
             <p class="cover-meta">&copy; <span id="year"></span> Matus Illith</p>
         </div>
     </section>
 </main>
 
 <script src="js/education.js"></script>
+<script src="js/lang/sk.js"></script>
+<script src="js/lang/de.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/course.js"></script>
 </body>
 </html>

@@ -1388,3 +1388,15 @@ Current project
         font-size: 1.5rem;
     }
 }
+
+.lang-select {
+    appearance: none;
+    background: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--card-border);
+    border-radius: 999px;
+    padding: 0.4rem 0.8rem;
+    font: inherit;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
