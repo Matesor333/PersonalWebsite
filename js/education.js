@@ -124,37 +124,37 @@ window.EDU_RGU = [
    {
     "name": "Introduction to Programming",
     "desc": "Fundamentals of programming logic, algorithms, and problem-solving approaches (JavaScript).",
-    "grade": "Pass"
+    "grade": "A"
    },
    {
     "name": "Problem Solving",
     "desc": "Techniques for analyzing and solving computational problems through structured approaches (R)",
-    "grade": "Pass"
+    "grade": "A"
    },
    {
     "name": "Computing Devices",
     "desc": "Hands-on exploration of microcontrollers, hardware interfaces, and Arduino programming fundamentals",
-    "grade": "Pass"
+    "grade": "A"
    },
    {
     "name": "Creative Design",
     "desc": "Principles of user-centered design and creative problem-solving for digital products",
-    "grade": "Pass"
+    "grade": "A"
    },
    {
     "name": "Frontend Web",
     "desc": "Development of responsive web interfaces using HTML, CSS, and JavaScript",
-    "grade": "Pass"
+    "grade": "A"
    },
    {
     "name": "Mathematics for Computing",
     "desc": "Essential mathematical concepts for computer science including discrete mathematics and logic (Python)",
-    "grade": "Pass"
+    "grade": "A"
    },
    {
     "name": "Software Development",
     "desc": "Object-oriented programming principles and application development (Java)",
-    "grade": "Pass"
+    "grade": "A"
    }
   ]
  },
@@ -282,6 +282,7 @@ window.EDU_RGU = [
    {
     "name": "Concurrent Programming",
     "desc": "Advanced programming techniques for parallel execution and synchronization in multithreaded applications",
+    "grade": "A",
     "learned": "Studied advanced programming techniques for building multithreaded and parallel applications that utilise modern hardware efficiently. Covered synchronisation, race conditions, deadlocks, and thread-safe design to build reliable concurrent systems.",
     "outcomes": [
      "Multithreading",
@@ -296,6 +297,7 @@ window.EDU_RGU = [
    {
     "name": "Interdisciplinary Team Project",
     "desc": "Collaborative projects work with students from different disciplines to solve complex problems",
+    "grade": "A",
     "learned": "Worked with students from other disciplines to solve complex, real-world problems using an agile, project‑based approach. Contributed to a client‑facing prototype, integrating technical computing with design and business inputs.",
     "outcomes": [
      "Cross‑discipline teamwork",
@@ -308,6 +310,7 @@ window.EDU_RGU = [
    {
     "name": "Machine Learning",
     "desc": "Algorithms and statistical models for computer systems to perform tasks without explicit instructions",
+    "grade": "A",
     "learned": "Introduction to core machine learning concepts, algorithms, and workflows. Trained and evaluated different models on datasets, including an experiment where an SVM model achieved 100% accuracy on a given task.",
     "outcomes": [
      "Supervised learning",
@@ -322,6 +325,7 @@ window.EDU_RGU = [
    {
     "name": "Information Risk and Security Management",
     "desc": "Strategies for identifying, assessing, and mitigating information security risks in organizations",
+    "grade": "A",
     "learned": "Focused on identifying, assessing, and managing information security risks while aligning technical controls with business needs. Studied risk assessment frameworks, security policies, and mitigation strategies (aligned with industry practices like NIST).",
     "outcomes": [
      "Risk assessment",
@@ -336,6 +340,7 @@ window.EDU_RGU = [
    {
     "name": "Pirates Studies",
     "desc": "Creating a product that has a product-market fit within the student's respective area of expertise",
+    "grade": "A",
     "learned": "Product‑focused module aimed at validating problem–solution fit and iterating towards product–market fit in a chosen domain. Emphasised experiments, user feedback, and rapid iteration.",
     "outcomes": [
      "Customer discovery",
@@ -348,6 +353,7 @@ window.EDU_RGU = [
    {
     "name": "Internet of Things",
     "desc": "Advanced concepts in IoT architecture, protocols, and applications for connected devices",
+    "grade": "A",
     "learned": "Covered IoT system architecture, communication protocols, and device integration. Explored sensor data acquisition, gateway design, and secure cloud ingestion for connected solutions.",
     "outcomes": [
      "IoT protocols (MQTT/HTTP)",
@@ -361,6 +367,7 @@ window.EDU_RGU = [
    {
     "name": "Artificial Intelligence for Problem Solving",
     "desc": "Application of AI techniques to solve complex computational and real-world problems",
+    "grade": "A",
     "learned": "Applied AI techniques such as heuristic search, planning, and knowledge‑based reasoning to tackle computational and real‑world problems. Emphasis on modelling problems and choosing suitable strategies.",
     "outcomes": [
      "Heuristic search",
@@ -373,6 +380,7 @@ window.EDU_RGU = [
    {
     "name": "Software Security and Malware Analysis",
     "desc": "Techniques for identifying vulnerabilities, analyzing malicious software, and implementing secure coding practices",
+    "grade": "A",
     "learned": "Explored secure coding principles and approaches for assessing software security. Introduced static/dynamic analysis and fundamentals of malware analysis and basic reverse engineering.",
     "outcomes": [
      "Secure coding",

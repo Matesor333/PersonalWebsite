@@ -100,6 +100,12 @@
         current = Math.max(0, i);
         counter.innerHTML = `<span class="num">${String(current + 1).padStart(2, '0')}</span> / ${String(list.length).padStart(2, '0')}`;
         counter.title = (list[current] && list[current].dataset.title) || '';
+        const id = list[current] && list[current].id;
+        $('.bar-nav a').forEach(a => {
+            const on = a.hash === '#' + id;
+            if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+            if (on) a.scrollIntoView({inline: 'nearest', block: 'nearest', behavior: reduce ? 'auto' : 'smooth'});
+        });
     };
 
     const io = new IntersectionObserver(es => es.forEach(e => {
