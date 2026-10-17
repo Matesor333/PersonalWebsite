@@ -73,13 +73,21 @@
     });
     const layerEls = $('.layer');
     const detail = $('#ladder-detail')[0];
+    let shown = -1;
     const setLayer = i => {
+        if (i === shown) return; // onUpdate fires every scroll tick; only touch the DOM when the layer changes
+        shown = i;
         layerEls.forEach(el => {
             const n = +el.dataset.i;
             el.classList.toggle('lit', n <= i);
             el.classList.toggle('cur', n === i);
         });
         detail.innerHTML = `<h3>${STACK_LAYERS[i].name}</h3><p class="big">${STACK_LAYERS[i].build}</p>`;
+        detail.getAnimations().forEach(a => a.cancel());
+        detail.animate(
+            [{opacity: 0, transform: 'translateY(12px)'}, {opacity: 1, transform: 'none'}],
+            {duration: 240, easing: 'cubic-bezier(0.16, 1, 0.3, 1)'}
+        );
     };
 
     // ---- slides + counter (counts only the slides of the active lens)
@@ -123,10 +131,25 @@
         layerEls.forEach(el => { el.classList.add('lit'); el.classList.remove('cur'); });
         if (root.dataset.lens === 'build' && desk.matches) {
             stackEl.classList.add('stack-pinned');
+            const n = STACK_LAYERS.length;
+            let fill = $('.ladder-fill')[0];
+            if (!fill) {
+                fill = document.createElement('span');
+                fill.className = 'ladder-fill';
+                fill.setAttribute('aria-hidden', 'true');
+                $('#ladder')[0].append(fill);
+            }
+            fill.style.transform = 'scaleY(0)';
+            shown = -1;
             setLayer(0);
+            // 22% of a viewport per layer, and a snap so every scroll settles on a whole layer.
             pin = ScrollTrigger.create({
-                trigger: stackEl, start: 'top top', end: `+=${STACK_LAYERS.length * 55}%`, pin: true,
-                onUpdate: s => setLayer(Math.min(STACK_LAYERS.length - 1, Math.floor(s.progress * STACK_LAYERS.length)))
+                trigger: stackEl, start: 'top top', end: `+=${n * 22}%`, pin: true,
+                snap: {snapTo: 1 / (n - 1), duration: {min: 0.2, max: 0.45}, delay: 0.08, ease: 'expo.out'},
+                onUpdate: s => {
+                    setLayer(Math.round(s.progress * (n - 1)));
+                    fill.style.transform = `scaleY(${s.progress})`;
+                }
             });
         }
         ScrollTrigger.refresh();

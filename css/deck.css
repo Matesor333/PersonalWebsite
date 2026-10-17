@@ -169,8 +169,10 @@ dd { margin: 0; max-width: 40em; }
 .ladder-detail { display: none; }
 .stack-pinned .ladder-detail { display: block; }
 .ladder-detail h3 { font-size: clamp(2.25rem, 5vw, 4rem); margin-bottom: 1.25rem; }
-.ladder { list-style: none; margin: 0; padding: 0; background: linear-gradient(var(--rule), var(--rule)) left / 2px 100% no-repeat; }
-.layer { position: relative; padding: 0.4rem 0 0.4rem 1.5rem; transition: opacity 0.4s var(--ease); }
+.ladder { position: relative; list-style: none; margin: 0; padding: 0; background: linear-gradient(var(--rule), var(--rule)) left / 2px 100% no-repeat; }
+.ladder-fill { display: none; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--accent); transform-origin: bottom; transform: scaleY(0); }
+.stack-pinned .ladder-fill { display: block; }
+.layer { position: relative; padding: 0.4rem 0 0.4rem 1.5rem; transition: opacity 0.25s var(--ease); }
 .layer::before { content: ""; position: absolute; left: -0.45rem; top: 0.85rem; width: 0.8rem; height: 0.8rem; border-radius: 50%; background: var(--bg); border: 2px solid var(--rule); transition: background 0.3s var(--ease), border-color 0.3s var(--ease), transform 0.4s var(--ease); }
 .layer.lit::before { background: var(--accent); border-color: var(--accent); }
 .layer.cur::before { transform: scale(1.6); }
