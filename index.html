@@ -1,412 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lens="business">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matus Illith - Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/page-details.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Matus Illith — Product Owner mindset, engineer's hands</title>
+    <meta name="description" content="Matus Illith builds the product and the business around it: own ventures, real users, and the code to ship them. Seeking a Product Owner or software engineering placement.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Hanken+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap">
+    <link rel="stylesheet" href="css/deck.css">
+    <script>try { var l = localStorage.getItem('lens'); if (l === 'build' || l === 'business') document.documentElement.dataset.lens = l; } catch (e) {}</script>
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <div class="logo">Portfolio</div>
-            <nav>
-                <ul>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#education" class="nav-link">Education</a></li>
-                    <li><a href="#past-projects" class="nav-link">Past Projects</a></li>
-                    <li><a href="#current-projects" class="nav-link">Current Projects</a></li>
-                    <li><a href="#interests" class="nav-link">Interests</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                    <li>
-                        <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
-                            <i id="darkModeIcon" class="fas fa-moon"></i>
-                        </button>
-                    </li>
-                </ul>
-            </nav>
+<a class="skip" href="#ventures">Skip to ventures</a>
+
+<header class="bar">
+    <a class="bar-name" href="#cover">Matus Illith</a>
+    <p class="counter" id="counter" aria-hidden="true" title="Use the left and right arrow keys to flip slides"></p>
+    <div class="bar-right">
+        <div class="lens-switch" role="group" aria-label="Reading lens">
+            <span class="pill" aria-hidden="true"></span>
+            <button type="button" data-set-lens="business" aria-pressed="true">Business</button>
+            <button type="button" data-set-lens="build" aria-pressed="false">Build</button>
         </div>
-    </header>
-
-<div class="container">
-    <main>
-        <section class="profile-section" id="about">
-            <div class="profile-container">
-                <div class="profile-img-container fade-in">
-                    <div class="profile-img">
-                        <img src="PhotoGallery/ProfielPicture.JPG" alt="Matus Illith">
-                    </div>
-                </div>
-
-                <div class="profile-content reveal-from-right">
-                    <h1>Matus Illith</h1>
-                    <h2>Software Engineer/Student</h2>
-
-                    <p class="bio">
-                        Hi! I'm a passionate computer science student from Slovakia, currently thriving (and occasionally
-                        braving the weather) at Robert Gordon University in Aberdeen. <strong>Currently studying Bachelors year</strong> of the integrated MSci
-                        Computing program and <strong>actively seeking a placement for my 4th year</strong> where I'll be working full-time in industry
-                        to further develop my skills and make a real impact. I'm most proficient in Java and C, with recent experience in Python. My
-                        projects include a full-stack calorie tracker and a healthcare prototype for Ikarien Health to help doctors monitor patients more effectively. I also use Docker and Bash scripting
-                        to streamline my workflow. When I'm not coding, you'll find me at the gym (often fueled by enough
-                        pre-workout and caffeine to power a small village), freediving, or jamming on my guitar. I bring the
-                        same energy and curiosity to tech as I do to my hobbies.
-                    </p>
-
-                    <div class="skills">
-                        <span class="skill-tag reveal-item">Java</span>
-                        <span class="skill-tag reveal-item">C</span>
-                        <span class="skill-tag reveal-item">JavaScript</span>
-                        <span class="skill-tag reveal-item">React</span>
-                        <span class="skill-tag reveal-item">Node.js</span>
-                        <span class="skill-tag reveal-item">Bash</span>
-                        <span class="skill-tag reveal-item">Python</span>
-                        <span class="skill-tag reveal-item">Docker</span>
-                    </div>
-
-                    <div class="buttons fade-in">
-
-                        <a href="https://www.linkedin.com/in/matus-illith"class="btn btn-primary">
-                            <i class="fas fa-envelope"></i> Get in touch
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--EDUCATIONAL SECTION-->
-        <section class="education-section" id="education">
-            <h2 class="section-title reveal-section">Education</h2>
-
-            <a href="education-details.html" class="project-card-link">
-                <div class="education-card reveal-from-left">
-                    <div class="education-header">
-                        <div class="education-info">
-                            <h3 class="education-degree">MSci Computer Science</h3>
-                            <p class="education-institution">Robert Gordon University Aberdeen</p>
-                        </div>
-                        <div class="education-year">
-                            <span>2023-2028</span>
-                        </div>
-                    </div>
-                    <p class="education-description">
-                        Integrated MSci undergrad program in Computer Science. <strong>Currently in Year 3: Bachelors Year</strong> and
-                        <strong>actively seeking a placement for my 4th year</strong> where I'll be working full-time in industry. 
-                        In my first two years, I've completed courses in Programming, Web Development, IoT, Databases, 
-                        Operating Systems, and Data Structures & Algorithms. See the detailed course list for each year in the education details page.
-                    </p>
-                   <div class="view-details">View Details <span class="arrow">→</span></div>
-                </div>
-            </a>
-
-            <a href="slovak-university-details.html" class="project-card-link">
-                <div class="education-card reveal-from-right">
-                    <div class="education-header">
-                        <div class="education-info">
-                            <h3 class="education-degree">BSci Informatics and Informational Science</h3>
-                            <p class="education-institution">Slovak Technical University in Bratislava</p>
-                        </div>
-                        <div class="education-year">
-                            <span>2022-2023</span>
-                        </div>
-                    </div>
-                    <p class="education-description">
-                        Studied one year in Slovakia before moving to study in Aberdeen.
-                        Here I gained knowledge of low-level programming (C, RAM Simulations) and built Sequence Logical Circuit with LogiSim.
-                        I was also introduced to Software Development using Java, with focus on OOP Design Patterns and Concurrent programming.
-                    </p>
-                    <div class="view-details">View Details <span class="arrow">→</span></div>
-                </div>
-            </a>
-
-        </section>
-
-        <!--Past projects-->
-
-        <section class="projects-section" id="past-projects">
-            <h2 class="section-title reveal-section">Past Projects</h2>
-
-            <div class="projects-container">
-                <!-- Project Card 1 -->
-                <div class="project-card reveal-item"><div class="project-image">
-                    <img src="PhotoGallery/InvoiceMakerVideo.gif" alt="Invoice Maker">
-                </div>
-                    <h3 class="project-title">Invoice Creation Software</h3>
-                    <div class="project-tags">
-                        <span class="tech-tag">Java</span>
-                        <span class="tech-tag">RESTful API</span>
-                        <span class="tech-tag">SupaBase</span>
-                        <span class="tech-tag">iText7</span>
-                        <span class="tech-tag">Jackson</span>
-                        <span class="tech-tag">Maven</span>
-                    </div>
-                    <p class="project-description">
-                        A robust desktop application designed to streamline the invoicing process for freelancers. Built with JavaFX and powered by Supabase, this tool allows you to manage clients, track history, and generate professional PDF invoices with cloud synchronization.
-                    </p>
-
-                </div>
-
-                <!-- Project Card 2 -->
-                <div class="project-card reveal-item">
-                    <div class="project-image">
-                        <img src="PhotoGallery/Ikarian.gif" alt="Doctor Portal">
-                    </div>
-                    <h3 class="project-title">Doctor Management Software</h3>
-                    <div class="project-tags">
-
-                        <!--<span class="tech-tag">Flutter</span>
-                        <span class="tech-tag">Firebase</span>
-                        <span class="tech-tag">Charts</span>
-                        <span class="tech-tag">Plaid API</span>
-                        <span class="tech-tag">Google Cloud Functions</span>-->
-                    </div>
-                    <p class="project-description">
-                        Part of a team which created Doctor portal prototype for Ikarians HealthTech, which allows doctors to better manage their patient data and make better and faster decisions. Lead a team which focused on a technical aspect of this startup.
-                    </p>
-
-                </div>
-
-                <!-- Project Card 3 -->
-                <div class="project-card reveal-item">
-                    <div class="project-image">
-                        <img src="PhotoGallery/Video Project 5.gif" alt="Turing Machine">
-                    </div>
-                    <h3 class="project-title">Variation Turing Machine</h3>
-                    <div class="project-tags">
-                        <span class="tech-tag">Pure turing machine code</span>
-                        <a href="https://turingmachine.io/" target="_blank" rel="noopener noreferrer" class="tech-tag">turingmachine.io</a>
-                    </div>
-                    <p class="project-description">
-                        Build a variation machine in pure turing machine code. Which takes input from tape $123,3,L,2$ First set of numbers (123) are the pattern that machine follows, second number (3) is how many different variation machine creates as an output (patterns), (L) is were we are moving the numbers to (L-Left,R-Right). last number (2) which numbers we are moving from previous pattern to new
-                    </p>
-
-                </div>
-            </div>
-        </section>
-
-        <!--Current projects-->
-        <section class="current-projects-section" id="current-projects">
-            <h2 class="section-title reveal-section">Current Projects</h2>
-
-            <div class="current-projects-container">
-                <!-- Project Card 2 -->
-                <a href="project-details.html" class="project-card-link">
-                    <div class="current-project-card reveal-from-left">
-                        <div class="project-icon fade-in">
-                            <div class="icon-container">
-                                <i class="fas fa-mobile-alt"></i>
-
-                            </div>
-                            <div class="icon-container">
-
-                                <i class="fas fa-desktop"></i>
-                            </div>
-                            <div class="icon-container">
-
-                                <i class="fas fa-laptop"></i>
-                            </div>
-
-                        </div>
-
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3 class="project-title">Personal Trainer CRM</h3>
-                                <span class="project-status">Prototyping</span>
-                            </div>
-
-                            <p class="project-description">
-                                This platform helps personal trainers manage their clients easily through a website and mobile app.
-                                Trainers can schedule sessions, track workouts and progress, and communicate with clients.
-                                The app provides quick access to update plans and stay connected on the go, making fitness coaching more organized and efficient.
-                                Working on this project with coaches across Aberdeen and Bratislava.
-
-                            </p>
-
-                            <div class="project-progress">
-                                <div class="progress-label">Progress</div>
-                                <div class="progress-bar-container">
-                                    <div class="progress-bar progress-20"></div>
-                                </div>
-                                <div class="progress-percentage">20%</div>
-                            </div>
-
-                            <div class="project-timeline">
-                                <div class="timeline-label">Timeline</div>
-                                <div class="timeline-value">Expected completion: End of Q2 – Start of Q3 2026</div>
-                            </div>
-
-                            <div class="project-tags">
-                                <span class="tech-tag reveal-item">React</span>
-                                <span class="tech-tag reveal-item">Firebase</span>
-                                <span class="tech-tag reveal-item">Python</span>
-                                <span class="tech-tag reveal-item">MySQL</span>
-                                <span class="tech-tag reveal-item">RESTful API</span>
-                                <span class="tech-tag reveal-item">AWS</span>
-                                <span class="tech-tag reveal-item">Stripe</span>
-                            </div>
-                            <!--
-                            <div class="project-links fade-in">
-                                <a href="project-details.html" class="view-details">View Details <span class="arrow">→</span></a>
-                                <a href="#" class="external-link" title="Project Website"><i class="fas fa-external-link-alt"></i></a>
-                            </div>-->
-                            <div class="view-details">View Details <span class="arrow">→</span></div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Freelance widget: Designlify -->
-                <a href="https://designlify.tech/" target="_blank" rel="noopener noreferrer" class="project-card-link">
-                    <div class="current-project-card reveal-from-right">
-                        <div class="project-icon fade-in">
-                            <div class="icon-container"><i class="fas fa-code"></i></div>
-                            <div class="icon-container"><i class="fas fa-pen-ruler"></i></div>
-                            <div class="icon-container"><i class="fas fa-globe"></i></div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3 class="project-title">Designlify — Freelance Software</h3>
-                                <span class="project-status">Freelance</span>
-                            </div>
-                            <p class="project-description">
-                                I also take on select freelance projects under Designlify — building Landing pages, Full stack web applications, custom software, and hardware implementations.
-                            </p>
-
-                            <div class="view-details">Visit Website <span class="arrow">→</span></div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-        </section>
-
-        <!-- interest section-->
-        <section class="interests-section" id="interests">
-            <h2 class="section-title reveal-section">Interests & Activities</h2>
-
-            <div class="interests-container">
-                <!-- Interest Card 1 -->
-                <div class="interest-card reveal-item">
-                    <div class="interest-icon fade-in">
-                        <div class="icon-circle">
-                            <i class="fas fa-water"></i>
-                        </div>
-                        <div class="icon-circle">
-                            <i class="fas fa-skiing"></i>
-                        </div>
-
-                    </div>
-                    <h3 class="interest-title">FreeDiving/FreeRiding</h3>
-                    <p class="interest-description">
-                        One of my all-time favorite hobbies are to do anything involving preposition Free. You will find me either 30 meters underwater or under avalanche.
-                    </p>
-                </div>
-
-                <!-- Interest Card 2 -->
-                <div class="interest-card reveal-item">
-                    <div class="interest-icon fade-in">
-                        <div class="icon-circle">
-                            <i class="fas fa-guitar"></i>
-                        </div>
-                    </div>
-                    <h3 class="interest-title">Guitar</h3>
-                    <p class="interest-description">
-                        Right now I am learning a new instrument, the Ukulele
-                    </p>
-                </div>
-
-                <!-- Interest Card 3 -->
-                <div class="interest-card reveal-item">
-                    <div class="interest-icon fade-in">
-                        <div class="icon-circle">
-                            <i class="fas fa-dumbbell"></i>
-                        </div>
-                    </div>
-                    <h3 class="interest-title">Gym</h3>
-                    <p class="interest-description">
-                        I LOVE picking up heavy stuff and putting them back on the ground.
-                    </p>
-
-                </div>
-            </div>
-        </section>
-        <!--Contact us page  -->
-        <section class="contact-section" id="contact">
-            <h2 class="section-title reveal-section">Get In Touch</h2>
-
-            <div class="contact-container">
-                <div class="contact-info reveal-from-left">
-                    <h3>Contact Information</h3>
-
-                    <div class="contact-item reveal-item">
-                        <div class="contact-icon fade-in">
-                            <div class="icon-circle">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                        </div>
-                        <div class="contact-detail">
-                            <span class="contact-label">Phone</span>
-                            <span class="contact-value">Connect with me on LinkedIn and set up a meeting.</span>
-                        </div>
-                    </div>
-
-                    <div class="contact-item reveal-item">
-                        <div class="contact-icon fade-in">
-                            <div class="icon-circle">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                        </div>
-                        <div class="contact-detail">
-                            <span class="contact-label">Location</span>
-                            <span class="contact-value">UK, Slovakia</span>
-                        </div>
-                    </div>
-
-                    <div class="social-links reveal-section">
-                        <h3>Connect With Me</h3>
-
-                        <div class="social-icons">
-                            <a href="https://github.com/Matesor333" target="_blank" class="social-icon reveal-item" title="GitHub">
-                                <div class="icon-circle">
-                                    <i class="fab fa-github"></i>
-                                </div>
-                            </a>
-                            <a href="https://www.linkedin.com/in/matus-illith" target="_blank" class="social-icon reveal-item" title="LinkedIn">
-                                <div class="icon-circle">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </div>
-                            </a>
-                            <!--
-                            <a href="https://twitter.com/" target="_blank" class="social-icon reveal-item" title="Twitter/X">
-                                <div class="icon-circle">
-                                    <i class="fab fa-x-twitter"></i>
-                                </div>
-                            </a>
-                            <a href="https://instagram.com/" target="_blank" class="social-icon reveal-item" title="Instagram">
-                                <div class="icon-circle">
-                                    <i class="fab fa-instagram"></i>
-                                </div>
-                            </a>
-                            -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <a href="#" class="scroll-top"><i class="fas fa-arrow-up"></i></a>
-    </main>
-</div>
-
-<footer class="footer">
-    <div class="container">
-        <p>&copy; <span id="current-year"></span> Matus Illith. All rights reserved.</p>
+        <a class="btn btn-sm" href="#ask">Let's talk</a>
     </div>
-</footer>
+</header>
 
-<script src="js/index.js"></script>
-<script src="js/background.js"></script>
+<main>
+    <!-- 01 Cover -->
+    <section class="slide stack cover" id="cover" data-title="Cover">
+        <div class="lens-ring" aria-hidden="true"></div>
+        <div class="wrap">
+            <h1>
+                <span class="w"><span style="--d:0">I</span></span>
+                <span class="w"><span style="--d:1">build</span></span>
+                <span class="w"><span style="--d:2">the</span></span>
+                <span class="w"><span style="--d:3">product</span></span>
+                <span class="w"><span style="--d:4">—</span></span>
+                <span class="w"><span style="--d:5">and</span></span>
+                <span class="w"><span style="--d:6">the</span></span>
+                <span class="w"><span style="--d:7">business</span></span>
+                <span class="w"><span style="--d:8">around</span></span>
+                <span class="w"><span style="--d:9">it.</span></span>
+            </h1>
+            <p class="lede" data-show="business">I run my own ventures: I talk to the people who'll use the thing, decide what gets built first, then write the code myself.</p>
+            <p class="lede" data-show="build">Java and C first, then React, Python and Docker. I don't throw a spec over a wall: I ship it.</p>
+            <div class="cta-row">
+                <a class="btn" href="https://www.linkedin.com/in/matus-illith" target="_blank" rel="noopener noreferrer">Let's talk</a>
+                <a class="arrow-link" href="#ventures">See the ventures <span aria-hidden="true">↓</span></a>
+            </div>
+            <p class="cover-meta">Matus Illith · MSci Computing, Robert Gordon University, Aberdeen · looking for a Product Owner role or a 4th-year industry placement</p>
+            <p class="hint">Flip the lens in the top bar: same work, two readings.</p>
+        </div>
+    </section>
 
+    <!-- 02 Problem -->
+    <section class="slide stack" id="problem" data-title="The gap">
+        <div class="wrap narrow">
+            <h2>Most products stall in the gap between what the business needs and what engineering builds.</h2>
+            <p class="big">Someone has to own that gap: talk to the people who will use the thing, decide what matters first, and understand the system well enough to know what is cheap and what is expensive.</p>
+            <p class="big">That is the job I am training for, and the one I have been doing on my own projects.</p>
+        </div>
+    </section>
+
+    <!-- 03 Profile -->
+    <section class="slide" id="profile" data-title="Profile">
+        <div class="wrap profile">
+            <img class="portrait" src="PhotoGallery/ProfielPicture.JPG" alt="Portrait of Matus Illith" data-r>
+            <div>
+                <h2>One person on both sides of the table.</h2>
+                <ul class="lines" data-show="business">
+                    <li data-r><strong>Discovery.</strong> Built Elev8 with coaches in Aberdeen and Bratislava.</li>
+                    <li data-r><strong>Roadmaps.</strong> Web first, then PC, then mobile: sequenced on purpose.</li>
+                    <li data-r><strong>Leading.</strong> Led the technical team on a HealthTech doctor-portal prototype.</li>
+                    <li data-r><strong>Delivering.</strong> Freelance projects scoped and shipped end to end under Designlify.</li>
+                </ul>
+                <div data-show="build">
+                    <p class="big">Most proficient in Java and C, with recent Python. I also use Docker and Bash to keep my workflow fast.</p>
+                    <ul class="chips" data-r>
+                        <li class="chip">Java</li><li class="chip">C</li><li class="chip">JavaScript</li>
+                        <li class="chip">React</li><li class="chip">Node.js</li><li class="chip">Python</li>
+                        <li class="chip">Bash</li><li class="chip">Docker</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 04 Proof -->
+    <section class="slide" id="proof" data-title="Proof">
+        <div class="wrap narrow">
+            <h2>The numbers behind it.</h2>
+            <ul class="ledger">
+                <li data-r><span>Clients served through Designlify</span><span class="tbd">TBD · add figure</span></li>
+                <li data-r><span>Coaches and users I have interviewed</span><span class="tbd">TBD · add figure</span></li>
+                <li data-r><span>Products taken from idea to working prototype</span><span class="tbd">TBD · add figure</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 05 Ventures -->
+    <section class="slide" id="ventures" data-title="Ventures">
+        <div class="wrap">
+            <h2>Three things I built with real people.</h2>
+            <div id="ventures-list"></div>
+        </div>
+    </section>
+
+    <!-- 06 Side projects -->
+    <section class="slide" id="side" data-title="Engineering projects">
+        <div class="wrap">
+            <h2>And the engineering underneath.</h2>
+            <div class="side-grid" id="side-list"></div>
+        </div>
+    </section>
+
+    <!-- 07 Roadmap -->
+    <section class="slide" id="roadmap" data-title="Roadmap">
+        <div class="wrap narrow">
+            <h2>My roadmap, so far and next.</h2>
+            <div class="roadmap">
+            <span class="rail" aria-hidden="true"><span class="rail-fill"></span></span>
+            <ol>
+                <li class="step"><h3>2022 — BSci Informatics</h3><p>Slovak Technical University, Bratislava. Low-level C, RAM simulation, logic circuits, and Java with OOP design patterns.</p></li>
+                <li class="step"><h3>2023–2028 — MSci Computer Science</h3><p>Robert Gordon University, Aberdeen. Programming, web development, IoT, databases, operating systems, data structures. <a href="education-details.html">Course details</a></p></li>
+                <li class="step"><h3>Now — Placement</h3><p>Looking for a full-time industry placement for my 4th year.</p></li>
+                <li class="step"><h3>Next — Product Owner</h3><p>Owning the "what" and the "why", with the engineering depth to keep the "how" honest.</p></li>
+            </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- 08 Fit -->
+    <section class="slide" id="fit" data-title="How I operate">
+        <div class="wrap narrow">
+            <h2>How I operate.</h2>
+            <ul class="lines">
+                <li data-r><strong>Freediving and freeriding.</strong> Calm under pressure, and respect for the risk you cannot see.</li>
+                <li data-r><strong>The gym.</strong> Boring consistency beats occasional heroics.</li>
+                <li data-r><strong>Guitar, now ukulele.</strong> Always learning a new instrument, badly at first, on purpose.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 09 Ask -->
+    <section class="slide" id="ask" data-title="Let's talk">
+        <div class="wrap narrow">
+            <h2>Hiring a Product Owner or an engineer who thinks like one?</h2>
+            <p class="big">Based between the UK and Slovakia. Connect with me on LinkedIn and let's set up a call.</p>
+            <div class="cta-row">
+                <a class="btn" href="https://www.linkedin.com/in/matus-illith" target="_blank" rel="noopener noreferrer">Message me on LinkedIn</a>
+                <a class="arrow-link" href="https://github.com/Matesor333" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                <a class="arrow-link" href="https://designlify.tech/" target="_blank" rel="noopener noreferrer">Designlify <span aria-hidden="true">↗</span></a>
+            </div>
+            <p class="cover-meta">&copy; <span id="year"></span> Matus Illith</p>
+        </div>
+    </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/ventures.js"></script>
+<script src="js/deck.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
