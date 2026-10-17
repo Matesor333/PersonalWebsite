@@ -1389,14 +1389,56 @@ Current project
     }
 }
 
-.lang-select {
-    appearance: none;
-    background: var(--card-bg);
-    color: var(--text-color);
+.lang-switch {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     border: 1px solid var(--card-border);
     border-radius: 999px;
-    padding: 0.4rem 0.8rem;
+    padding: 3px;
+}
+
+.lang-switch button {
+    position: relative;
+    z-index: 1;
+    border: 0;
+    background: none;
+    color: var(--text-color);
     font: inherit;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
     cursor: pointer;
+    transition: color 0.25s ease;
+}
+
+.lang-switch button[aria-pressed="true"] {
+    color: #fff;
+}
+
+.lang-switch .pill {
+    position: absolute;
+    inset: 3px auto 3px 3px;
+    width: calc((100% - 6px) / 3);
+    background: var(--primary-color);
+    border-radius: 999px;
+}
+
+.lang-switch.ready .pill {
+    transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.lang-switch[data-active="1"] .pill {
+    transform: translateX(100%);
+}
+
+.lang-switch[data-active="2"] .pill {
+    transform: translateX(200%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .lang-switch .pill {
+        transition: none !important;
+    }
 }

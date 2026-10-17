@@ -20,11 +20,12 @@
 <header class="bar">
     <a class="bar-name" href="index.html?lens=build#cover">Matus Illith</a>
     <div class="bar-right">
-        <select class="lang-select" aria-label="Language" data-i18n-attr="aria-label=lang.label">
-            <option value="en" lang="en">EN</option>
-            <option value="sk" lang="sk">SK</option>
-            <option value="de" lang="de">DE</option>
-        </select>
+        <div class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label=lang.label">
+            <span class="pill" aria-hidden="true"></span>
+            <button type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+            <button type="button" data-lang="sk" lang="sk" aria-label="Slovenčina" aria-pressed="false">SK</button>
+            <button type="button" data-lang="de" lang="de" aria-label="Deutsch" aria-pressed="false">DE</button>
+        </div>
         <a class="arrow-link back" href="index.html?lens=build#rgu" data-i18n="course.back"><span aria-hidden="true">←</span> Back to the deck</a>
         <a class="btn btn-sm" href="https://www.linkedin.com/in/matus-illith" target="_blank" rel="noopener noreferrer" data-i18n="talk">Let's talk</a>
     </div>

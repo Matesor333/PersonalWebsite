@@ -39,11 +39,12 @@
     </nav>
     <p class="counter" id="counter" aria-hidden="true" title="Use the left and right arrow keys to flip slides" data-i18n-attr="title=counter.title"></p>
     <div class="bar-right">
-        <select class="lang-select" aria-label="Language" data-i18n-attr="aria-label=lang.label">
-            <option value="en" lang="en">EN</option>
-            <option value="sk" lang="sk">SK</option>
-            <option value="de" lang="de">DE</option>
-        </select>
+        <div class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label=lang.label">
+            <span class="pill" aria-hidden="true"></span>
+            <button type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+            <button type="button" data-lang="sk" lang="sk" aria-label="Slovenčina" aria-pressed="false">SK</button>
+            <button type="button" data-lang="de" lang="de" aria-label="Deutsch" aria-pressed="false">DE</button>
+        </div>
         <div class="lens-switch" role="group" aria-label="Choose which side to read" data-i18n-attr="aria-label=lens.label">
             <span class="pill" aria-hidden="true"></span>
             <button type="button" data-set-lens="business" aria-pressed="false" data-i18n="lens.business">Business</button>

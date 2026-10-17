@@ -34,15 +34,27 @@
     window.I18N = {lang, t: (key, en) => ui[key] ?? en};
 
     // Switching reloads on the same slide: deck.js owns GSAP pins and element refs a live re-render would break.
-    const sel = $('.lang-select')[0];
-    if (!sel) return;
-    sel.value = lang;
-    sel.addEventListener('change', () => {
-        save(sel.value);
+    const sw = $('.lang-switch')[0];
+    if (!sw) return;
+    const btns = [...sw.querySelectorAll('button')];
+    const mark = l => {
+        sw.dataset.active = LANGS.indexOf(l);
+        btns.forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === l));
+    };
+    mark(lang);
+    // the pill only animates after first paint, so a SK/DE page does not load with it sliding in
+    requestAnimationFrame(() => requestAnimationFrame(() => sw.classList.add('ready')));
+    btns.forEach(b => b.addEventListener('click', () => {
+        const to = b.dataset.lang;
+        if (to === lang || sw.dataset.busy) return;
+        sw.dataset.busy = 1;
+        save(to);
+        mark(to);
         const u = new URL(location.href);
-        if (sel.value === 'en') u.searchParams.delete('lang'); else u.searchParams.set('lang', sel.value);
+        if (to === 'en') u.searchParams.delete('lang'); else u.searchParams.set('lang', to);
         const sec = document.elementFromPoint(innerWidth / 2, innerHeight / 2)?.closest('section[id]');
         u.hash = sec ? sec.id : '';
-        location.replace(u);
-    });
+        // let the pill land before the page swaps
+        setTimeout(() => location.replace(u), matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 220);
+    }));
 })();

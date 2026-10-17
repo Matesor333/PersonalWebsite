@@ -72,14 +72,21 @@ html[data-lens="build"] [data-show="business"] { display: none; }
 @keyframes tick { from { transform: translateY(60%); opacity: 0; } }
 .bar-right { display: flex; align-items: center; gap: 0.75rem; }
 
-.lang-select {
-    appearance: none; background: none; color: var(--fg); cursor: pointer;
-    font: 500 0.8rem/1 var(--mono); letter-spacing: 0.04em;
-    border: 1.5px solid var(--rule); border-radius: 999px; padding: 0.6rem 0.9rem;
-    transition: border-color 0.2s var(--ease);
+/* language switch: a quieter sibling of the lens switch; the pill slides, then the page swaps (see i18n.js) */
+.lang-switch { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); border: 1.5px solid var(--rule); border-radius: 999px; padding: 3px; }
+.lang-switch button {
+    position: relative; z-index: 1; border: 0; background: none; color: var(--muted);
+    font: 500 0.75rem/1 var(--mono); letter-spacing: 0.04em;
+    padding: 0.5rem 0.7rem; border-radius: 999px; cursor: pointer;
+    transition: color 0.25s var(--ease), transform 0.12s var(--ease);
 }
-.lang-select option { background: var(--bg); color: var(--fg); }
-@media (hover: hover) and (pointer: fine) { .lang-select:hover { border-color: var(--fg); } }
+.lang-switch button:active { transform: scale(0.92); }
+.lang-switch button[aria-pressed="true"] { color: var(--bg); }
+.lang-switch .pill { position: absolute; z-index: 0; inset: 3px auto 3px 3px; width: calc((100% - 6px) / 3); background: var(--fg); border-radius: 999px; }
+.lang-switch.ready .pill { transition: transform 0.3s var(--ease); }
+.lang-switch[data-active="1"] .pill { transform: translateX(100%); }
+.lang-switch[data-active="2"] .pill { transform: translateX(200%); }
+@media (hover: hover) and (pointer: fine) { .lang-switch button[aria-pressed="false"]:hover { color: var(--fg); } }
 
 .lens-switch { position: relative; display: grid; grid-template-columns: 1fr 1fr; border: 1.5px solid var(--fg); border-radius: 999px; padding: 3px; }
 .lens-switch button {
