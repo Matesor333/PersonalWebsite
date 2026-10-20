@@ -23,8 +23,8 @@
 
     // Course rows: collapsed to name + grade, open to what I learned.
     const course = c => !(c.desc || c.learned || c.outcomes) ? `
-        <div class="course static"><span class="cname">${c.name}</span>${c.status ? `<span class="grade now">${c.status}</span>` : ''}</div>` : `
-        <details class="course">
+        <div class="course static" data-area="${(c.area || []).join(' ')}"><span class="cname">${c.name}</span>${c.status ? `<span class="grade now">${c.status}</span>` : ''}</div>` : `
+        <details class="course" data-area="${(c.area || []).join(' ')}">
             <summary><span class="cname">${c.name}</span>${c.grade ? `<span class="grade" title="${t('js.grade', 'Grade')}">${c.grade}</span>` : ''}</summary>
             <div class="cbody">
                 <p>${c.desc}</p>
@@ -41,6 +41,19 @@
             <div class="courses">${y.courses.map(course).join('')}</div>
         </li>`).join('');
     });
+
+    // Area filter above the course lists: state lives on <html data-area>, CSS does the hiding. Always starts at All.
+    const AREAS = [['all', 'All'], ['computing', 'Computing'], ['ai', 'AI'], ['security', 'Cyber Security']];
+    const filterHtml = `<div class="area-filter" role="group" aria-label="${t('area.label', 'Filter courses by area')}">${AREAS.map(([k, en]) =>
+        `<button type="button" data-set-area="${k}" aria-pressed="${k === 'all'}">${t('area.' + k, en)}</button>`).join('')}</div>`;
+    $('#fiit .big, #rgu .big').forEach(el => el.insertAdjacentHTML('afterend', filterHtml));
+    $('#fiit-courses').forEach(el => el.insertAdjacentHTML('afterend', `<p class="no-match">${t('area.none', 'Nothing here yet. These came later, at RGU.')}</p>`));
+    const areaBtns = $('[data-set-area]');
+    areaBtns.forEach(b => b.addEventListener('click', () => {
+        root.dataset.area = b.dataset.setArea;
+        areaBtns.forEach(x => x.setAttribute('aria-pressed', x.dataset.setArea === b.dataset.setArea));
+        if (window.ScrollTrigger) ScrollTrigger.refresh(); // section heights changed
+    }));
 
     // ---- stack ladder (index 0 = lowest layer; listed top-down)
     $('#ladder').forEach(el => {

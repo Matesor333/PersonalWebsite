@@ -231,9 +231,8 @@ dd { margin: 0; max-width: 40em; }
 
 /* course rows: name + grade, open for what I learned */
 :root { interpolate-size: allow-keywords; }
-.courses { margin: 1.25rem 0 0.5rem; }
+.courses { margin: 1.25rem 0 0.5rem; border-bottom: 1.5px solid var(--rule); }
 .course { border-top: 1.5px solid var(--rule); }
-.course:last-child { border-bottom: 1.5px solid var(--rule); }
 .course summary { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; cursor: pointer; font-weight: 700; padding: 0.8rem 0.25rem; transition: color 0.2s var(--ease); }
 .course summary::marker { color: var(--accent); }
 .course summary:active { transform: scale(0.995); }
@@ -328,3 +327,23 @@ html.lens-wipe::view-transition-new(root) { animation: wipe 0.75s var(--ease); }
 /* case-study page */
 .case-sec .lines { margin-bottom: 1rem; }
 .case-sec .note { margin: 0; }
+
+/* area filter (Build deck): html[data-area] hides courses outside the chosen area, and years left empty */
+.area-filter { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.25rem 0 0; }
+.area-filter button { font: 500 0.8rem/1 var(--mono); padding: 0.65em 1em; border: 1.5px solid var(--fg); border-radius: 999px; background: none; color: var(--fg); cursor: pointer; transition: background 0.2s var(--ease), color 0.2s var(--ease), border-color 0.2s var(--ease), transform 0.16s var(--ease); }
+.area-filter button:active { transform: scale(0.96); }
+.area-filter button[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
+@media (hover: hover) and (pointer: fine) { .area-filter button[aria-pressed="false"]:hover { color: var(--accent); border-color: var(--accent); } }
+.no-match { display: none; margin: 1.25rem 0 0; color: var(--muted); }
+html[data-area="computing"] .course:not([data-area~="computing"]),
+html[data-area="computing"] .step:not(:has(.course[data-area~="computing"])),
+html[data-area="computing"] #fiit-courses:not(:has(.course[data-area~="computing"])) { display: none; }
+html[data-area="computing"] #fiit-courses:not(:has(.course[data-area~="computing"])) + .no-match { display: block; }
+html[data-area="ai"] .course:not([data-area~="ai"]),
+html[data-area="ai"] .step:not(:has(.course[data-area~="ai"])),
+html[data-area="ai"] #fiit-courses:not(:has(.course[data-area~="ai"])) { display: none; }
+html[data-area="ai"] #fiit-courses:not(:has(.course[data-area~="ai"])) + .no-match { display: block; }
+html[data-area="security"] .course:not([data-area~="security"]),
+html[data-area="security"] .step:not(:has(.course[data-area~="security"])),
+html[data-area="security"] #fiit-courses:not(:has(.course[data-area~="security"])) { display: none; }
+html[data-area="security"] #fiit-courses:not(:has(.course[data-area~="security"])) + .no-match { display: block; }

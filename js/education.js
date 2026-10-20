@@ -2,6 +2,7 @@
 window.EDU_FIIT = [
  {
   "name": "Calculus",
+  "area": ["computing"],
   "desc": "Advanced mathematical concepts including limits, derivatives, integrals, and their applications in computer science",
   "learned": "Built a solid foundation in single‑variable and introductory multivariable calculus. Applied differentiation and integration to optimisation and analysis problems common in computing.",
   "outcomes": [
@@ -15,6 +16,7 @@ window.EDU_FIIT = [
  },
  {
   "name": "Algebra",
+  "area": ["computing"],
   "desc": "Linear algebra, matrices, vector spaces, and algebraic structures essential for computer science applications",
   "learned": "Covered linear algebra and discrete structures used in graphics, ML, and theoretical CS, focusing on reasoning about systems and transformations.",
   "outcomes": [
@@ -28,6 +30,7 @@ window.EDU_FIIT = [
  },
  {
   "name": "Engineering Methods",
+  "area": ["computing"],
   "desc": "Problem-solving approaches and methodologies used in engineering disciplines with applications to computing",
   "learned": "Practiced systematic engineering approaches, estimations, and documentation used to analyse and solve technical problems in computing contexts.",
   "outcomes": [
@@ -40,6 +43,7 @@ window.EDU_FIIT = [
  },
  {
   "name": "Procedural Programming",
+  "area": ["computing"],
   "desc": "Fundamentals of procedural programming paradigms, control structures, and algorithm implementation (C)",
   "learned": "Learned low‑level programming with C, memory management, and debugging while implementing classic algorithms using procedural patterns.",
   "outcomes": [
@@ -52,6 +56,7 @@ window.EDU_FIIT = [
  },
  {
   "name": "Principles of Computer Engineering",
+  "area": ["computing"],
   "desc": "Computer architecture, hardware components, digital logic, and system design principles (Logisim)",
   "learned": "Explored digital logic and basic architecture; designed and simulated circuits in Logisim to understand hardware‑level computation.",
   "outcomes": [
@@ -64,6 +69,7 @@ window.EDU_FIIT = [
  },
  {
   "name": "Data Structures and Algorithms",
+  "area": ["computing"],
   "desc": "Implementation and analysis of fundamental data structures and algorithms for efficient problem-solving (Java)",
   "learned": "Implemented lists, stacks, queues, trees and common algorithms in Java; evaluated complexity with Big‑O to make performance‑aware choices.",
   "outcomes": [
@@ -76,6 +82,7 @@ window.EDU_FIIT = [
  },
  {
   "name": "Theoretical Beginnings of Computer Science",
+  "area": ["computing"],
   "desc": "Foundational theories of computation, automata theory, formal languages, and computational complexity (TuringMachine, Ram)",
   "learned": "Studied formal models of computation and complexity; implemented small machines/simulations to deepen understanding of computability.",
   "outcomes": [
@@ -88,6 +95,7 @@ window.EDU_FIIT = [
  },
  {
   "name": "Object-Oriented Programming",
+  "area": ["computing"],
   "desc": "Object-oriented design principles, inheritance, polymorphism, implementation, design patterns, and multithreading (Java)",
   "learned": "Practiced OOP in Java including class design, patterns, and introductory concurrency to build maintainable applications.",
   "outcomes": [
@@ -123,36 +131,43 @@ window.EDU_RGU = [
   "courses": [
    {
     "name": "Introduction to Programming",
+    "area": ["computing"],
     "desc": "Fundamentals of programming logic, algorithms, and problem-solving approaches (JavaScript).",
     "grade": "A"
    },
    {
     "name": "Problem Solving",
+    "area": ["computing"],
     "desc": "Techniques for analyzing and solving computational problems through structured approaches (R)",
     "grade": "A"
    },
    {
     "name": "Computing Devices",
+    "area": ["computing"],
     "desc": "Hands-on exploration of microcontrollers, hardware interfaces, and Arduino programming fundamentals",
     "grade": "A"
    },
    {
     "name": "Creative Design",
+    "area": ["computing"],
     "desc": "Principles of user-centered design and creative problem-solving for digital products",
     "grade": "A"
    },
    {
     "name": "Frontend Web",
+    "area": ["computing"],
     "desc": "Development of responsive web interfaces using HTML, CSS, and JavaScript",
     "grade": "A"
    },
    {
     "name": "Mathematics for Computing",
+    "area": ["computing"],
     "desc": "Essential mathematical concepts for computer science including discrete mathematics and logic (Python)",
     "grade": "A"
    },
    {
     "name": "Software Development",
+    "area": ["computing"],
     "desc": "Object-oriented programming principles and application development (Java)",
     "grade": "A"
    }
@@ -163,6 +178,7 @@ window.EDU_RGU = [
   "courses": [
    {
     "name": "Operating Systems",
+    "area": ["computing","security"],
     "desc": "Principles of operating system design, virtualization, process management, memory allocation, OS scripting, and Docker.",
     "grade": "A",
     "learned": "Covered principles of modern operating systems: process and memory management, file systems, and resource scheduling in both standalone and cloud environments. Worked with virtualization platforms, containers such as Docker, and cloud infrastructures to understand large-scale deployment, monitoring, and maintenance. Practiced OS-level scripting (Bash on UBUNTU) , automation (cron), backup strategies, and security/access control to manage real servers and virtual instances safely.",
@@ -180,6 +196,7 @@ window.EDU_RGU = [
    },
    {
     "name": "Advanced Software Development",
+    "area": ["computing"],
     "desc": "Advanced object-oriented programming concepts and implementation of design patterns in Java",
     "grade": "A",
     "learned": "Deepened OOP proficiency by applying abstraction, inheritance, polymorphism, interfaces, and generics in Java. Followed the full SDLC from requirements through maintenance, using OO design principles and patterns with a focus on clean architecture, scalability, and testability.",
@@ -196,6 +213,7 @@ window.EDU_RGU = [
    },
    {
     "name": "Full Stack Web Development",
+    "area": ["computing"],
     "desc": "End-to-end web application development including frontend, backend, and database integration(Node.js, RESTfull API, EJS, MongoDb)",
     "grade": "B",
     "learned": "Built cohesive full-stack web applications using Node.js for the server, RESTful APIs, EJS for server-side templating, and MongoDB for persistence. Structured apps with proper routing and authentication while managing data flow across client, server, and database.",
@@ -211,6 +229,7 @@ window.EDU_RGU = [
    },
    {
     "name": "Real World Project",
+    "area": ["computing"],
     "desc": "Collaborative team project solving real-world problems using software development methodologies",
     "grade": "A",
     "learned": "Team-delivered a software solution for a real client partner, applying engineering methodologies, communication, and project management. Delivered a doctor medical portal prototype and iterated based on feedback.",
@@ -228,6 +247,7 @@ window.EDU_RGU = [
    },
    {
     "name": "Databases",
+    "area": ["computing","security"],
     "desc": "Advanced database concepts, normalization, query optimization, security, and database management systems (Microsoft SQL)",
     "grade": "A",
     "learned": "Explored advanced relational concepts: normalization, indexing, query optimization, and security. Focused on Microsoft SQL Server for both design and administration, including setup and configuration.",
@@ -244,6 +264,7 @@ window.EDU_RGU = [
    },
    {
     "name": "Research Methods",
+    "area": ["computing"],
     "desc": "Techniques for conducting research in Computer Science, including literature review and methodology",
     "grade": "B",
     "learned": "Introduced to research techniques used in Computer Science. Practiced literature reviews, formulating research questions, and choosing appropriate methodologies for empirical or theoretical studies.",
@@ -260,6 +281,7 @@ window.EDU_RGU = [
    },
    {
     "name": "Data Structures and Algorithms",
+    "area": ["computing"],
     "desc": "Implementation and analysis of fundamental data structures and algorithms for efficient problem-solving (Java)",
     "grade": "A",
     "learned": "Implemented and analyzed fundamental data structures and algorithms in Java to solve problems efficiently, using Big O to compare time and space performance.",
@@ -281,6 +303,7 @@ window.EDU_RGU = [
   "courses": [
    {
     "name": "Concurrent Programming",
+    "area": ["computing"],
     "desc": "Advanced programming techniques for parallel execution and synchronization in multithreaded applications",
     "grade": "A",
     "learned": "Studied advanced programming techniques for building multithreaded and parallel applications that utilise modern hardware efficiently. Covered synchronisation, race conditions, deadlocks, and thread-safe design to build reliable concurrent systems.",
@@ -296,6 +319,7 @@ window.EDU_RGU = [
    },
    {
     "name": "Interdisciplinary Team Project",
+    "area": ["computing"],
     "desc": "Collaborative projects work with students from different disciplines to solve complex problems",
     "grade": "A",
     "learned": "Worked with students from other disciplines to solve complex, real-world problems using an agile, project‑based approach. Contributed to a client‑facing prototype, integrating technical computing with design and business inputs.",
@@ -309,6 +333,7 @@ window.EDU_RGU = [
    },
    {
     "name": "Machine Learning",
+    "area": ["ai"],
     "desc": "Algorithms and statistical models for computer systems to perform tasks without explicit instructions",
     "grade": "A",
     "learned": "Introduction to core machine learning concepts, algorithms, and workflows. Trained and evaluated different models on datasets, including an experiment where an SVM model achieved 100% accuracy on a given task.",
@@ -324,6 +349,7 @@ window.EDU_RGU = [
    },
    {
     "name": "Information Risk and Security Management",
+    "area": ["security"],
     "desc": "Strategies for identifying, assessing, and mitigating information security risks in organizations",
     "grade": "A",
     "learned": "Focused on identifying, assessing, and managing information security risks while aligning technical controls with business needs. Studied risk assessment frameworks, security policies, and mitigation strategies (aligned with industry practices like NIST).",
@@ -339,6 +365,7 @@ window.EDU_RGU = [
    },
    {
     "name": "Pirates Studies",
+    "area": ["computing"],
     "desc": "Creating a product that has a product-market fit within the student's respective area of expertise",
     "grade": "A",
     "learned": "Product‑focused module aimed at validating problem–solution fit and iterating towards product–market fit in a chosen domain. Emphasised experiments, user feedback, and rapid iteration.",
@@ -352,6 +379,7 @@ window.EDU_RGU = [
    },
    {
     "name": "Internet of Things",
+    "area": ["computing"],
     "desc": "Advanced concepts in IoT architecture, protocols, and applications for connected devices",
     "grade": "A",
     "learned": "Covered IoT system architecture, communication protocols, and device integration. Explored sensor data acquisition, gateway design, and secure cloud ingestion for connected solutions.",
@@ -366,6 +394,7 @@ window.EDU_RGU = [
    },
    {
     "name": "Artificial Intelligence for Problem Solving",
+    "area": ["ai"],
     "desc": "Application of AI techniques to solve complex computational and real-world problems",
     "grade": "A",
     "learned": "Applied AI techniques such as heuristic search, planning, and knowledge‑based reasoning to tackle computational and real‑world problems. Emphasis on modelling problems and choosing suitable strategies.",
@@ -379,6 +408,7 @@ window.EDU_RGU = [
    },
    {
     "name": "Software Security and Malware Analysis",
+    "area": ["security"],
     "desc": "Techniques for identifying vulnerabilities, analyzing malicious software, and implementing secure coding practices",
     "grade": "A",
     "learned": "Explored secure coding principles and approaches for assessing software security. Introduced static/dynamic analysis and fundamentals of malware analysis and basic reverse engineering.",
@@ -393,6 +423,7 @@ window.EDU_RGU = [
    },
    {
     "name": "Web and Mobile Security",
+    "area": ["security"],
     "desc": "Hands-on penetration testing and hardening of web and mobile applications, plus mobile app data security and privacy analysis",
     "grade": "A",
     "learned": "Attacked a website and a mobile app using SQL injection, malicious file upload, XSS and dictionary attacks, then reinforced the web application and web server based on our own findings. Finished by analysing mobile app data security and privacy.",
@@ -416,22 +447,27 @@ window.EDU_RGU = [
   "courses": [
    {
     "name": "Languages and Compilers",
+    "area": ["computing"],
     "status": "In progress"
    },
    {
     "name": "Data Visualisation",
+    "area": ["computing"],
     "status": "In progress"
    },
    {
     "name": "Natural Language Processing",
+    "area": ["ai"],
     "status": "In progress"
    },
    {
     "name": "Computer Vision",
+    "area": ["ai"],
     "status": "In progress"
    },
    {
     "name": "Capstone Project",
+    "area": ["computing"],
     "status": "In progress"
    }
   ]
