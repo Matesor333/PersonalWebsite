@@ -22,6 +22,8 @@ window.I18N_PACKS.sk = {
         'area.ai': 'AI',
         'area.security': 'Kybernetická bezpečnosť',
         'area.none': 'Zatiaľ nič. Tieto prišli neskôr, na RGU.',
+        'js.request': 'Správa a kód sú dostupné na požiadanie.',
+        'js.request.cta': 'Napíšte mi na LinkedIne',
         'counter.title': 'Snímky prepínajte šípkami doľava a doprava',
         'lang.label': 'Jazyk',
         'lens.label': 'Vyberte, ktorú stranu si chcete prečítať',

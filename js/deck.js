@@ -30,6 +30,7 @@
                 <p>${c.desc}</p>
                 ${c.learned ? `<p>${c.learned}</p>` : ''}
                 ${c.outcomes ? `<ul class="chips">${chips(c.outcomes)}</ul>` : ''}
+                ${c.onRequest ? `<p class="on-request">${t('js.request', 'Report and code available on request.')} <a class="arrow-link" href="https://www.linkedin.com/in/matus-illith" target="_blank" rel="noopener noreferrer">${t('js.request.cta', 'Message me on LinkedIn')}<span aria-hidden="true">↗</span></a></p>` : ''}
             </div>
         </details>`;
     $('#fiit-courses').forEach(el => { el.innerHTML = EDU_FIIT.map(course).join(''); });

@@ -179,6 +179,7 @@ window.EDU_RGU = [
    {
     "name": "Operating Systems",
     "area": ["computing","security"],
+    "onRequest": true,
     "desc": "Principles of operating system design, virtualization, process management, memory allocation, OS scripting, and Docker.",
     "grade": "A",
     "learned": "Covered principles of modern operating systems: process and memory management, file systems, and resource scheduling in both standalone and cloud environments. Worked with virtualization platforms, containers such as Docker, and cloud infrastructures to understand large-scale deployment, monitoring, and maintenance. Practiced OS-level scripting (Bash on UBUNTU) , automation (cron), backup strategies, and security/access control to manage real servers and virtual instances safely.",
@@ -350,6 +351,7 @@ window.EDU_RGU = [
    {
     "name": "Information Risk and Security Management",
     "area": ["security"],
+    "onRequest": true,
     "desc": "Strategies for identifying, assessing, and mitigating information security risks in organizations",
     "grade": "A",
     "learned": "Focused on identifying, assessing, and managing information security risks while aligning technical controls with business needs. Studied risk assessment frameworks, security policies, and mitigation strategies (aligned with industry practices like NIST).",
@@ -424,6 +426,7 @@ window.EDU_RGU = [
    {
     "name": "Web and Mobile Security",
     "area": ["security"],
+    "onRequest": true,
     "desc": "Hands-on penetration testing and hardening of web and mobile applications, plus mobile app data security and privacy analysis",
     "grade": "A",
     "learned": "Attacked a website and a mobile app using SQL injection, malicious file upload, XSS and dictionary attacks, then reinforced the web application and web server based on our own findings. Finished by analysing mobile app data security and privacy.",

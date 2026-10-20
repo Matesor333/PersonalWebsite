@@ -22,6 +22,8 @@ window.I18N_PACKS.de = {
         'area.ai': 'KI',
         'area.security': 'Cybersicherheit',
         'area.none': 'Hier noch nichts. Das kam später, an der RGU.',
+        'js.request': 'Bericht und Code auf Anfrage verfügbar.',
+        'js.request.cta': 'Schreiben Sie mir auf LinkedIn',
         'counter.title': 'Mit den Pfeiltasten links und rechts blättern Sie durch die Folien',
         'lang.label': 'Sprache',
         'lens.label': 'Wählen Sie, welche Seite Sie lesen möchten',

@@ -347,3 +347,4 @@ html[data-area="security"] .course:not([data-area~="security"]),
 html[data-area="security"] .step:not(:has(.course[data-area~="security"])),
 html[data-area="security"] #fiit-courses:not(:has(.course[data-area~="security"])) { display: none; }
 html[data-area="security"] #fiit-courses:not(:has(.course[data-area~="security"])) + .no-match { display: block; }
+.on-request { margin: 1rem 0 0; color: var(--muted); }
