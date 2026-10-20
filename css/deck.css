@@ -329,7 +329,7 @@ html.lens-wipe::view-transition-new(root) { animation: wipe 0.75s var(--ease); }
 .case-sec .note { margin: 0; }
 
 /* area filter (Build deck): html[data-area] hides courses outside the chosen area, and years left empty */
-.area-filter { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.25rem 0 0; }
+.area-filter { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 2.5rem; }
 .area-filter button { font: 500 0.8rem/1 var(--mono); padding: 0.65em 1em; border: 1.5px solid var(--fg); border-radius: 999px; background: none; color: var(--fg); cursor: pointer; transition: background 0.2s var(--ease), color 0.2s var(--ease), border-color 0.2s var(--ease), transform 0.16s var(--ease); }
 .area-filter button:active { transform: scale(0.96); }
 .area-filter button[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
