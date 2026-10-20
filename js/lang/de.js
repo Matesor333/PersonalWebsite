@@ -319,6 +319,11 @@ window.I18N_PACKS.de = {
                         desc: 'Techniken zur Erkennung von Schwachstellen, zur Analyse von Schadsoftware und zur Umsetzung sicherer Programmierpraktiken',
                         learned: 'Ich habe Prinzipien sicherer Programmierung und Ansätze zur Bewertung der Softwaresicherheit erkundet. Eingeführt wurden statische und dynamische Analyse sowie Grundlagen der Malware-Analyse und des Reverse Engineering.',
                         outcomes: ['Sichere Programmierung', 'Schwachstellenbewertung', 'Statische Analyse', 'Dynamische Analyse', 'Grundlagen des Reverse Engineering', 'Bedrohungsmodellierung']
+                    },
+                    {
+                        desc: 'Praktische Penetrationstests und Absicherung von Web- und Mobilanwendungen sowie Analyse von Datensicherheit und Datenschutz in mobilen Apps',
+                        learned: 'Wir haben eine Website und eine mobile App mit SQL-Injection, bösartigen Datei-Uploads, XSS und Wörterbuchangriffen angegriffen und anschließend Webanwendung und Webserver anhand unserer eigenen Erkenntnisse abgesichert. Zum Abschluss haben wir Datensicherheit und Datenschutz mobiler Apps analysiert.',
+                        outcomes: ['SQL-Injection', 'Angriffe über Datei-Uploads', 'XSS', 'Wörterbuchangriffe', 'Penetrationstests', 'Absicherung von Webanwendungen', 'Webserver-Sicherheit', 'Datensicherheit mobiler Apps', 'Datenschutzanalyse']
                     }
                 ]
             },

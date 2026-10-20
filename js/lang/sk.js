@@ -319,6 +319,11 @@ window.I18N_PACKS.sk = {
                         desc: 'Techniky identifikácie zraniteľností, analýzy škodlivého softvéru a zavádzania bezpečných programátorských postupov',
                         learned: 'Skúmal som princípy bezpečného programovania a prístupy k hodnoteniu bezpečnosti softvéru. Zoznámil som sa so statickou a dynamickou analýzou, základmi analýzy malvéru a základným reverzným inžinierstvom.',
                         outcomes: ['Bezpečné programovanie', 'Hodnotenie zraniteľností', 'Statická analýza', 'Dynamická analýza', 'Základy reverzného inžinierstva', 'Modelovanie hrozieb']
+                    },
+                    {
+                        desc: 'Praktické penetračné testovanie a zabezpečenie webových a mobilných aplikácií, vrátane analýzy bezpečnosti a súkromia dát v mobilných aplikáciách',
+                        learned: 'Útočili sme na webovú stránku a mobilnú aplikáciu pomocou SQL injection, nahrávania škodlivých súborov, XSS a slovníkových útokov. Potom sme na základe vlastných zistení posilnili webovú aplikáciu aj webový server. Na záver sme analyzovali bezpečnosť a súkromie dát v mobilných aplikáciách.',
+                        outcomes: ['SQL injection', 'Útoky cez nahrávanie súborov', 'XSS', 'Slovníkové útoky', 'Penetračné testovanie', 'Zabezpečenie webových aplikácií', 'Bezpečnosť webového servera', 'Bezpečnosť dát v mobilných aplikáciách', 'Analýza súkromia']
                     }
                 ]
             },

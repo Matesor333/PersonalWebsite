@@ -390,6 +390,23 @@ window.EDU_RGU = [
      "Reverse engineering basics",
      "Threat modelling"
     ]
+   },
+   {
+    "name": "Web and Mobile Security",
+    "desc": "Hands-on penetration testing and hardening of web and mobile applications, plus mobile app data security and privacy analysis",
+    "grade": "A",
+    "learned": "Attacked a website and a mobile app using SQL injection, malicious file upload, XSS and dictionary attacks, then reinforced the web application and web server based on our own findings. Finished by analysing mobile app data security and privacy.",
+    "outcomes": [
+     "SQL injection",
+     "File upload attacks",
+     "XSS",
+     "Dictionary attacks",
+     "Penetration testing",
+     "Web app hardening",
+     "Web server security",
+     "Mobile app data security",
+     "Privacy analysis"
+    ]
    }
   ]
  },
